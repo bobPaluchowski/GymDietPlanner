@@ -58,7 +58,9 @@ fun DashboardScreen(
         ) {
             // Header with Settings
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .defaultMinSize(minHeight = 48.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -145,9 +147,10 @@ fun DashboardScreen(
             )
 
             // Meals Card
+            val todaysMeals = meals.filter { it.days.contains(todayAbbr) }
             DashboardSummaryCard(
                 title = "Nutrition",
-                content = if (meals.isEmpty()) "No meals planned" else "${meals.size} Meals Planned",
+                content = if (todaysMeals.isEmpty()) "No meals planned" else "${todaysMeals.size} Meals Planned",
                 icon = Icons.Filled.Restaurant,
                 containerColor = MaterialTheme.colorScheme.tertiaryContainer,
                 contentColor = MaterialTheme.colorScheme.onTertiaryContainer

@@ -51,6 +51,7 @@ fun MealsScreen(
     }
 
     Scaffold(
+        contentWindowInsets = WindowInsets(0.dp),
         floatingActionButton = {
             if (meals.isNotEmpty()) {
                 ExtendedFloatingActionButton(
@@ -73,7 +74,8 @@ fun MealsScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 16.dp),
+                    .padding(bottom = 16.dp)
+                    .defaultMinSize(minHeight = 48.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -157,6 +159,19 @@ fun MealCard(
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
+                    
+                    val dayMap = mapOf(
+                        "M" to "Monday", "T" to "Tuesday", "W" to "Wednesday",
+                        "Th" to "Thursday", "F" to "Friday", "S" to "Saturday", "Su" to "Sunday"
+                    )
+                    val fullDays = meal.days.map { dayMap[it] ?: it }.joinToString(", ")
+                    
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = "Days: ${fullDays.takeIf { it.isNotBlank() } ?: "None"}",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f)
+                    )
                 }
                 
                 Icon(

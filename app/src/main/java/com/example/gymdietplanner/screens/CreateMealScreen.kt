@@ -4,6 +4,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
@@ -30,7 +33,22 @@ fun CreateMealScreen(
     val ingredients = remember { mutableStateListOf<String>() }
     var instructions by remember { mutableStateOf("") }
 
+    val daysOfWeek = listOf("M", "T", "W", "Th", "F", "S", "Su")
+    val selectedDays = remember { mutableStateListOf<String>() }
+
     Scaffold(
+        modifier = Modifier.pointerInput(Unit) {
+            var gestured = false
+            detectHorizontalDragGestures(
+                onDragStart = { gestured = false },
+                onHorizontalDrag = { _, dragAmount ->
+                    if (!gestured && dragAmount > 30) {
+                        gestured = true
+                        onNavigateBack()
+                    }
+                }
+            )
+        },
         topBar = {
             TopAppBar(
                 title = { Text("Create New Meal", fontWeight = FontWeight.Bold) },
@@ -157,6 +175,41 @@ fun CreateMealScreen(
                 )
             }
 
+            // Assign Days Section
+            item {
+                Text(
+                    text = "Assign Days",
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    daysOfWeek.forEach { day ->
+                        val isSelected = selectedDays.contains(day)
+                        Surface(
+                            modifier = Modifier.size(40.dp),
+                            shape = CircleShape,
+                            color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant,
+                            onClick = {
+                                if (isSelected) selectedDays.remove(day) else selectedDays.add(day)
+                            }
+                        ) {
+                            Box(contentAlignment = Alignment.Center) {
+                                Text(
+                                    text = day,
+                                    color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
             // Save Button
             item {
                 Button(
@@ -166,6 +219,7 @@ fun CreateMealScreen(
                                 MealEntity(
                                     name = mealName,
                                     time = time,
+                                    days = selectedDays.toList(),
                                     ingredients = ingredients.toList(),
                                     instructions = instructions
                                 )

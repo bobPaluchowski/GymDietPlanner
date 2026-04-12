@@ -4,8 +4,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -40,9 +43,26 @@ fun CreateRoutineScreen(
     var showBottomSheet by remember { mutableStateOf(false) }
 
     Scaffold(
+        modifier = Modifier.pointerInput(Unit) {
+            var gestured = false
+            detectHorizontalDragGestures(
+                onDragStart = { gestured = false },
+                onHorizontalDrag = { _, dragAmount ->
+                    if (!gestured && dragAmount > 30) {
+                        gestured = true
+                        onNavigateBack()
+                    }
+                }
+            )
+        },
         topBar = {
             TopAppBar(
                 title = { Text(if (routine == null) "Create Routine" else "Edit Routine") },
+                navigationIcon = {
+                    IconButton(onClick = onNavigateBack) {
+                        Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.background,
                     titleContentColor = MaterialTheme.colorScheme.primary
@@ -234,7 +254,8 @@ fun CreateRoutineScreen(
                 },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(56.dp)
+                    .height(56.dp),
+                shape = MaterialTheme.shapes.medium
             ) {
                 Text("Save Routine", style = MaterialTheme.typography.titleMedium)
             }

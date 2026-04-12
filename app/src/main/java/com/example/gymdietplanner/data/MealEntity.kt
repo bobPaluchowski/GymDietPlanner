@@ -9,6 +9,7 @@ data class MealEntity(
     val id: Int = 0,
     val name: String,
     val time: String,
+    val days: List<String> = emptyList(),
     val ingredients: List<String>,
     val instructions: String
 )

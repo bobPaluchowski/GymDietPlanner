@@ -28,13 +28,20 @@ fun WorkoutsScreen() {
             .fillMaxSize()
             .padding(top = 24.dp, start = 16.dp, end = 16.dp)
     ) {
-        Text(
-            text = "Exercise Library",
-            style = MaterialTheme.typography.headlineMedium,
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.padding(bottom = 16.dp)
-        )
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 16.dp)
+                .defaultMinSize(minHeight = 48.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = "Exercise Library",
+                style = MaterialTheme.typography.headlineMedium,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary
+            )
+        }
 
         ExerciseLibraryList(onExerciseClick = { /* TODO in Workouts tab */ })
     }

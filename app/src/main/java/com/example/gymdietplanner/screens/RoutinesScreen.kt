@@ -56,6 +56,7 @@ fun RoutinesScreen(
     }
 
     Scaffold(
+        contentWindowInsets = WindowInsets(0.dp),
         floatingActionButton = {
             if (routines.isNotEmpty()) {
                 ExtendedFloatingActionButton(
@@ -75,13 +76,20 @@ fun RoutinesScreen(
                 .padding(innerPadding)
                 .padding(top = 24.dp, start = 16.dp, end = 16.dp)
         ) {
-            Text(
-                text = "Your Routines",
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.padding(bottom = 16.dp)
-            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 16.dp)
+                    .defaultMinSize(minHeight = 48.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Your Routines",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary
+                )
+            }
 
             if (routines.isEmpty()) {
                 EmptyRoutinesState(onCreateRoutineClick)
