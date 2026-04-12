@@ -267,7 +267,10 @@ fun CreateRoutineScreen(
                 sheetState = sheetState,
                 containerColor = MaterialTheme.colorScheme.surface
             ) {
-                Box(modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp)) {
+                Box(modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp)
+                ) {
                     MultiSelectExerciseList(onExercisesSelected = { exercises ->
                         // Construct RoutineExercises explicitly
                         val mappedExercises = exercises.map { RoutineExercise(exercise = it) }
