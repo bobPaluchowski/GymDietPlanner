@@ -5,17 +5,17 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.runtime.*
+import kotlinx.coroutines.delay
 import androidx.compose.foundation.background
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Search
 
 import com.example.gymdietplanner.data.Exercise
 import com.example.gymdietplanner.data.rawExercises
@@ -49,11 +49,60 @@ fun WorkoutsScreen() {
 
 @Composable
 fun ExerciseLibraryList(onExerciseClick: (Exercise) -> Unit) {
+    var searchQuery by remember { mutableStateOf("") }
+    var debouncedQuery by remember { mutableStateOf("") }
+
+    LaunchedEffect(searchQuery) {
+        delay(300)
+        debouncedQuery = searchQuery
+    }
+
+    val filteredExercises = remember(debouncedQuery) {
+        if (debouncedQuery.isBlank()) {
+            rawExercises
+        } else {
+            rawExercises.map { group ->
+                group.copy(exercises = group.exercises.filter { 
+                    it.name.contains(debouncedQuery, ignoreCase = true) 
+                })
+            }.filter { it.exercises.isNotEmpty() }
+        }
+    }
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        rawExercises.forEach { group ->
+        item {
+            OutlinedTextField(
+                value = searchQuery,
+                onValueChange = { searchQuery = it },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 8.dp),
+                placeholder = { Text("Search exercises...") },
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                singleLine = true,
+                shape = MaterialTheme.shapes.medium
+            )
+        }
+
+        if (filteredExercises.isEmpty()) {
+            item {
+                Box(
+                    modifier = Modifier.fillMaxWidth().padding(32.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        "No exercises found",
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        }
+
+        filteredExercises.forEach { group ->
             item {
                 Text(
                     text = group.name,
@@ -100,13 +149,61 @@ fun ExerciseLibraryList(onExerciseClick: (Exercise) -> Unit) {
 @Composable
 fun MultiSelectExerciseList(onExercisesSelected: (List<Exercise>) -> Unit) {
     val selectedItems = remember { mutableStateListOf<Exercise>() }
+    var searchQuery by remember { mutableStateOf("") }
+    var debouncedQuery by remember { mutableStateOf("") }
+
+    LaunchedEffect(searchQuery) {
+        delay(300)
+        debouncedQuery = searchQuery
+    }
+
+    val filteredExercises = remember(debouncedQuery) {
+        if (debouncedQuery.isBlank()) {
+            rawExercises
+        } else {
+            rawExercises.map { group ->
+                group.copy(exercises = group.exercises.filter { 
+                    it.name.contains(debouncedQuery, ignoreCase = true) 
+                })
+            }.filter { it.exercises.isNotEmpty() }
+        }
+    }
     
     Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
-            rawExercises.forEach { group ->
+            item {
+                OutlinedTextField(
+                    value = searchQuery,
+                    onValueChange = { searchQuery = it },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 8.dp, vertical = 8.dp),
+                    placeholder = { Text("Search exercises...") },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                    singleLine = true,
+                    shape = MaterialTheme.shapes.medium
+                )
+            }
+
+            if (filteredExercises.isEmpty()) {
+                item {
+                    Box(
+                        modifier = Modifier.fillMaxWidth().padding(32.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            "No exercises found",
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
+            }
+
+            filteredExercises.forEach { group ->
                 item {
                     Text(
                         text = group.name,
