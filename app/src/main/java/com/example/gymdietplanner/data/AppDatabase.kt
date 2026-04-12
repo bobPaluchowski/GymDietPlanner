@@ -6,12 +6,13 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
-@Database(entities = [RoutineEntity::class, MealEntity::class, WeightEntity::class], version = 4, exportSchema = false)
+@Database(entities = [RoutineEntity::class, MealEntity::class, WeightEntity::class, ExerciseEntity::class], version = 5, exportSchema = false)
 @TypeConverters(RoutineTypeConverters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun routineDao(): RoutineDao
     abstract fun mealDao(): MealDao
     abstract fun weightDao(): WeightDao
+    abstract fun exerciseDao(): ExerciseDao
 
     companion object {
         @Volatile

@@ -20,6 +20,10 @@ import com.example.gymdietplanner.data.Exercise
 import com.example.gymdietplanner.data.RoutineEntity
 import com.example.gymdietplanner.data.RoutineExercise
 import com.example.gymdietplanner.data.WorkoutSet
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import com.example.gymdietplanner.data.ExerciseEntity
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -28,7 +32,8 @@ fun CreateRoutineScreen(
     onNavigateBack: () -> Unit,
     onSaveRoutine: (RoutineEntity) -> Unit,
     routine: RoutineEntity? = null,
-    isMetric: Boolean
+    isMetric: Boolean,
+    exercises: List<ExerciseEntity>
 ) {
     val unitSuffix = if (isMetric) "kg" else "lbs"
     var routineName by remember { mutableStateOf(routine?.name ?: "") }
@@ -37,12 +42,11 @@ fun CreateRoutineScreen(
     val daysOfWeek = listOf("M", "T", "W", "Th", "F", "S", "Su")
     val selectedDays = remember { mutableStateListOf<String>().apply { addAll(routine?.days ?: emptyList()) } }
     val selectedExercises = remember { mutableStateListOf<RoutineExercise>().apply { addAll(routine?.exercises ?: emptyList()) } }
+    
+    var showSelectionScreen by remember { mutableStateOf(false) }
 
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = false)
-    val scope = rememberCoroutineScope()
-    var showBottomSheet by remember { mutableStateOf(false) }
-
-    Scaffold(
+    Box(modifier = Modifier.fillMaxSize()) {
+        Scaffold(
         modifier = Modifier.pointerInput(Unit) {
             var gestured = false
             detectHorizontalDragGestures(
@@ -94,7 +98,7 @@ fun CreateRoutineScreen(
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onBackground
                 )
-                TextButton(onClick = { showBottomSheet = true }) {
+                TextButton(onClick = { showSelectionScreen = true }) {
                     Icon(Icons.Filled.Add, contentDescription = "Add Workout")
                     Spacer(modifier = Modifier.width(4.dp))
                     Text("Add Workout")
@@ -260,28 +264,43 @@ fun CreateRoutineScreen(
                 Text("Save Routine", style = MaterialTheme.typography.titleMedium)
             }
         }
+    }
 
-        if (showBottomSheet) {
-            ModalBottomSheet(
-                onDismissRequest = { showBottomSheet = false },
-                sheetState = sheetState,
-                containerColor = MaterialTheme.colorScheme.surface
-            ) {
+    // Full-screen selection overlay
+        AnimatedVisibility(
+            visible = showSelectionScreen,
+            enter = slideInVertically(initialOffsetY = { it }),
+            exit = slideOutVertically(targetOffsetY = { it })
+        ) {
+            Scaffold(
+                topBar = {
+                    TopAppBar(
+                        title = { Text("Select Workouts") },
+                        navigationIcon = {
+                            IconButton(onClick = { showSelectionScreen = false }) {
+                                Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                            }
+                        },
+                        colors = TopAppBarDefaults.topAppBarColors(
+                            containerColor = MaterialTheme.colorScheme.background,
+                            titleContentColor = MaterialTheme.colorScheme.primary
+                        )
+                    )
+                }
+            ) { padding ->
                 Box(modifier = Modifier
-                    .fillMaxWidth()
+                    .fillMaxSize()
+                    .padding(padding)
                     .padding(horizontal = 16.dp)
                 ) {
-                    MultiSelectExerciseList(onExercisesSelected = { exercises ->
-                        // Construct RoutineExercises explicitly
-                        val mappedExercises = exercises.map { RoutineExercise(exercise = it) }
-                        selectedExercises.addAll(mappedExercises)
-                        
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                showBottomSheet = false
-                            }
+                    MultiSelectExerciseList(
+                        exercises = exercises,
+                        onExercisesSelected = { selected ->
+                            val mappedExercises = selected.map { RoutineExercise(exercise = it) }
+                            selectedExercises.addAll(mappedExercises)
+                            showSelectionScreen = false
                         }
-                    })
+                    )
                 }
             }
         }

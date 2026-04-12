@@ -118,12 +118,14 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                     onDeleteRoutineClick = { routine -> viewModel.deleteRoutine(routine.id) }
                 )
             }
-            composable(Screen.CreateRoutine.route) {
+                composable(Screen.CreateRoutine.route) {
                 val isMetric by viewModel.isMetric.collectAsState()
+                val exercises by viewModel.exercises.collectAsState()
                 CreateRoutineScreen(
                     onNavigateBack = { navController.popBackStack() },
                     onSaveRoutine = { routine -> viewModel.saveRoutine(routine) },
-                    isMetric = isMetric
+                    isMetric = isMetric,
+                    exercises = exercises
                 )
             }
             composable(Screen.EditRoutine.route) { backStackEntry ->
@@ -131,12 +133,14 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                 val routines by viewModel.routines.collectAsState()
                 val routine = routines.find { it.id == routineId }
                 val isMetric by viewModel.isMetric.collectAsState()
+                val exercises by viewModel.exercises.collectAsState()
                 
                 CreateRoutineScreen(
                     onNavigateBack = { navController.popBackStack() },
                     onSaveRoutine = { updatedRoutine -> viewModel.saveRoutine(updatedRoutine) },
                     routine = routine,
-                    isMetric = isMetric
+                    isMetric = isMetric,
+                    exercises = exercises
                 )
             }
             composable(Screen.RoutineSession.route) { backStackEntry ->
@@ -151,7 +155,15 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                     isMetric = isMetric
                 )
             }
-            composable(Screen.Workouts.route) { WorkoutsScreen() }
+            composable(Screen.Workouts.route) { 
+                val exercises by viewModel.exercises.collectAsState()
+                WorkoutsScreen(
+                    exercises = exercises,
+                    onSaveExercise = { name, equipment, category -> 
+                        viewModel.saveExercise(name, equipment, category)
+                    }
+                ) 
+            }
             composable(Screen.Meals.route) {
                 val meals by viewModel.meals.collectAsState()
                 MealsScreen(

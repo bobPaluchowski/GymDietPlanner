@@ -14,41 +14,153 @@ import kotlinx.coroutines.delay
 import androidx.compose.foundation.background
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Search
-
+import androidx.compose.material.icons.filled.Check
 import com.example.gymdietplanner.data.Exercise
+import com.example.gymdietplanner.data.ExerciseEntity
 import com.example.gymdietplanner.data.rawExercises
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WorkoutsScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(top = 24.dp, start = 16.dp, end = 16.dp)
-    ) {
-        Row(
+fun WorkoutsScreen(
+    exercises: List<ExerciseEntity>,
+    onSaveExercise: (String, String, String) -> Unit
+) {
+    var showAddDialog by remember { mutableStateOf(false) }
+
+    Scaffold(
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = { showAddDialog = true },
+                containerColor = MaterialTheme.colorScheme.primary,
+                contentColor = MaterialTheme.colorScheme.onPrimary
+            ) {
+                Icon(Icons.Filled.Add, contentDescription = "Add Workout")
+            }
+        }
+    ) { padding ->
+        Column(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 16.dp)
-                .defaultMinSize(minHeight = 48.dp),
-            verticalAlignment = Alignment.CenterVertically
+                .fillMaxSize()
+                .padding(padding)
+                .padding(top = 24.dp, start = 16.dp, end = 16.dp)
         ) {
-            Text(
-                text = "Exercise Library",
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 16.dp)
+                    .defaultMinSize(minHeight = 48.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Exercise Library",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary
+                )
+            }
+
+            ExerciseLibraryList(
+                exercises = exercises,
+                onExerciseClick = { /* TODO in Workouts tab */ }
             )
         }
 
-        ExerciseLibraryList(onExerciseClick = { /* TODO in Workouts tab */ })
+        if (showAddDialog) {
+            AddExerciseDialog(
+                onDismiss = { showAddDialog = false },
+                onSave = { name, equipment, category ->
+                    onSaveExercise(name, equipment, category)
+                    showAddDialog = false
+                },
+                existingCategories = exercises.map { it.category }.distinct()
+            )
+        }
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ExerciseLibraryList(onExerciseClick: (Exercise) -> Unit) {
+fun AddExerciseDialog(
+    onDismiss: () -> Unit,
+    onSave: (String, String, String) -> Unit,
+    existingCategories: List<String>
+) {
+    var name by remember { mutableStateOf("") }
+    var equipment by remember { mutableStateOf("") }
+    var category by remember { mutableStateOf("") }
+    var expanded by remember { mutableStateOf(false) }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Add Custom Workout") },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                OutlinedTextField(
+                    value = name,
+                    onValueChange = { name = it },
+                    label = { Text("Workout Name") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+                OutlinedTextField(
+                    value = equipment,
+                    onValueChange = { equipment = it },
+                    label = { Text("Equipment (e.g. Barbell, Machine)") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+                
+                // Category Selection
+                ExposedDropdownMenuBox(
+                    expanded = expanded,
+                    onExpandedChange = { expanded = !expanded }
+                ) {
+                    OutlinedTextField(
+                        value = category,
+                        onValueChange = { category = it },
+                        label = { Text("Category (Muscle Group)") },
+                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+                        modifier = Modifier.menuAnchor().fillMaxWidth(),
+                        readOnly = false // Allow typing new ones too
+                    )
+                    ExposedDropdownMenu(
+                        expanded = expanded,
+                        onDismissRequest = { expanded = false }
+                    ) {
+                        existingCategories.forEach { cat ->
+                            DropdownMenuItem(
+                                text = { Text(cat) },
+                                onClick = {
+                                    category = cat
+                                    expanded = false
+                                }
+                            )
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            Button(
+                onClick = { if (name.isNotBlank() && category.isNotBlank()) onSave(name, equipment, category) },
+                enabled = name.isNotBlank() && category.isNotBlank()
+            ) {
+                Text("Save")
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text("Cancel")
+            }
+        }
+    )
+}
+
+@Composable
+fun ExerciseLibraryList(
+    exercises: List<ExerciseEntity>,
+    onExerciseClick: (ExerciseEntity) -> Unit
+) {
     var searchQuery by remember { mutableStateOf("") }
     var debouncedQuery by remember { mutableStateOf("") }
 
@@ -57,16 +169,13 @@ fun ExerciseLibraryList(onExerciseClick: (Exercise) -> Unit) {
         debouncedQuery = searchQuery
     }
 
-    val filteredExercises = remember(debouncedQuery) {
-        if (debouncedQuery.isBlank()) {
-            rawExercises
+    val filteredExercises = remember(debouncedQuery, exercises) {
+        val filtered = if (debouncedQuery.isBlank()) {
+            exercises
         } else {
-            rawExercises.map { group ->
-                group.copy(exercises = group.exercises.filter { 
-                    it.name.contains(debouncedQuery, ignoreCase = true) 
-                })
-            }.filter { it.exercises.isNotEmpty() }
+            exercises.filter { it.name.contains(debouncedQuery, ignoreCase = true) }
         }
+        filtered.groupBy { it.category }
     }
 
     LazyColumn(
@@ -81,7 +190,7 @@ fun ExerciseLibraryList(onExerciseClick: (Exercise) -> Unit) {
                     .fillMaxWidth()
                     .padding(bottom = 8.dp),
                 placeholder = { Text("Search exercises...") },
-                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                leadingIcon = { Icon(Icons.Filled.Search, contentDescription = null) },
                 singleLine = true,
                 shape = MaterialTheme.shapes.medium
             )
@@ -102,10 +211,10 @@ fun ExerciseLibraryList(onExerciseClick: (Exercise) -> Unit) {
             }
         }
 
-        filteredExercises.forEach { group ->
+        filteredExercises.forEach { (category, categoryExercises) ->
             item {
                 Text(
-                    text = group.name,
+                    text = category,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.secondary,
@@ -113,7 +222,7 @@ fun ExerciseLibraryList(onExerciseClick: (Exercise) -> Unit) {
                 )
             }
 
-            items(group.exercises) { exercise ->
+            items(categoryExercises) { exercise ->
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -147,8 +256,11 @@ fun ExerciseLibraryList(onExerciseClick: (Exercise) -> Unit) {
 }
 
 @Composable
-fun MultiSelectExerciseList(onExercisesSelected: (List<Exercise>) -> Unit) {
-    val selectedItems = remember { mutableStateListOf<Exercise>() }
+fun MultiSelectExerciseList(
+    exercises: List<ExerciseEntity>,
+    onExercisesSelected: (List<Exercise>) -> Unit
+) {
+    val selectedItems = remember { mutableStateListOf<ExerciseEntity>() }
     var searchQuery by remember { mutableStateOf("") }
     var debouncedQuery by remember { mutableStateOf("") }
 
@@ -157,21 +269,18 @@ fun MultiSelectExerciseList(onExercisesSelected: (List<Exercise>) -> Unit) {
         debouncedQuery = searchQuery
     }
 
-    val filteredExercises = remember(debouncedQuery) {
-        if (debouncedQuery.isBlank()) {
-            rawExercises
+    val filteredExercises = remember(debouncedQuery, exercises) {
+        val filtered = if (debouncedQuery.isBlank()) {
+            exercises
         } else {
-            rawExercises.map { group ->
-                group.copy(exercises = group.exercises.filter { 
-                    it.name.contains(debouncedQuery, ignoreCase = true) 
-                })
-            }.filter { it.exercises.isNotEmpty() }
+            exercises.filter { it.name.contains(debouncedQuery, ignoreCase = true) }
         }
+        filtered.groupBy { it.category }
     }
     
-    Box(modifier = Modifier.fillMaxWidth()) {
+    Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
             item {
@@ -182,7 +291,7 @@ fun MultiSelectExerciseList(onExercisesSelected: (List<Exercise>) -> Unit) {
                         .fillMaxWidth()
                         .padding(horizontal = 8.dp, vertical = 8.dp),
                     placeholder = { Text("Search exercises...") },
-                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                    leadingIcon = { Icon(Icons.Filled.Search, contentDescription = null) },
                     singleLine = true,
                     shape = MaterialTheme.shapes.medium
                 )
@@ -203,17 +312,17 @@ fun MultiSelectExerciseList(onExercisesSelected: (List<Exercise>) -> Unit) {
                 }
             }
 
-            filteredExercises.forEach { group ->
+            filteredExercises.forEach { (category, categoryExercises) ->
                 item {
                     Text(
-                        text = group.name,
+                        text = category,
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(top = 16.dp, bottom = 8.dp, start = 8.dp)
                     )
                 }
 
-                items(group.exercises) { exercise ->
+                items(categoryExercises) { exercise ->
                     val isSelected = selectedItems.contains(exercise)
                     val cardBackgroundColor = if (isSelected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surface
                     
@@ -274,7 +383,10 @@ fun MultiSelectExerciseList(onExercisesSelected: (List<Exercise>) -> Unit) {
         
         if (selectedItems.isNotEmpty()) {
             FloatingActionButton(
-                onClick = { onExercisesSelected(selectedItems.toList()) },
+                onClick = { 
+                    // Convert ExerciseEntity to legacy Exercise model for compatibility with RoutineEntity JSON storage
+                    onExercisesSelected(selectedItems.map { Exercise(it.name, it.equipment) }) 
+                },
                 modifier = Modifier
                     .align(Alignment.BottomEnd)
                     .padding(16.dp),
