@@ -14,4 +14,20 @@ class PreferencesManager(context: Context) {
     fun setMetric(isMetric: Boolean) {
         sharedPreferences.edit().putBoolean("is_metric", isMetric).apply()
     }
+
+    fun isWorkoutNotificationsEnabled(): Boolean {
+        return sharedPreferences.getBoolean("workout_notifications_enabled", true)
+    }
+
+    fun setWorkoutNotificationsEnabled(enabled: Boolean) {
+        sharedPreferences.edit().putBoolean("workout_notifications_enabled", enabled).apply()
+    }
+
+    fun isMealNotificationsEnabled(): Boolean {
+        return sharedPreferences.getBoolean("meal_notifications_enabled", true)
+    }
+
+    fun setMealNotificationsEnabled(enabled: Boolean) {
+        sharedPreferences.edit().putBoolean("meal_notifications_enabled", enabled).apply()
+    }
 }

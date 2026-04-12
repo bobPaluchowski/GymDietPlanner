@@ -20,6 +20,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.gymdietplanner.data.MealEntity
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
+import java.util.Locale
+import androidx.compose.material.icons.filled.Schedule
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -28,7 +32,8 @@ fun CreateMealScreen(
     onSaveMeal: (MealEntity) -> Unit
 ) {
     var mealName by remember { mutableStateOf("") }
-    var time by remember { mutableStateOf("") }
+    var time by remember { mutableStateOf("12:00") }
+    var showTimePicker by remember { mutableStateOf(false) }
     var currentIngredient by remember { mutableStateOf("") }
     val ingredients = remember { mutableStateListOf<String>() }
     var instructions by remember { mutableStateOf("") }
@@ -87,11 +92,17 @@ fun CreateMealScreen(
             item {
                 OutlinedTextField(
                     value = time,
-                    onValueChange = { time = it },
+                    onValueChange = { /* Read only, changed via picker */ },
                     label = { Text("Meal Time") },
-                    placeholder = { Text("e.g., 1:00 PM / Dinner") },
+                    placeholder = { Text("Set meal time") },
                     modifier = Modifier.fillMaxWidth(),
-                    shape = MaterialTheme.shapes.medium
+                    shape = MaterialTheme.shapes.medium,
+                    readOnly = true,
+                    trailingIcon = {
+                        IconButton(onClick = { showTimePicker = true }) {
+                            Icon(Icons.Default.Add, contentDescription = "Pick Time") // Using Add as clock placeholder if not available
+                        }
+                    }
                 )
             }
 
@@ -239,6 +250,29 @@ fun CreateMealScreen(
                 }
                 Spacer(modifier = Modifier.height(32.dp))
             }
+        }
+
+        if (showTimePicker) {
+            val state = rememberTimePickerState(
+                initialHour = time.split(":")[0].toIntOrNull() ?: 12,
+                initialMinute = time.split(":")[1].toIntOrNull() ?: 0,
+                is24Hour = true
+            )
+            AlertDialog(
+                onDismissRequest = { showTimePicker = false },
+                confirmButton = {
+                    TextButton(onClick = {
+                        time = String.format("%02d:%02d", state.hour, state.minute)
+                        showTimePicker = false
+                    }) { Text("Confirm") }
+                },
+                dismissButton = {
+                    TextButton(onClick = { showTimePicker = false }) { Text("Cancel") }
+                },
+                text = {
+                    TimePicker(state = state)
+                }
+            )
         }
     }
 }

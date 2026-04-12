@@ -31,11 +31,8 @@ fun DashboardScreen(
     meals: List<MealEntity>,
     weights: List<WeightEntity>,
     isMetric: Boolean,
-    onToggleUnit: () -> Unit
+    onNavigateToSettings: () -> Unit
 ) {
-    var showSettings by remember { mutableStateOf(false) }
-    val sheetState = rememberModalBottomSheetState()
-    
     val today = LocalDate.now()
     val dayMapping = mapOf(
         DayOfWeek.MONDAY to "M",
@@ -70,7 +67,7 @@ fun DashboardScreen(
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary
                 )
-                IconButton(onClick = { showSettings = true }) {
+                IconButton(onClick = onNavigateToSettings) {
                     Icon(
                         imageVector = Icons.Filled.Settings,
                         contentDescription = "Settings",
@@ -168,64 +165,6 @@ fun DashboardScreen(
         }
         
         Spacer(modifier = Modifier.height(16.dp))
-        }
-    }
-
-    if (showSettings) {
-        ModalBottomSheet(
-            onDismissRequest = { showSettings = false },
-            sheetState = sheetState,
-            containerColor = MaterialTheme.colorScheme.surface
-        ) {
-            SettingsContent(
-                isMetric = isMetric,
-                onToggleUnit = onToggleUnit
-            )
-        }
-    }
-}
-
-@Composable
-fun SettingsContent(
-    isMetric: Boolean,
-    onToggleUnit: () -> Unit
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(24.dp)
-            .padding(bottom = 32.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
-        Text(
-            text = "App Settings",
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.Bold
-        )
-
-        Divider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
-
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Column {
-                Text(
-                    text = "Unit System",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Medium
-                )
-                Text(
-                    text = if (isMetric) "Metric (kg, cm)" else "Imperial (lbs, in)",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            Switch(
-                checked = isMetric,
-                onCheckedChange = { onToggleUnit() }
-            )
         }
     }
 }

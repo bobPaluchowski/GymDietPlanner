@@ -9,7 +9,9 @@ import com.example.gymdietplanner.data.MealEntity
 import com.example.gymdietplanner.data.WeightEntity
 import com.example.gymdietplanner.data.ExerciseEntity
 import com.example.gymdietplanner.data.rawExercises
+import com.example.gymdietplanner.data.rawExercises
 import com.example.gymdietplanner.data.PreferencesManager
+import com.example.gymdietplanner.notifications.ReminderManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -23,9 +25,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val weightDao = AppDatabase.getDatabase(application).weightDao()
     private val exerciseDao = AppDatabase.getDatabase(application).exerciseDao()
     private val preferencesManager = PreferencesManager(application)
+    private val reminderManager = ReminderManager(application)
 
     private val _isMetric = MutableStateFlow(preferencesManager.isMetric())
     val isMetric: StateFlow<Boolean> = _isMetric.asStateFlow()
+
+    private val _isWorkoutNotificationsEnabled = MutableStateFlow(preferencesManager.isWorkoutNotificationsEnabled())
+    val isWorkoutNotificationsEnabled: StateFlow<Boolean> = _isWorkoutNotificationsEnabled.asStateFlow()
+
+    private val _isMealNotificationsEnabled = MutableStateFlow(preferencesManager.isMealNotificationsEnabled())
+    val isMealNotificationsEnabled: StateFlow<Boolean> = _isMealNotificationsEnabled.asStateFlow()
 
     val routines: StateFlow<List<RoutineEntity>> = routineDao.getAllRoutines()
         .stateIn(
@@ -83,24 +92,28 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun saveRoutine(routine: RoutineEntity) {
         viewModelScope.launch {
             routineDao.insertRoutine(routine)
+            reminderManager.scheduleAll()
         }
     }
 
     fun deleteRoutine(routineId: Int) {
         viewModelScope.launch {
             routineDao.deleteRoutine(routineId)
+            reminderManager.scheduleAll()
         }
     }
 
     fun saveMeal(meal: MealEntity) {
         viewModelScope.launch {
             mealDao.insertMeal(meal)
+            reminderManager.scheduleAll()
         }
     }
 
     fun deleteMeal(mealId: Int) {
         viewModelScope.launch {
             mealDao.deleteMeal(mealId)
+            reminderManager.scheduleAll()
         }
     }
 
@@ -133,5 +146,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val newValue = !_isMetric.value
         preferencesManager.setMetric(newValue)
         _isMetric.value = newValue
+    }
+
+    fun toggleWorkoutNotifications() {
+        val newValue = !_isWorkoutNotificationsEnabled.value
+        preferencesManager.setWorkoutNotificationsEnabled(newValue)
+        _isWorkoutNotificationsEnabled.value = newValue
+        reminderManager.scheduleAll()
+    }
+
+    fun toggleMealNotifications() {
+        val newValue = !_isMealNotificationsEnabled.value
+        preferencesManager.setMealNotificationsEnabled(newValue)
+        _isMealNotificationsEnabled.value = newValue
+        reminderManager.scheduleAll()
     }
 }

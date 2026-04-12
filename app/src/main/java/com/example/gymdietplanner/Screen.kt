@@ -8,6 +8,7 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MonitorWeight
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class Screen(val route: String, val title: String, val icon: ImageVector) {
@@ -24,4 +25,5 @@ sealed class Screen(val route: String, val title: String, val icon: ImageVector)
     object Meals : Screen("meals", "Meals", Icons.Filled.Restaurant)
     object CreateMeal : Screen("create_meal", "New Meal", Icons.Filled.Add)
     object Weight : Screen("weight", "Weight", Icons.Filled.MonitorWeight)
+    object Settings : Screen("settings", "Settings", Icons.Filled.Settings)
 }

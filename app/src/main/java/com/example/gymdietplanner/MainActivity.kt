@@ -26,6 +26,15 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.runtime.collectAsState
 import com.example.gymdietplanner.screens.CreateRoutineScreen
 import com.example.gymdietplanner.screens.CreateMealScreen
+import com.example.gymdietplanner.screens.SettingsScreen
+import androidx.compose.ui.platform.LocalContext
+import androidx.core.content.ContextCompat
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.runtime.LaunchedEffect
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +59,28 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
         Screen.Meals,
         Screen.Weight
     )
+
+    val context = LocalContext.javaClass
+    val localContext = LocalContext.current
+
+    // Notification Permission Request
+    val permissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        // Handle permission result if needed
+    }
+
+    LaunchedEffect(Unit) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            val hasPermission = ContextCompat.checkSelfPermission(
+                localContext,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) == PackageManager.PERMISSION_GRANTED
+            if (!hasPermission) {
+                permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
+        }
+    }
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
@@ -105,7 +136,13 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                 val meals by viewModel.meals.collectAsState()
                 val weights by viewModel.weights.collectAsState()
                 val isMetric by viewModel.isMetric.collectAsState()
-                DashboardScreen(routines, meals, weights, isMetric, onToggleUnit = { viewModel.toggleUnitSystem() }) 
+                DashboardScreen(
+                    routines = routines,
+                    meals = meals,
+                    weights = weights,
+                    isMetric = isMetric,
+                    onNavigateToSettings = { navController.navigate(Screen.Settings.route) }
+                ) 
             }
             composable(Screen.Routines.route) {
                 val routines by viewModel.routines.collectAsState()
@@ -186,6 +223,21 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                     isMetric = isMetric,
                     onSaveWeight = { viewModel.saveWeight(it) },
                     onDeleteWeight = { viewModel.deleteWeight(it.id) }
+                )
+            }
+            composable(Screen.Settings.route) {
+                val isMetric by viewModel.isMetric.collectAsState()
+                val isWorkoutNotifEnabled by viewModel.isWorkoutNotificationsEnabled.collectAsState()
+                val isMealNotifEnabled by viewModel.isMealNotificationsEnabled.collectAsState()
+                
+                SettingsScreen(
+                    isMetric = isMetric,
+                    onToggleMetric = { viewModel.toggleUnitSystem() },
+                    isWorkoutNotifEnabled = isWorkoutNotifEnabled,
+                    onToggleWorkoutNotif = { viewModel.toggleWorkoutNotifications() },
+                    isMealNotifEnabled = isMealNotifEnabled,
+                    onToggleMealNotif = { viewModel.toggleMealNotifications() },
+                    onNavigateBack = { navController.popBackStack() }
                 )
             }
         }
