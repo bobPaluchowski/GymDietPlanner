@@ -21,7 +21,10 @@ val rawExercises = listOf(
         Exercise("Push-up", "Bodyweight"),
         Exercise("Diamond Push-up", "Bodyweight"),
         Exercise("Incline Push-up", "Bench / Elevated Surface"),
-        Exercise("Decline Push-up", "Bench / Elevated Surface")
+        Exercise("Decline Push-up", "Bench / Elevated Surface"),
+        Exercise("Incline Dumbbell Press", "Dumbbell"),
+        Exercise("Dumbbell Chest Flyes", "Dumbbell"),
+        Exercise("Cable Chest Flyes", "Cable")
     )),
     MuscleGroup("Back (Lats, Traps, Rhomboids, Lower Back)", listOf(
         Exercise("Conventional Deadlift", "Barbell"),
@@ -46,7 +49,12 @@ val rawExercises = listOf(
         Exercise("Straight-Arm Pulldown", "Cable"),
         Exercise("Hyperextension", "Bench / 45-degree station"),
         Exercise("Barbell Shrug", "Barbell"),
-        Exercise("Dumbbell Shrug", "Dumbbell")
+        Exercise("Dumbbell Shrug", "Dumbbell"),
+        Exercise("Deadlift", "Barbell"),
+        Exercise("Seated Cable Rows", "Cable"),
+        Exercise("Face Pulls", "Cable"),
+        Exercise("Pull-ups", "Bodyweight"),
+        Exercise("Chin-ups", "Bodyweight")
     )),
     MuscleGroup("Shoulders (Deltoids)", listOf(
         Exercise("Standing Military Press", "Barbell"),
@@ -62,7 +70,9 @@ val rawExercises = listOf(
         Exercise("Rear Delt Dumbbell Fly", "Dumbbell"),
         Exercise("Reverse Pec Deck", "Machine"),
         Exercise("Face Pull", "Cable"),
-        Exercise("Upright Row", "Barbell / EZ-Bar")
+        Exercise("Upright Row", "Barbell / EZ-Bar"),
+        Exercise("Lateral Raises", "Dumbbell"),
+        Exercise("Standing Overhead Press", "Barbell")
     )),
     MuscleGroup("Legs (Quads, Hamstrings, Glutes, Calves)", listOf(
         Exercise("High-Bar Back Squat", "Barbell"),
@@ -85,7 +95,14 @@ val rawExercises = listOf(
         Exercise("Dumbbell Glute Bridge", "Dumbbell"),
         Exercise("Standing Calf Raise", "Machine / Barbell"),
         Exercise("Seated Calf Raise", "Machine"),
-        Exercise("Donkey Calf Raise", "Machine / Partner")
+        Exercise("Donkey Calf Raise", "Machine / Partner"),
+        Exercise("Barbell Back Squats", "Barbell"),
+        Exercise("Romanian Deadlifts", "Barbell / Dumbbell"),
+        Exercise("Leg Curls (Seated or Lying)", "Machine"),
+        Exercise("Standing Calf Raises", "Machine"),
+        Exercise("Goblet Squats", "Dumbbell / Kettlebell"),
+        Exercise("Walking Lunges", "Dumbbell / Barbell"),
+        Exercise("Leg Extensions", "Machine")
     )),
     MuscleGroup("Arms (Biceps & Triceps)", listOf(
         Exercise("Standing Barbell Curl", "Barbell"),
@@ -103,7 +120,11 @@ val rawExercises = listOf(
         Exercise("Cable Tricep Pushdown (Rope)", "Cable"),
         Exercise("Single-Arm Cable Extension", "Cable"),
         Exercise("Tricep Dip", "Bodyweight / Parallel Bars"),
-        Exercise("Bench Dip", "Bench")
+        Exercise("Bench Dip", "Bench"),
+        Exercise("Tricep Rope Pushdowns", "Cable"),
+        Exercise("Dumbbell Hammer Curls", "Dumbbell"),
+        Exercise("Weighted Dips", "Bodyweight / Plate"),
+        Exercise("Incline Bicep Curls", "Dumbbell")
     )),
     MuscleGroup("Core (Abs & Obliques)", listOf(
         Exercise("Hanging Leg Raise", "Pull-up Bar"),
