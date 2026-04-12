@@ -34,6 +34,31 @@ fun WeightScreen(
     val currentDateTime = remember { LocalDateTime.now() }
     val dateFormatter = DateTimeFormatter.ofPattern("MMM dd, yyyy")
     var dateString by remember { mutableStateOf(currentDateTime.format(dateFormatter)) }
+    
+    var weightToDelete by remember { mutableStateOf<WeightEntity?>(null) }
+
+    if (weightToDelete != null) {
+        AlertDialog(
+            onDismissRequest = { weightToDelete = null },
+            title = { Text("Delete log?") },
+            text = { Text("Are you sure you want to delete this weight log? This cannot be undone.") },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        onDeleteWeight(weightToDelete!!)
+                        weightToDelete = null
+                    }
+                ) {
+                    Text("Delete", color = MaterialTheme.colorScheme.error)
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { weightToDelete = null }) {
+                    Text("Cancel")
+                }
+            }
+        )
+    }
 
     Column(
         modifier = Modifier
@@ -156,7 +181,7 @@ fun WeightScreen(
                     WeightLogItem(
                         weight = weight,
                         unitSuffix = unitSuffix,
-                        onDeleteClick = { onDeleteWeight(weight) }
+                        onDeleteClick = { weightToDelete = weight }
                     )
                 }
             }
