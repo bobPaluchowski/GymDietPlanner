@@ -4,6 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import com.example.gymdietplanner.BuildConfig
 
 object RetrofitClient {
     private const val BASE_URL = "https://edb-with-videos-and-images-by-ascendapi.p.rapidapi.com/"
@@ -17,7 +18,7 @@ object RetrofitClient {
         .addInterceptor(logging)
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
-                .addHeader("X-RapidAPI-Key", "REMOVED")
+                .addHeader("X-RapidAPI-Key", BuildConfig.RAPIDAPI_KEY)
                 .addHeader("X-RapidAPI-Host", API_HOST)
                 .build()
             chain.proceed(request)
