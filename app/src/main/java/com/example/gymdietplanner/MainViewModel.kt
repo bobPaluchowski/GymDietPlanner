@@ -11,6 +11,7 @@ import com.example.gymdietplanner.data.ExerciseEntity
 import com.example.gymdietplanner.data.rawExercises
 import com.example.gymdietplanner.data.rawExercises
 import com.example.gymdietplanner.data.PreferencesManager
+import com.example.gymdietplanner.notifications.NotificationHelper
 import com.example.gymdietplanner.notifications.ReminderManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -65,6 +66,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         )
 
     init {
+        // Initialize notification channels as soon as the app starts
+        NotificationHelper(application)
         prepopulateExercises()
     }
 
