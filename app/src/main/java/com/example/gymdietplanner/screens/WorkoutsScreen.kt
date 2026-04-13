@@ -14,8 +14,12 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.background
 import com.example.gymdietplanner.data.Exercise
 import com.example.gymdietplanner.data.ExerciseEntity
-import com.example.gymdietplanner.data.rawExercises
-import com.example.gymdietplanner.utils.getExerciseIcon
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
+import coil.decode.GifDecoder
+import coil.decode.ImageDecoderDecoder
+import android.os.Build
+import androidx.compose.ui.platform.LocalContext
 import kotlinx.coroutines.delay
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -23,7 +27,9 @@ import androidx.compose.material.icons.filled.*
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WorkoutsScreen(
-    exercises: List<ExerciseEntity>,
+    exercises: List<Exercise>,
+    isLoading: Boolean,
+    onSearch: (String) -> Unit,
     onSaveExercise: (String, String, String) -> Unit
 ) {
     var showAddDialog by remember { mutableStateOf(false) }
@@ -58,10 +64,15 @@ fun WorkoutsScreen(
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary
                 )
+                if (isLoading) {
+                    Spacer(modifier = Modifier.width(16.dp))
+                    CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
+                }
             }
 
             ExerciseLibraryList(
                 exercises = exercises,
+                onSearch = onSearch,
                 onExerciseClick = { /* TODO in Workouts tab */ }
             )
         }
@@ -73,7 +84,7 @@ fun WorkoutsScreen(
                     onSaveExercise(name, equipment, category)
                     showAddDialog = false
                 },
-                existingCategories = exercises.map { it.category }.distinct()
+                existingCategories = listOf("Chest", "Back", "Legs", "Shoulders", "Arms", "Core")
             )
         }
     }
@@ -157,24 +168,19 @@ fun AddExerciseDialog(
 
 @Composable
 fun ExerciseLibraryList(
-    exercises: List<ExerciseEntity>,
-    onExerciseClick: (ExerciseEntity) -> Unit
+    exercises: List<Exercise>,
+    onSearch: (String) -> Unit,
+    onExerciseClick: (Exercise) -> Unit
 ) {
     var searchQuery by remember { mutableStateOf("") }
-    var debouncedQuery by remember { mutableStateOf("") }
 
     LaunchedEffect(searchQuery) {
-        delay(300)
-        debouncedQuery = searchQuery
+        delay(500)
+        onSearch(searchQuery)
     }
 
-    val filteredExercises = remember(debouncedQuery, exercises) {
-        val filtered = if (debouncedQuery.isBlank()) {
-            exercises
-        } else {
-            exercises.filter { it.name.contains(debouncedQuery, ignoreCase = true) }
-        }
-        filtered.groupBy { it.category }
+    val groupedExercises = remember(exercises) {
+        exercises.groupBy { it.targetMuscles.firstOrNull() ?: "Other" }
     }
 
     LazyColumn(
@@ -195,7 +201,7 @@ fun ExerciseLibraryList(
             )
         }
 
-        if (filteredExercises.isEmpty()) {
+        if (groupedExercises.isEmpty()) {
             item {
                 Box(
                     modifier = Modifier.fillMaxWidth().padding(32.dp),
@@ -210,7 +216,7 @@ fun ExerciseLibraryList(
             }
         }
 
-        filteredExercises.forEach { (category, categoryExercises) ->
+        groupedExercises.forEach { (category, categoryExercises) ->
             item {
                 Text(
                     text = category,
@@ -234,20 +240,23 @@ fun ExerciseLibraryList(
                             .padding(16.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Surface(
-                            modifier = Modifier.size(40.dp),
-                            shape = CircleShape,
-                            color = MaterialTheme.colorScheme.primaryContainer
-                        ) {
-                            Box(contentAlignment = Alignment.Center) {
-                                Icon(
-                                    imageVector = getExerciseIcon(exercise.iconName),
-                                    contentDescription = null,
-                                    tint = MaterialTheme.colorScheme.onPrimaryContainer,
-                                    modifier = Modifier.size(24.dp)
-                                )
-                            }
+                        val firstImage = exercise.imageUrls.firstOrNull()
+                        val context = LocalContext.current
+                        val imageRequest: ImageRequest = remember(firstImage) {
+                            ImageRequest.Builder(context)
+                                .data(firstImage)
+                                .crossfade(true)
+                                .build()
                         }
+
+                        AsyncImage(
+                            model = imageRequest,
+                            contentDescription = null,
+                            modifier = Modifier
+                                .size(50.dp)
+                                .background(MaterialTheme.colorScheme.primaryContainer, MaterialTheme.shapes.small)
+                                .padding(2.dp)
+                        )
                         
                         Spacer(modifier = Modifier.width(16.dp))
                         
@@ -259,7 +268,7 @@ fun ExerciseLibraryList(
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                             Text(
-                                text = exercise.equipment,
+                                text = exercise.equipments.joinToString(", "),
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
                             )
@@ -268,33 +277,25 @@ fun ExerciseLibraryList(
                 }
             }
         }
-        item {
-            Spacer(modifier = Modifier.height(16.dp))
-        }
     }
 }
 
 @Composable
 fun MultiSelectExerciseList(
-    exercises: List<ExerciseEntity>,
+    exercises: List<Exercise>,
+    onSearch: (String) -> Unit,
     onExercisesSelected: (List<Exercise>) -> Unit
 ) {
-    val selectedItems = remember { mutableStateListOf<ExerciseEntity>() }
+    val selectedItems = remember { mutableStateListOf<Exercise>() }
     var searchQuery by remember { mutableStateOf("") }
-    var debouncedQuery by remember { mutableStateOf("") }
 
     LaunchedEffect(searchQuery) {
-        delay(300)
-        debouncedQuery = searchQuery
+        delay(500)
+        onSearch(searchQuery)
     }
 
-    val filteredExercises = remember(debouncedQuery, exercises) {
-        val filtered = if (debouncedQuery.isBlank()) {
-            exercises
-        } else {
-            exercises.filter { it.name.contains(debouncedQuery, ignoreCase = true) }
-        }
-        filtered.groupBy { it.category }
+    val groupedExercises = remember(exercises) {
+        exercises.groupBy { it.targetMuscles.firstOrNull() ?: "Other" }
     }
     
     Box(modifier = Modifier.fillMaxSize()) {
@@ -316,7 +317,7 @@ fun MultiSelectExerciseList(
                 )
             }
 
-            if (filteredExercises.isEmpty()) {
+            if (groupedExercises.isEmpty()) {
                 item {
                     Box(
                         modifier = Modifier.fillMaxWidth().padding(32.dp),
@@ -331,7 +332,7 @@ fun MultiSelectExerciseList(
                 }
             }
 
-            filteredExercises.forEach { (category, categoryExercises) ->
+            groupedExercises.forEach { (category, categoryExercises) ->
                 item {
                     Text(
                         text = category,
@@ -342,40 +343,54 @@ fun MultiSelectExerciseList(
                 }
 
                 items(categoryExercises) { exercise ->
-                    val isSelected = selectedItems.contains(exercise)
+                    val isSelected = selectedItems.any { it.exerciseId == exercise.exerciseId }
                     val cardBackgroundColor = if (isSelected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surface
                     
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clickable {
-                                if (isSelected) selectedItems.remove(exercise) else selectedItems.add(exercise)
+                                if (isSelected) {
+                                    selectedItems.removeAll { it.exerciseId == exercise.exerciseId }
+                                } else {
+                                    selectedItems.add(exercise)
+                                }
                             }
                             .background(cardBackgroundColor)
                             .padding(16.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Surface(
-                            modifier = Modifier.size(40.dp),
-                            shape = CircleShape,
-                            color = if (isSelected) MaterialTheme.colorScheme.surface else MaterialTheme.colorScheme.surfaceVariant
-                        ) {
-                            Box(contentAlignment = Alignment.Center) {
-                                if (isSelected) {
+                        val context = LocalContext.current
+                        if (isSelected) {
+                             Surface(
+                                modifier = Modifier.size(50.dp),
+                                shape = CircleShape,
+                                color = MaterialTheme.colorScheme.surface
+                            ) {
+                                Box(contentAlignment = Alignment.Center) {
                                     Icon(
                                         imageVector = Icons.Filled.Check,
                                         contentDescription = "Selected",
                                         tint = MaterialTheme.colorScheme.onSurface
                                     )
-                                } else {
-                                    Icon(
-                                        imageVector = getExerciseIcon(exercise.iconName),
-                                        contentDescription = null,
-                                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                                        modifier = Modifier.size(24.dp)
-                                    )
                                 }
                             }
+                        } else {
+                            val firstImage = exercise.imageUrls.firstOrNull()
+                            val imageRequest: ImageRequest = remember(firstImage) {
+                                ImageRequest.Builder(context)
+                                    .data(firstImage)
+                                    .crossfade(true)
+                                    .build()
+                            }
+                            AsyncImage(
+                                model = imageRequest,
+                                contentDescription = null,
+                                modifier = Modifier
+                                    .size(50.dp)
+                                    .background(MaterialTheme.colorScheme.surfaceVariant, MaterialTheme.shapes.small)
+                                    .padding(2.dp)
+                            )
                         }
                         
                         Spacer(modifier = Modifier.width(16.dp))
@@ -388,7 +403,7 @@ fun MultiSelectExerciseList(
                                 color = MaterialTheme.colorScheme.onSurface
                             )
                             Text(
-                                text = exercise.equipment,
+                                text = exercise.equipments.joinToString(", "),
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
                             )
@@ -397,16 +412,13 @@ fun MultiSelectExerciseList(
                 }
             }
             item {
-                Spacer(modifier = Modifier.height(80.dp)) // Extra padding for the FAB
+                Spacer(modifier = Modifier.height(80.dp))
             }
         }
         
         if (selectedItems.isNotEmpty()) {
             FloatingActionButton(
-                onClick = { 
-                    // Convert ExerciseEntity to legacy Exercise model for compatibility with RoutineEntity JSON storage
-                    onExercisesSelected(selectedItems.map { Exercise(it.name, it.equipment, it.iconName) }) 
-                },
+                onClick = { onExercisesSelected(selectedItems.toList()) },
                 modifier = Modifier
                     .align(Alignment.BottomEnd)
                     .padding(16.dp),

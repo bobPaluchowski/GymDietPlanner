@@ -4,11 +4,20 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowBack
+import com.example.gymdietplanner.data.RoutineEntity
+import com.example.gymdietplanner.data.RoutineExercise
+import com.example.gymdietplanner.data.WorkoutSet
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import com.example.gymdietplanner.data.Exercise
+import com.example.gymdietplanner.data.ExerciseEntity
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -16,16 +25,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.gymdietplanner.data.Exercise
-import com.example.gymdietplanner.data.RoutineEntity
-import com.example.gymdietplanner.data.RoutineExercise
-import com.example.gymdietplanner.data.WorkoutSet
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.slideInVertically
-import androidx.compose.animation.slideOutVertically
-import com.example.gymdietplanner.data.ExerciseEntity
-import kotlinx.coroutines.launch
-import com.example.gymdietplanner.utils.getExerciseIcon
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
+import coil.decode.GifDecoder
+import coil.decode.ImageDecoderDecoder
+import android.os.Build
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -34,7 +41,9 @@ fun CreateRoutineScreen(
     onSaveRoutine: (RoutineEntity) -> Unit,
     routine: RoutineEntity? = null,
     isMetric: Boolean,
-    exercises: List<ExerciseEntity>
+    exercises: List<Exercise>,
+    isLoading: Boolean,
+    onSearch: (String) -> Unit
 ) {
     val unitSuffix = if (isMetric) "kg" else "lbs"
     var routineName by remember { mutableStateOf(routine?.name ?: "") }
@@ -65,7 +74,7 @@ fun CreateRoutineScreen(
                 title = { Text(if (routine == null) "Create Routine" else "Edit Routine") },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -124,24 +133,32 @@ fun CreateRoutineScreen(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Surface(
-                                        modifier = Modifier.size(32.dp),
-                                        shape = CircleShape,
-                                        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.6f)
-                                    ) {
-                                        Box(contentAlignment = Alignment.Center) {
-                                            Icon(
-                                                imageVector = getExerciseIcon(routineExercise.exercise.iconName),
-                                                contentDescription = null,
-                                                modifier = Modifier.size(18.dp),
-                                                tint = MaterialTheme.colorScheme.onPrimaryContainer
-                                            )
-                                        }
+                                    val context = LocalContext.current
+                                    val fullExercise = exercises.find { it.exerciseId == routineExercise.exerciseId }
+                                    val firstImage = fullExercise?.imageUrls?.firstOrNull()
+                                    
+                                    val imageRequest: ImageRequest = remember(firstImage) {
+                                        ImageRequest.Builder(context)
+                                            .data(firstImage)
+                                            .crossfade(true)
+                                            .build()
                                     }
+
+                                    AsyncImage(
+                                        model = imageRequest,
+                                        contentDescription = null,
+                                        modifier = Modifier
+                                            .size(32.dp)
+                                            .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.6f), CircleShape)
+                                            .padding(2.dp)
+                                    )
                                     Spacer(modifier = Modifier.width(12.dp))
                                     Column {
-                                        Text(text = routineExercise.exercise.name, fontWeight = FontWeight.Bold)
-                                        Text(text = routineExercise.exercise.equipment, style = MaterialTheme.typography.bodySmall)
+                                        Text(text = routineExercise.exerciseName, fontWeight = FontWeight.Bold)
+                                        Text(
+                                            text = fullExercise?.equipments?.joinToString(", ") ?: "Body Weight", 
+                                            style = MaterialTheme.typography.bodySmall
+                                        )
                                     }
                                 }
                                 IconButton(onClick = { selectedExercises.remove(routineExercise) }) {
@@ -294,7 +311,7 @@ fun CreateRoutineScreen(
                         title = { Text("Select Workouts") },
                         navigationIcon = {
                             IconButton(onClick = { showSelectionScreen = false }) {
-                                Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
+                                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                             }
                         },
                         colors = TopAppBarDefaults.topAppBarColors(
@@ -311,8 +328,11 @@ fun CreateRoutineScreen(
                 ) {
                     MultiSelectExerciseList(
                         exercises = exercises,
+                        onSearch = onSearch,
                         onExercisesSelected = { selected ->
-                            val mappedExercises = selected.map { RoutineExercise(exercise = it) }
+                            val mappedExercises = selected.map { 
+                                RoutineExercise(exerciseId = it.exerciseId, exerciseName = it.name) 
+                            }
                             selectedExercises.addAll(mappedExercises)
                             showSelectionScreen = false
                         }

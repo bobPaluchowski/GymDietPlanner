@@ -5,10 +5,14 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "exercises")
 data class ExerciseEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @PrimaryKey val exerciseId: String,
     val name: String,
-    val equipment: String,
-    val category: String,
-    val isCustom: Boolean = false,
-    val iconName: String? = null
+    val targetMuscles: List<String> = emptyList(),
+    val secondaryMuscles: List<String> = emptyList(),
+    val muscles: List<String> = emptyList(),
+    val equipments: List<String> = emptyList(),
+    val imageUrls: List<String> = emptyList(),
+    val videoUrls: List<String> = emptyList(),
+    val instructions: List<String> = emptyList(),
+    val isCustom: Boolean = true
 )

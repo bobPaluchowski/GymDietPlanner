@@ -20,11 +20,21 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.gymdietplanner.data.RoutineEntity
-import com.example.gymdietplanner.utils.getExerciseIcon
+import com.example.gymdietplanner.data.Exercise
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
+import coil.decode.GifDecoder
+import coil.decode.ImageDecoderDecoder
+import android.os.Build
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 
 @Composable
 fun RoutineSessionScreen(
     routine: RoutineEntity?,
+    library: List<Exercise>,
     onNavigateBack: () -> Unit,
     isMetric: Boolean
 ) {
@@ -94,48 +104,50 @@ fun RoutineSessionScreen(
                                 .then(if (isDone) Modifier.blur(12.dp) else Modifier),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            // Image Placeholder
-                            Surface(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .height(200.dp)
-                                    .padding(bottom = 16.dp),
-                                shape = MaterialTheme.shapes.medium,
-                                color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
-                            ) {
-                                Box(contentAlignment = Alignment.Center) {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Icon(
-                                            imageVector = getExerciseIcon(exercise.exercise.iconName),
-                                            contentDescription = null,
-                                            modifier = Modifier.size(80.dp),
-                                            tint = MaterialTheme.colorScheme.primary
-                                        )
-                                        Spacer(modifier = Modifier.height(8.dp))
-                                        Text(
-                                            text = exercise.exercise.equipment,
-                                            style = MaterialTheme.typography.labelLarge,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
-                                        )
-                                    }
-                                }
+                            // Large Exercise Image
+                            val fullExercise = library.find { it.exerciseId == exercise.exerciseId }
+                            val firstImage = fullExercise?.imageUrls?.firstOrNull()
+                            
+                            val context = LocalContext.current
+                            val imageRequest: ImageRequest = remember(firstImage) {
+                                ImageRequest.Builder(context)
+                                    .data(firstImage)
+                                    .crossfade(true)
+                                    .build()
                             }
 
+                            Card(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(220.dp),
+                                shape = MaterialTheme.shapes.medium,
+                                colors = CardDefaults.cardColors(containerColor = Color.White)
+                            ) {
+                                AsyncImage(
+                                    model = imageRequest,
+                                    contentDescription = null,
+                                    modifier = Modifier.fillMaxSize()
+                                )
+                            }
+                            
+                            Spacer(modifier = Modifier.height(16.dp))
+
                             Text(
-                                text = exercise.exercise.name,
-                                style = MaterialTheme.typography.headlineMedium,
+                                text = fullExercise?.name ?: exercise.exerciseName,
+                                style = MaterialTheme.typography.headlineSmall,
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.onSecondaryContainer,
                                 textAlign = TextAlign.Center
                             )
                             
                             Text(
-                                text = exercise.exercise.equipment,
-                                style = MaterialTheme.typography.bodyLarge,
-                                color = MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = 0.7f)
+                                text = (fullExercise?.equipments?.joinToString(", ") ?: "Target: ${fullExercise?.targetMuscles?.joinToString(", ") ?: "" }").uppercase(),
+                                style = MaterialTheme.typography.labelMedium,
+                                color = MaterialTheme.colorScheme.primary,
+                                fontWeight = FontWeight.Bold
                             )
 
-                            Spacer(modifier = Modifier.height(24.dp))
+                            Spacer(modifier = Modifier.height(16.dp))
 
                             // Stats Summary Row
                             Row(
@@ -144,55 +156,61 @@ fun RoutineSessionScreen(
                             ) {
                                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                     Text("SETS", style = MaterialTheme.typography.labelSmall)
-                                    Text(
-                                        "${exercise.sets.size}",
-                                        style = MaterialTheme.typography.titleLarge,
-                                        fontWeight = FontWeight.Bold
-                                    )
+                                    Text("${exercise.sets.size}", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                                 }
                                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                     Text("WEIGHT ($unitSuffix)", style = MaterialTheme.typography.labelSmall)
-                                    Text(
-                                        exercise.sets.firstOrNull()?.weight?.ifBlank { "-" } ?: "-",
-                                        style = MaterialTheme.typography.titleLarge,
-                                        fontWeight = FontWeight.Bold
-                                    )
+                                    Text(exercise.sets.firstOrNull()?.weight?.ifBlank { "-" } ?: "-", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                                 }
                                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                     Text("REPS", style = MaterialTheme.typography.labelSmall)
-                                    Text(
-                                        exercise.sets.firstOrNull()?.reps?.ifBlank { "-" } ?: "-",
-                                        style = MaterialTheme.typography.titleLarge,
-                                        fontWeight = FontWeight.Bold
-                                    )
+                                    Text(exercise.sets.firstOrNull()?.reps?.ifBlank { "-" } ?: "-", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                                 }
                             }
 
-                            Spacer(modifier = Modifier.height(24.dp))
+                            Spacer(modifier = Modifier.height(16.dp))
 
-                            // Detailed Sets View
-                            Text(
-                                "Target Sets",
-                                style = MaterialTheme.typography.titleSmall,
-                                modifier = Modifier.align(Alignment.Start).padding(bottom = 8.dp)
-                            )
-                            
-                            LazyColumn(
+                            // Scrollable Instructions & Sets
+                            Column(
                                 modifier = Modifier
-                                    .fillMaxWidth()
-                                    .weight(1f),
-                                verticalArrangement = Arrangement.spacedBy(4.dp)
+                                    .weight(1f)
+                                    .verticalScroll(rememberScrollState())
                             ) {
-                                items(exercise.sets.size) { index ->
-                                    val set = exercise.sets[index]
+                                if (fullExercise != null && fullExercise.instructions.isNotEmpty()) {
+                                    Text(
+                                        "Instructions",
+                                        style = MaterialTheme.typography.titleSmall,
+                                        fontWeight = FontWeight.Bold,
+                                        modifier = Modifier.padding(bottom = 4.dp)
+                                    )
+                                    fullExercise.instructions.forEachIndexed { index, step ->
+                                        Text(
+                                            text = "${index + 1}. $step",
+                                            style = MaterialTheme.typography.bodySmall,
+                                            modifier = Modifier.padding(bottom = 4.dp),
+                                            color = MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = 0.8f)
+                                        )
+                                    }
+                                    Spacer(modifier = Modifier.height(16.dp))
+                                }
+
+                                Text(
+                                    "Target Sets",
+                                    style = MaterialTheme.typography.titleSmall,
+                                    fontWeight = FontWeight.Bold,
+                                    modifier = Modifier.padding(bottom = 8.dp)
+                                )
+                                
+                                exercise.sets.forEachIndexed { index, set ->
                                     Row(
                                         modifier = Modifier
                                             .fillMaxWidth()
+                                            .padding(vertical = 4.dp)
                                             .background(
                                                 MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
                                                 MaterialTheme.shapes.small
                                             )
-                                            .padding(8.dp),
+                                            .padding(12.dp),
                                         horizontalArrangement = Arrangement.SpaceBetween
                                     ) {
                                         Text("Set ${index + 1}", fontWeight = FontWeight.Medium)
