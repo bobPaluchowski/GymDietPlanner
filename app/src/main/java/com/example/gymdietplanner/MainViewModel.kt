@@ -68,6 +68,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     init {
         // Initialize notification channels as soon as the app starts
         NotificationHelper(application)
+        reminderManager.scheduleAll()
         prepopulateExercises()
     }
 

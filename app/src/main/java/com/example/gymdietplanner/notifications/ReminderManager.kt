@@ -10,6 +10,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import android.util.Log
+import android.os.Build
 import java.time.*
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -22,6 +24,7 @@ class ReminderManager(private val context: Context) {
 
     fun scheduleAll() {
         scope.launch {
+            Log.d("ReminderManager", "Scheduling all reminders...")
             if (prefs.isWorkoutNotificationsEnabled()) {
                 scheduleWorkoutReminder()
             } else {
@@ -84,24 +87,8 @@ class ReminderManager(private val context: Context) {
 
     private suspend fun scheduleMealReminders() {
         val meals = db.mealDao().getAllMeals().first()
-        val today = LocalDate.now()
-        val dayOfWeek = today.dayOfWeek.getDisplayName(java.time.format.TextStyle.SHORT, Locale.ENGLISH).take(2) 
-        // Note: Routine days are "M", "T", "W", "Th", "F", "S", "Su"
-        // I need a mapper for these.
-        
-        val dayMapper = mapOf(
-            DayOfWeek.MONDAY to "M",
-            DayOfWeek.TUESDAY to "T",
-            DayOfWeek.WEDNESDAY to "W",
-            DayOfWeek.THURSDAY to "Th",
-            DayOfWeek.FRIDAY to "F",
-            DayOfWeek.SATURDAY to "S",
-            DayOfWeek.SUNDAY to "Su"
-        )
-
         meals.forEach { meal ->
             meal.days.forEach { day ->
-                // For simplicity, we schedule the next occurrence of this meal
                 scheduleSpecificMealAlarm(meal.id, meal.name, meal.time, day)
             }
         }
@@ -113,9 +100,7 @@ class ReminderManager(private val context: Context) {
             putExtra("meal_name", name)
         }
         
-        // Use meal ID + day hash as request code for uniqueness
-        val requestCode = mealId * 10 + dayStr.hashCode()
-        
+        val requestCode = mealId * 10000 + dayStr.hashCode()
         val pendingIntent = PendingIntent.getBroadcast(
             context,
             requestCode,
@@ -124,13 +109,12 @@ class ReminderManager(private val context: Context) {
         )
 
         try {
-            val time = LocalTime.parse(timeStr, DateTimeFormatter.ofPattern("HH:mm"))
-            val alarmTime = time.minusMinutes(30)
-            
+            val mealTime = LocalTime.parse(timeStr, DateTimeFormatter.ofPattern("HH:mm"))
             val now = LocalDateTime.now()
-            var targetDateTime = LocalDateTime.of(LocalDate.now(), alarmTime)
             
-            // Adjust to the correct day
+            // Start with today's date and the meal time
+            var mealDateTime = LocalDateTime.of(LocalDate.now(), mealTime)
+            
             val dayMapper = mapOf(
                 "M" to DayOfWeek.MONDAY,
                 "T" to DayOfWeek.TUESDAY,
@@ -142,25 +126,53 @@ class ReminderManager(private val context: Context) {
             )
             
             val targetDay = dayMapper[dayStr] ?: DayOfWeek.MONDAY
-            while (targetDateTime.dayOfWeek != targetDay || targetDateTime.isBefore(now)) {
-                targetDateTime = targetDateTime.plusDays(1)
+            
+            // Logic: Find the next occurrence where (meal time - 30 mins) is in the future
+            while (mealDateTime.dayOfWeek != targetDay || mealDateTime.minusMinutes(30).isBefore(now)) {
+                mealDateTime = mealDateTime.plusDays(1)
             }
 
-            val triggerAtMillis = targetDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
+            val alarmDateTime = mealDateTime.minusMinutes(30)
+            val triggerAtMillis = alarmDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
             
-            alarmManager.setExactAndAllowWhileIdle(
-                AlarmManager.RTC_WAKEUP,
-                triggerAtMillis,
-                pendingIntent
-            )
+            Log.d("ReminderManager", "Scheduling meal $name ($dayStr at $timeStr) for alarm at ${alarmDateTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)}")
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                if (alarmManager.canScheduleExactAlarms()) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAtMillis, pendingIntent)
+                } else {
+                    alarmManager.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAtMillis, pendingIntent)
+                }
+            } else {
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAtMillis, pendingIntent)
+            }
         } catch (e: Exception) {
-            // Log parsing error or ignore invalid time formats for now
+            Log.e("ReminderManager", "Error scheduling meal alarm: ${e.message}", e)
         }
     }
 
-    private fun cancelMealReminders() {
-        // This is tricky without knowing all request codes. 
-        // Usually we'd store scheduled IDs or use a shared action and filter.
-        // For now, let's assume scheduleAll handles the logic properly.
+    private suspend fun cancelMealReminders() {
+        Log.d("ReminderManager", "Cancelling all meal reminders...")
+        val meals = db.mealDao().getAllMeals().first()
+        val days = listOf("M", "T", "W", "Th", "F", "S", "Su")
+        
+        meals.forEach { meal ->
+            days.forEach { day ->
+                val requestCode = meal.id * 10000 + day.hashCode()
+                val intent = Intent(context, AlarmReceiver::class.java).apply {
+                    action = AlarmReceiver.ACTION_MEAL_REMINDER
+                }
+                val pendingIntent = PendingIntent.getBroadcast(
+                    context,
+                    requestCode,
+                    intent,
+                    PendingIntent.FLAG_NO_CREATE or PendingIntent.FLAG_IMMUTABLE
+                )
+                if (pendingIntent != null) {
+                    alarmManager.cancel(pendingIntent)
+                    pendingIntent.cancel()
+                }
+            }
+        }
     }
 }
