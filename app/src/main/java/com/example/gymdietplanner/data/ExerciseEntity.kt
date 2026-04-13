@@ -9,5 +9,6 @@ data class ExerciseEntity(
     val name: String,
     val equipment: String,
     val category: String,
-    val isCustom: Boolean = false
+    val isCustom: Boolean = false,
+    val iconName: String? = null
 )

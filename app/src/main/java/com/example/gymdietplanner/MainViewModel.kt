@@ -83,6 +83,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                                 name = ex.name,
                                 equipment = ex.equipment,
                                 category = muscleGroup.name,
+                                iconName = ex.iconName,
                                 isCustom = false
                             )
                         )

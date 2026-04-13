@@ -25,6 +25,7 @@ import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import com.example.gymdietplanner.data.ExerciseEntity
 import kotlinx.coroutines.launch
+import com.example.gymdietplanner.utils.getExerciseIcon
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -122,9 +123,26 @@ fun CreateRoutineScreen(
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Column {
-                                    Text(text = routineExercise.exercise.name, fontWeight = FontWeight.Bold)
-                                    Text(text = routineExercise.exercise.equipment, style = MaterialTheme.typography.bodySmall)
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Surface(
+                                        modifier = Modifier.size(32.dp),
+                                        shape = CircleShape,
+                                        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.6f)
+                                    ) {
+                                        Box(contentAlignment = Alignment.Center) {
+                                            Icon(
+                                                imageVector = getExerciseIcon(routineExercise.exercise.iconName),
+                                                contentDescription = null,
+                                                modifier = Modifier.size(18.dp),
+                                                tint = MaterialTheme.colorScheme.onPrimaryContainer
+                                            )
+                                        }
+                                    }
+                                    Spacer(modifier = Modifier.width(12.dp))
+                                    Column {
+                                        Text(text = routineExercise.exercise.name, fontWeight = FontWeight.Bold)
+                                        Text(text = routineExercise.exercise.equipment, style = MaterialTheme.typography.bodySmall)
+                                    }
                                 }
                                 IconButton(onClick = { selectedExercises.remove(routineExercise) }) {
                                     Icon(Icons.Filled.Delete, contentDescription = "Remove")

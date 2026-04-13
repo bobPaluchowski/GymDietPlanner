@@ -1,15 +1,13 @@
 package com.example.gymdietplanner.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.FitnessCenter
-import androidx.compose.material.icons.filled.Restaurant
-import androidx.compose.material.icons.filled.Scale
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -31,7 +29,8 @@ fun DashboardScreen(
     meals: List<MealEntity>,
     weights: List<WeightEntity>,
     isMetric: Boolean,
-    onNavigateToSettings: () -> Unit
+    onNavigateToSettings: () -> Unit,
+    onRoutineClick: (Int) -> Unit
 ) {
     val today = LocalDate.now()
     val dayMapping = mapOf(
@@ -69,9 +68,9 @@ fun DashboardScreen(
                 )
                 IconButton(onClick = onNavigateToSettings) {
                     Icon(
-                        imageVector = Icons.Filled.Settings,
+                        imageVector = Icons.Default.Settings,
                         contentDescription = "Settings",
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                         tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
@@ -138,9 +137,12 @@ fun DashboardScreen(
             DashboardSummaryCard(
                 title = "Routine",
                 content = if (todaysRoutines.isEmpty()) "Rest Day" else todaysRoutines.joinToString(", ") { it.name },
-                icon = Icons.Filled.FitnessCenter,
+                icon = Icons.Default.FitnessCenter,
                 containerColor = MaterialTheme.colorScheme.secondaryContainer,
-                contentColor = MaterialTheme.colorScheme.onSecondaryContainer
+                contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
+                onClick = todaysRoutines.firstOrNull()?.let { routine ->
+                    { onRoutineClick(routine.id) }
+                }
             )
 
             // Meals Card
@@ -148,7 +150,7 @@ fun DashboardScreen(
             DashboardSummaryCard(
                 title = "Nutrition",
                 content = if (todaysMeals.isEmpty()) "No meals planned" else "${todaysMeals.size} Meals Planned",
-                icon = Icons.Filled.Restaurant,
+                icon = Icons.Default.Restaurant,
                 containerColor = MaterialTheme.colorScheme.tertiaryContainer,
                 contentColor = MaterialTheme.colorScheme.onTertiaryContainer
             )
@@ -159,7 +161,7 @@ fun DashboardScreen(
             DashboardSummaryCard(
                 title = "Latest Weight",
                 content = latestWeight?.let { "${it.weight} $unitSuffix - ${it.date}" } ?: "Not logged yet",
-                icon = Icons.Filled.Scale,
+                icon = Icons.Default.Scale,
                 containerColor = MaterialTheme.colorScheme.surfaceVariant,
                 contentColor = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -176,47 +178,64 @@ fun DashboardSummaryCard(
     content: String,
     icon: ImageVector,
     containerColor: androidx.compose.ui.graphics.Color,
-    contentColor: androidx.compose.ui.graphics.Color
+    contentColor: androidx.compose.ui.graphics.Color,
+    onClick: (() -> Unit)? = null
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = containerColor),
         shape = MaterialTheme.shapes.large
     ) {
-        Row(
+        Surface(
+            color = androidx.compose.ui.graphics.Color.Transparent,
             modifier = Modifier
-                .padding(20.dp)
-                .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
+                .fillMaxWidth()
+                .then(if (onClick != null) Modifier.clickable { onClick() } else Modifier)
         ) {
-            Surface(
-                shape = CircleShape,
-                color = contentColor.copy(alpha = 0.15f),
-                modifier = Modifier.size(48.dp)
+            Row(
+                modifier = Modifier
+                    .padding(20.dp)
+                    .fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Box(contentAlignment = Alignment.Center) {
-                    Icon(
-                        imageVector = icon,
-                        contentDescription = null,
-                        tint = contentColor,
-                        modifier = Modifier.size(24.dp)
+                Surface(
+                    shape = CircleShape,
+                    color = contentColor.copy(alpha = 0.15f),
+                    modifier = Modifier.size(48.dp)
+                ) {
+                    Box(contentAlignment = Alignment.Center) {
+                        Icon(
+                            imageVector = icon,
+                            contentDescription = null,
+                            tint = contentColor,
+                            modifier = Modifier.size(24.dp)
+                        )
+                    }
+                }
+                
+                Spacer(modifier = Modifier.width(16.dp))
+
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.labelLarge,
+                        color = contentColor.copy(alpha = 0.7f)
+                    )
+                    Text(
+                        text = content,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = contentColor
                     )
                 }
-            }
-            
-            Column {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.labelLarge,
-                    color = contentColor.copy(alpha = 0.7f)
-                )
-                Text(
-                    text = content,
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = contentColor
-                )
+
+                if (onClick != null) {
+                    Icon(
+                        imageVector = Icons.Default.ChevronRight,
+                        contentDescription = "Navigate",
+                        tint = contentColor.copy(alpha = 0.5f)
+                    )
+                }
             }
         }
     }

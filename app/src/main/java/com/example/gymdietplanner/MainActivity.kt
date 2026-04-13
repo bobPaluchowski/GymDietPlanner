@@ -141,7 +141,10 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                     meals = meals,
                     weights = weights,
                     isMetric = isMetric,
-                    onNavigateToSettings = { navController.navigate(Screen.Settings.route) }
+                    onNavigateToSettings = { navController.navigate(Screen.Settings.route) },
+                    onRoutineClick = { routineId ->
+                        navController.navigate(Screen.RoutineSession.createRoute(routineId))
+                    }
                 ) 
             }
             composable(Screen.Routines.route) {

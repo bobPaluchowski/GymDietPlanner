@@ -1,21 +1,26 @@
 package com.example.gymdietplanner.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.FitnessCenter
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.draw.blur
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.gymdietplanner.data.RoutineEntity
+import com.example.gymdietplanner.utils.getExerciseIcon
 
 @Composable
 fun RoutineSessionScreen(
@@ -46,6 +51,7 @@ fun RoutineSessionScreen(
     }
 
     val pagerState = rememberPagerState(pageCount = { exercises.size })
+    val completedExerciseIndices = remember { mutableStateListOf<Int>() }
 
     // No App Bar or Bottom Navigation to make it fully immersive
     Box(modifier = Modifier
@@ -79,10 +85,13 @@ fun RoutineSessionScreen(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
+                        val isDone = completedExerciseIndices.contains(page)
+                        
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .padding(16.dp),
+                                .padding(16.dp)
+                                .then(if (isDone) Modifier.blur(12.dp) else Modifier),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
                             // Image Placeholder
@@ -97,15 +106,16 @@ fun RoutineSessionScreen(
                                 Box(contentAlignment = Alignment.Center) {
                                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                         Icon(
-                                            imageVector = Icons.Filled.FitnessCenter,
+                                            imageVector = getExerciseIcon(exercise.exercise.iconName),
                                             contentDescription = null,
-                                            modifier = Modifier.size(48.dp),
-                                            tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
+                                            modifier = Modifier.size(80.dp),
+                                            tint = MaterialTheme.colorScheme.primary
                                         )
+                                        Spacer(modifier = Modifier.height(8.dp))
                                         Text(
-                                            "Image Placeholder",
-                                            style = MaterialTheme.typography.bodySmall,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
+                                            text = exercise.exercise.equipment,
+                                            style = MaterialTheme.typography.labelLarge,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
                                         )
                                     }
                                 }
@@ -168,7 +178,9 @@ fun RoutineSessionScreen(
                             )
                             
                             LazyColumn(
-                                modifier = Modifier.fillMaxWidth(),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .weight(1f),
                                 verticalArrangement = Arrangement.spacedBy(4.dp)
                             ) {
                                 items(exercise.sets.size) { index ->
@@ -187,6 +199,38 @@ fun RoutineSessionScreen(
                                         Text("${set.weight.ifBlank { "0" }} $unitSuffix x ${set.reps.ifBlank { "0" }}")
                                     }
                                 }
+                            }
+
+                            Button(
+                                onClick = {
+                                    if (isDone) completedExerciseIndices.remove(page)
+                                    else completedExerciseIndices.add(page)
+                                },
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(top = 16.dp),
+                                colors = if (isDone) ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.tertiary)
+                                         else ButtonDefaults.buttonColors()
+                            ) {
+                                Text(if (isDone) "UNDO DONE" else "MARK DONE")
+                            }
+                        }
+
+                        // Completion Overlay
+                        if (completedExerciseIndices.contains(page)) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.6f))
+                                    .clickable { completedExerciseIndices.remove(page) },
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Filled.CheckCircle,
+                                    contentDescription = "Completed",
+                                    modifier = Modifier.size(120.dp),
+                                    tint = MaterialTheme.colorScheme.primary
+                                )
                             }
                         }
                     }
