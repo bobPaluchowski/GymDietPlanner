@@ -155,9 +155,10 @@ fun DashboardScreen(
 
             // Weight Card
             val latestWeight = weights.firstOrNull()
+            val unitSuffix = if (isMetric) "kg" else "lbs"
             DashboardSummaryCard(
                 title = "Latest Weight",
-                content = latestWeight?.let { "${it.weight} - ${it.date}" } ?: "Not logged yet",
+                content = latestWeight?.let { "${it.weight} $unitSuffix - ${it.date}" } ?: "Not logged yet",
                 icon = Icons.Filled.Scale,
                 containerColor = MaterialTheme.colorScheme.surfaceVariant,
                 contentColor = MaterialTheme.colorScheme.onSurfaceVariant

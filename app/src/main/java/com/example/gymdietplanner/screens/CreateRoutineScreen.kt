@@ -106,85 +106,83 @@ fun CreateRoutineScreen(
             }
 
             // Display added exercises
-            if (selectedExercises.isNotEmpty()) {
-                LazyColumn(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(1f, fill = false),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    items(selectedExercises.toList()) { routineExercise ->
-                        Card(
-                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-                        ) {
-                            Column(modifier = Modifier.fillMaxWidth().padding(12.dp)) {
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                items(selectedExercises.toList()) { routineExercise ->
+                    Card(
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+                    ) {
+                        Column(modifier = Modifier.fillMaxWidth().padding(12.dp)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Column {
+                                    Text(text = routineExercise.exercise.name, fontWeight = FontWeight.Bold)
+                                    Text(text = routineExercise.exercise.equipment, style = MaterialTheme.typography.bodySmall)
+                                }
+                                IconButton(onClick = { selectedExercises.remove(routineExercise) }) {
+                                    Icon(Icons.Filled.Delete, contentDescription = "Remove")
+                                }
+                            }
+                            
+                            Spacer(modifier = Modifier.height(8.dp))
+                            
+                            routineExercise.sets.forEachIndexed { index, set ->
                                 Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                                    horizontalArrangement = Arrangement.SpaceEvenly,
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    Column {
-                                        Text(text = routineExercise.exercise.name, fontWeight = FontWeight.Bold)
-                                        Text(text = routineExercise.exercise.equipment, style = MaterialTheme.typography.bodySmall)
-                                    }
-                                    IconButton(onClick = { selectedExercises.remove(routineExercise) }) {
-                                        Icon(Icons.Filled.Delete, contentDescription = "Remove")
-                                    }
+                                    Text("Set ${index + 1}", modifier = Modifier.weight(1f))
+                                    
+                                    OutlinedTextField(
+                                        value = set.weight,
+                                        onValueChange = { newWeight -> 
+                                            val updatedSet = set.copy(weight = newWeight)
+                                            val newSets = routineExercise.sets.toMutableList()
+                                            newSets[index] = updatedSet
+                                            val newRoutineExercise = routineExercise.copy(sets = newSets)
+                                            val itemIndex = selectedExercises.indexOf(routineExercise)
+                                            if(itemIndex != -1) selectedExercises[itemIndex] = newRoutineExercise
+                                        },
+                                        label = { Text(unitSuffix) },
+                                        modifier = Modifier.weight(1f).padding(end = 8.dp),
+                                        singleLine = true
+                                    )
+                                    
+                                    OutlinedTextField(
+                                        value = set.reps,
+                                        onValueChange = { newReps -> 
+                                            val updatedSet = set.copy(reps = newReps)
+                                            val newSets = routineExercise.sets.toMutableList()
+                                            newSets[index] = updatedSet
+                                            val newRoutineExercise = routineExercise.copy(sets = newSets)
+                                            val itemIndex = selectedExercises.indexOf(routineExercise)
+                                            if(itemIndex != -1) selectedExercises[itemIndex] = newRoutineExercise
+                                        },
+                                        label = { Text("reps") },
+                                        modifier = Modifier.weight(1f),
+                                        singleLine = true
+                                    )
                                 }
-                                
-                                Spacer(modifier = Modifier.height(8.dp))
-                                
-                                routineExercise.sets.forEachIndexed { index, set ->
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
-                                        horizontalArrangement = Arrangement.SpaceEvenly,
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
-                                        Text("Set ${index + 1}", modifier = Modifier.weight(1f))
-                                        
-                                        OutlinedTextField(
-                                            value = set.weight,
-                                            onValueChange = { newWeight -> 
-                                                val updatedSet = set.copy(weight = newWeight)
-                                                val newSets = routineExercise.sets.toMutableList()
-                                                newSets[index] = updatedSet
-                                                val newRoutineExercise = routineExercise.copy(sets = newSets)
-                                                val itemIndex = selectedExercises.indexOf(routineExercise)
-                                                if(itemIndex != -1) selectedExercises[itemIndex] = newRoutineExercise
-                                            },
-                                            label = { Text("lbs") },
-                                            modifier = Modifier.weight(1f).padding(end = 8.dp),
-                                            singleLine = true
-                                        )
-                                        
-                                        OutlinedTextField(
-                                            value = set.reps,
-                                            onValueChange = { newReps -> 
-                                                val updatedSet = set.copy(reps = newReps)
-                                                val newSets = routineExercise.sets.toMutableList()
-                                                newSets[index] = updatedSet
-                                                val newRoutineExercise = routineExercise.copy(sets = newSets)
-                                                val itemIndex = selectedExercises.indexOf(routineExercise)
-                                                if(itemIndex != -1) selectedExercises[itemIndex] = newRoutineExercise
-                                            },
-                                            label = { Text("reps") },
-                                            modifier = Modifier.weight(1f),
-                                            singleLine = true
-                                        )
-                                    }
-                                }
-                                
-                                TextButton(
-                                    onClick = {
-                                        val newSets = routineExercise.sets.toMutableList().apply { add(WorkoutSet()) }
-                                        val newRoutineExercise = routineExercise.copy(sets = newSets)
-                                        val itemIndex = selectedExercises.indexOf(routineExercise)
-                                        if(itemIndex != -1) selectedExercises[itemIndex] = newRoutineExercise
-                                    },
-                                    modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 8.dp)
-                                ) {
-                                    Text("+ Add Set")
-                                }
+                            }
+                            
+                            TextButton(
+                                onClick = {
+                                    val newSets = routineExercise.sets.toMutableList().apply { add(WorkoutSet()) }
+                                    val newRoutineExercise = routineExercise.copy(sets = newSets)
+                                    val itemIndex = selectedExercises.indexOf(routineExercise)
+                                    if(itemIndex != -1) selectedExercises[itemIndex] = newRoutineExercise
+                                },
+                                modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 8.dp)
+                            ) {
+                                Text("+ Add Set")
                             }
                         }
                     }
@@ -242,7 +240,7 @@ fun CreateRoutineScreen(
                 )
             }
 
-            Spacer(modifier = Modifier.weight(1f))
+            Spacer(modifier = Modifier.height(16.dp))
 
             Button(
                 onClick = {
