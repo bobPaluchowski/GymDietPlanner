@@ -29,17 +29,26 @@ import androidx.compose.material.icons.filled.Schedule
 @Composable
 fun CreateMealScreen(
     onNavigateBack: () -> Unit,
-    onSaveMeal: (MealEntity) -> Unit
+    onSaveMeal: (MealEntity) -> Unit,
+    meal: MealEntity? = null
 ) {
-    var mealName by remember { mutableStateOf("") }
-    var time by remember { mutableStateOf("12:00") }
+    var mealName by remember { mutableStateOf(meal?.name ?: "") }
+    var time by remember { mutableStateOf(meal?.time ?: "12:00") }
     var showTimePicker by remember { mutableStateOf(false) }
     var currentIngredient by remember { mutableStateOf("") }
-    val ingredients = remember { mutableStateListOf<String>() }
-    var instructions by remember { mutableStateOf("") }
+    val ingredients = remember { 
+        mutableStateListOf<String>().apply { 
+            addAll(meal?.ingredients ?: emptyList()) 
+        } 
+    }
+    var instructions by remember { mutableStateOf(meal?.instructions ?: "") }
 
     val daysOfWeek = listOf("M", "T", "W", "Th", "F", "S", "Su")
-    val selectedDays = remember { mutableStateListOf<String>() }
+    val selectedDays = remember { 
+        mutableStateListOf<String>().apply { 
+            addAll(meal?.days ?: emptyList()) 
+        } 
+    }
 
     Scaffold(
         modifier = Modifier.pointerInput(Unit) {
@@ -56,7 +65,7 @@ fun CreateMealScreen(
         },
         topBar = {
             TopAppBar(
-                title = { Text("Create New Meal", fontWeight = FontWeight.Bold) },
+                title = { Text(if (meal != null) "Edit Meal" else "Create New Meal", fontWeight = FontWeight.Bold) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
                         Icon(Icons.Filled.ArrowBack, contentDescription = "Back")
@@ -228,6 +237,7 @@ fun CreateMealScreen(
                         if (mealName.isNotBlank()) {
                             onSaveMeal(
                                 MealEntity(
+                                    id = meal?.id ?: 0,
                                     name = mealName,
                                     time = time,
                                     days = selectedDays.toList(),
@@ -246,7 +256,7 @@ fun CreateMealScreen(
                         containerColor = MaterialTheme.colorScheme.primary
                     )
                 ) {
-                    Text("Save Meal", style = MaterialTheme.typography.titleMedium)
+                    Text(if (meal != null) "Update Meal" else "Save Meal", style = MaterialTheme.typography.titleMedium)
                 }
                 Spacer(modifier = Modifier.height(32.dp))
             }

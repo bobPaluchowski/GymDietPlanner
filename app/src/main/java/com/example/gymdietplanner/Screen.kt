@@ -24,6 +24,9 @@ sealed class Screen(val route: String, val title: String, val icon: ImageVector)
     object Workouts : Screen("workouts", "Workouts", Icons.Filled.FitnessCenter)
     object Meals : Screen("meals", "Meals", Icons.Filled.Restaurant)
     object CreateMeal : Screen("create_meal", "New Meal", Icons.Filled.Add)
+    object EditMeal : Screen("edit_meal/{mealId}", "Edit Meal", Icons.Filled.Add) {
+        fun createRoute(mealId: Int) = "edit_meal/$mealId"
+    }
     object Weight : Screen("weight", "Weight", Icons.Filled.MonitorWeight)
     object Settings : Screen("settings", "Settings", Icons.Filled.Settings)
 }

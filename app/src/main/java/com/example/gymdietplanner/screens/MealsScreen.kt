@@ -22,6 +22,7 @@ import com.example.gymdietplanner.data.MealEntity
 fun MealsScreen(
     meals: List<MealEntity>,
     onCreateMealClick: () -> Unit,
+    onEditMealClick: (Int) -> Unit,
     onDeleteMealClick: (MealEntity) -> Unit
 ) {
     var expandedMealId by remember { mutableStateOf<Int?>(null) }
@@ -102,7 +103,8 @@ fun MealsScreen(
                             onExpandToggle = {
                                 expandedMealId = if (expandedMealId == meal.id) null else meal.id
                             },
-                            onDeleteClick = { mealToDelete = meal }
+                            onDeleteClick = { mealToDelete = meal },
+                            onEditClick = { onEditMealClick(meal.id) }
                         )
                     }
                 }
@@ -116,7 +118,8 @@ fun MealCard(
     meal: MealEntity,
     isExpanded: Boolean,
     onExpandToggle: () -> Unit,
-    onDeleteClick: () -> Unit
+    onDeleteClick: () -> Unit,
+    onEditClick: () -> Unit
 ) {
     Card(
         modifier = Modifier
@@ -229,8 +232,20 @@ fun MealCard(
                 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
+                    horizontalArrangement = Arrangement.End,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
+                    TextButton(
+                        onClick = onEditClick,
+                        colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.primary)
+                    ) {
+                        Icon(Icons.Filled.Edit, contentDescription = null, modifier = Modifier.size(18.dp))
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text("Edit Meal")
+                    }
+                    
+                    Spacer(modifier = Modifier.width(8.dp))
+                    
                     TextButton(
                         onClick = onDeleteClick,
                         colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error)

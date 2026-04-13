@@ -206,6 +206,7 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                 MealsScreen(
                     meals = meals,
                     onCreateMealClick = { navController.navigate(Screen.CreateMeal.route) },
+                    onEditMealClick = { mealId -> navController.navigate(Screen.EditMeal.createRoute(mealId)) },
                     onDeleteMealClick = { meal -> viewModel.deleteMeal(meal.id) }
                 )
             }
@@ -213,6 +214,17 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                 CreateMealScreen(
                     onNavigateBack = { navController.popBackStack() },
                     onSaveMeal = { meal -> viewModel.saveMeal(meal) }
+                )
+            }
+            composable(Screen.EditMeal.route) { backStackEntry ->
+                val mealId = backStackEntry.arguments?.getString("mealId")?.toIntOrNull()
+                val meals by viewModel.meals.collectAsState()
+                val meal = meals.find { it.id == mealId }
+                
+                CreateMealScreen(
+                    onNavigateBack = { navController.popBackStack() },
+                    onSaveMeal = { updatedMeal -> viewModel.saveMeal(updatedMeal) },
+                    meal = meal
                 )
             }
             composable(Screen.Weight.route) {
