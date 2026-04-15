@@ -8,8 +8,6 @@ import com.example.gymdietplanner.data.RoutineEntity
 import com.example.gymdietplanner.data.MealEntity
 import com.example.gymdietplanner.data.WeightEntity
 import com.example.gymdietplanner.data.ExerciseEntity
-import com.example.gymdietplanner.data.rawExercises
-import com.example.gymdietplanner.data.rawExercises
 import com.example.gymdietplanner.data.PreferencesManager
 import com.example.gymdietplanner.notifications.NotificationHelper
 import com.example.gymdietplanner.notifications.ReminderManager
@@ -75,21 +73,42 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private fun prepopulateExercises() {
         viewModelScope.launch {
             if (exerciseDao.getExerciseCount() == 0) {
-                val defaultExercises = mutableListOf<ExerciseEntity>()
-                rawExercises.forEach { muscleGroup ->
-                    muscleGroup.exercises.forEach { ex ->
-                        defaultExercises.add(
+                try {
+                    val assetManager = getApplication<Application>().assets
+                    val dbFile = assetManager.open("exercises_preseed.db")
+                    val dbBytes = dbFile.readBytes()
+                    dbFile.close()
+
+                    // Write to a temp file so SQLite can open it
+                    val tempFile = java.io.File(getApplication<Application>().cacheDir, "exercises_temp.db")
+                    tempFile.writeBytes(dbBytes)
+
+                    val seedConn = android.database.sqlite.SQLiteDatabase.openDatabase(
+                        tempFile.absolutePath, null,
+                        android.database.sqlite.SQLiteDatabase.OPEN_READONLY
+                    )
+
+                    val cursor = seedConn.rawQuery("SELECT name, equipment, category, isCustom, iconName FROM exercises", null)
+                    val exercises = mutableListOf<ExerciseEntity>()
+                    while (cursor.moveToNext()) {
+                        exercises.add(
                             ExerciseEntity(
-                                name = ex.name,
-                                equipment = ex.equipment,
-                                category = muscleGroup.name,
-                                iconName = ex.iconName,
-                                isCustom = false
+                                name = cursor.getString(0) ?: "",
+                                equipment = cursor.getString(1) ?: "",
+                                category = cursor.getString(2) ?: "Other",
+                                isCustom = cursor.getInt(3) != 0,
+                                iconName = cursor.getString(4)
                             )
                         )
                     }
+                    cursor.close()
+                    seedConn.close()
+                    tempFile.delete()
+
+                    exerciseDao.insertExercises(exercises)
+                } catch (e: Exception) {
+                    android.util.Log.e("GymApp", "Failed to seed exercises from asset DB", e)
                 }
-                exerciseDao.insertExercises(defaultExercises)
             }
         }
     }
