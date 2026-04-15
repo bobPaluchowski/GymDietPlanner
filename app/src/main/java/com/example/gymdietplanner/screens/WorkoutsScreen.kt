@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.*
@@ -79,6 +80,7 @@ fun WorkoutsScreen(
 }
 
 // --- Large image card grid for the Workouts tab ---
+// --- Grouping and Sectioning Logic ---
 @Composable
 fun ExerciseLibraryGrid(exercises: List<ExerciseEntity>) {
     var searchQuery by remember { mutableStateOf("") }
@@ -89,7 +91,8 @@ fun ExerciseLibraryGrid(exercises: List<ExerciseEntity>) {
         debouncedQuery = searchQuery
     }
 
-    val filteredExercises = remember(debouncedQuery, exercises) {
+    // Step 1: Filter
+    val filteredResults = remember(debouncedQuery, exercises) {
         if (debouncedQuery.isBlank()) exercises
         else exercises.filter {
             it.name.contains(debouncedQuery, ignoreCase = true) ||
@@ -98,44 +101,69 @@ fun ExerciseLibraryGrid(exercises: List<ExerciseEntity>) {
         }
     }
 
+    // Step 2: Flatten for 'Strict Groups' (split multi-muscle categories)
+    val groupedExercises = remember(filteredResults) {
+        val pairs = mutableListOf<Pair<String, ExerciseEntity>>()
+        filteredResults.forEach { ex ->
+            // Split "Abs, Waist" into ["Abs", "Waist"]
+            val muscles = ex.category.split(",").map { it.trim() }.filter { it.isNotBlank() }
+            if (muscles.isEmpty()) {
+                pairs.add("Other" to ex)
+            } else {
+                muscles.forEach { muscle ->
+                    pairs.add(muscle to ex)
+                }
+            }
+        }
+        pairs.groupBy({ it.first }, { it.second })
+            .toSortedMap()
+    }
+
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+        horizontalArrangement = Arrangement.spacedBy(16.dp),
         contentPadding = PaddingValues(bottom = 80.dp)
     ) {
+        // Search Header
         item(span = { androidx.compose.foundation.lazy.grid.GridItemSpan(2) }) {
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 4.dp),
-                placeholder = { Text("Search exercises, muscles, equipment...") },
+                    .padding(bottom = 8.dp),
+                placeholder = { Text("Search 1,600+ exercises...") },
                 leadingIcon = { Icon(Icons.Filled.Search, contentDescription = null) },
                 singleLine = true,
                 shape = MaterialTheme.shapes.medium
             )
         }
 
-        if (filteredExercises.isEmpty()) {
+        if (groupedExercises.isEmpty()) {
             item(span = { androidx.compose.foundation.lazy.grid.GridItemSpan(2) }) {
-                Box(
-                    modifier = Modifier.fillMaxWidth().padding(32.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        "No exercises found",
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
+                Box(modifier = Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) {
+                    Text("No exercises found", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
         }
 
-        items(filteredExercises) { exercise ->
-            ExerciseCard(exercise = exercise)
+        groupedExercises.forEach { (category, muscleExercises) ->
+            // Muscle Group Header
+            item(span = { androidx.compose.foundation.lazy.grid.GridItemSpan(2) }) {
+                Text(
+                    text = category.uppercase(),
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.Black,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.padding(top = 16.dp, bottom = 4.dp)
+                )
+            }
+
+            items(muscleExercises) { exercise ->
+                ExerciseCard(exercise = exercise)
+            }
         }
     }
 }
@@ -147,7 +175,7 @@ fun ExerciseCard(exercise: ExerciseEntity) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .aspectRatio(1f),  // Square card — image + info both fully visible
+            .aspectRatio(1f),
         shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
@@ -159,7 +187,7 @@ fun ExerciseCard(exercise: ExerciseEntity) {
                     .fillMaxWidth()
                     .weight(0.58f)
                     .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))
-                    .background(MaterialTheme.colorScheme.surfaceVariant)
+                    .background(Color.White)
             ) {
                 if (exercise.iconName != null) {
                     AsyncImage(
@@ -168,14 +196,11 @@ fun ExerciseCard(exercise: ExerciseEntity) {
                             .crossfade(true)
                             .build(),
                         contentDescription = exercise.name,
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier.fillMaxSize()
+                        contentScale = ContentScale.Fit,
+                        modifier = Modifier.fillMaxSize().padding(8.dp)
                     )
                 } else {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         Icon(
                             imageVector = Icons.Filled.FitnessCenter,
                             contentDescription = null,
@@ -191,8 +216,10 @@ fun ExerciseCard(exercise: ExerciseEntity) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(0.42f)
-                    .padding(horizontal = 10.dp, vertical = 8.dp),
-                verticalArrangement = Arrangement.SpaceBetween
+                    .background(MaterialTheme.colorScheme.surface)
+                    .padding(horizontal = 12.dp, vertical = 8.dp),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = exercise.name,
@@ -200,36 +227,9 @@ fun ExerciseCard(exercise: ExerciseEntity) {
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface,
                     maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
+                    overflow = TextOverflow.Ellipsis,
+                    textAlign = TextAlign.Center
                 )
-                Spacer(modifier = Modifier.height(4.dp))
-                // Muscle group chip
-                if (exercise.category.isNotBlank()) {
-                    Surface(
-                        shape = RoundedCornerShape(50),
-                        color = MaterialTheme.colorScheme.primaryContainer,
-                        modifier = Modifier.wrapContentSize()
-                    ) {
-                        Text(
-                            text = exercise.category.split(",").first().trim(),
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer,
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                    }
-                }
-                // Equipment
-                if (exercise.equipment.isNotBlank()) {
-                    Text(
-                        text = exercise.equipment.split(",").first().trim(),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                }
             }
         }
     }
