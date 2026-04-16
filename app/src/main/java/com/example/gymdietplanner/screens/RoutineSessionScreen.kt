@@ -7,6 +7,7 @@ import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.FitnessCenter
@@ -95,7 +96,7 @@ fun RoutineSessionScreen(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .padding(16.dp)
-                                .padding(bottom = 70.dp) // Leave room for pinned button
+                                .padding(bottom = 90.dp) // More room for pinned button
                                 .then(if (isDone) Modifier.blur(12.dp) else Modifier),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
@@ -151,68 +152,38 @@ fun RoutineSessionScreen(
 
                             Spacer(modifier = Modifier.height(16.dp))
 
-                            // Stats Summary Row
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceEvenly
-                            ) {
-                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                    Text("SETS", style = MaterialTheme.typography.labelSmall)
-                                    Text(
-                                        "${exercise.sets.size}",
-                                        style = MaterialTheme.typography.titleLarge,
-                                        fontWeight = FontWeight.Bold
-                                    )
-                                }
-                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                    Text("WEIGHT ($unitSuffix)", style = MaterialTheme.typography.labelSmall)
-                                    Text(
-                                        exercise.sets.firstOrNull()?.weight?.ifBlank { "-" } ?: "-",
-                                        style = MaterialTheme.typography.titleLarge,
-                                        fontWeight = FontWeight.Bold
-                                    )
-                                }
-                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                    Text("REPS", style = MaterialTheme.typography.labelSmall)
-                                    Text(
-                                        exercise.sets.firstOrNull()?.reps?.ifBlank { "-" } ?: "-",
-                                        style = MaterialTheme.typography.titleLarge,
-                                        fontWeight = FontWeight.Bold
-                                    )
-                                }
-                            }
+                            Spacer(modifier = Modifier.weight(1f))
 
-                            Spacer(modifier = Modifier.height(16.dp))
-
-                            // Detailed Sets View
-                            Text(
-                                "Target Sets",
-                                style = MaterialTheme.typography.titleSmall,
-                                modifier = Modifier.align(Alignment.Start).padding(bottom = 8.dp)
-                            )
+                            // Minimalist Exercise Summary (Transparent background, standard text color)
+                            val firstSet = exercise.sets.firstOrNull()
+                            val weightText = firstSet?.weight?.ifBlank { "0" } ?: "0"
+                            val repsText = firstSet?.reps?.ifBlank { "0" } ?: "0"
                             
-                            LazyColumn(
+                            Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .weight(1f),
-                                verticalArrangement = Arrangement.spacedBy(4.dp)
+                                    .padding(horizontal = 16.dp),
+                                horizontalArrangement = Arrangement.SpaceEvenly,
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
-                                items(exercise.sets.size) { index ->
-                                    val set = exercise.sets[index]
-                                    Row(
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .background(
-                                                MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
-                                                MaterialTheme.shapes.small
-                                            )
-                                            .padding(8.dp),
-                                        horizontalArrangement = Arrangement.SpaceBetween
-                                    ) {
-                                        Text("Set ${index + 1}", fontWeight = FontWeight.Medium)
-                                        Text("${set.weight.ifBlank { "0" }} $unitSuffix x ${set.reps.ifBlank { "0" }}")
-                                    }
-                                }
+                                Text(
+                                    text = "sets: ${exercise.sets.size}",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onSurface
+                                )
+                                Text(
+                                    text = "$weightText $unitSuffix",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onSurface
+                                )
+                                Text(
+                                    text = "$repsText reps",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onSurface
+                                )
                             }
                         }
 
