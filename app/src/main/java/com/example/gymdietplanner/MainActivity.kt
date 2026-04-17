@@ -35,12 +35,6 @@ import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.LaunchedEffect
-import coil.ImageLoader
-import coil.decode.GifDecoder
-import coil.decode.ImageDecoderDecoder
-import coil.imageLoader
-import androidx.compose.ui.platform.LocalContext
-import coil.compose.AsyncImage
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -166,15 +160,12 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
             }
                 composable(Screen.CreateRoutine.route) {
                 val isMetric by viewModel.isMetric.collectAsState()
-                val apiLibrary by viewModel.apiLibrary.collectAsState()
-                val isLoading by viewModel.isLoading.collectAsState()
+                val exercises by viewModel.exercises.collectAsState()
                 CreateRoutineScreen(
                     onNavigateBack = { navController.popBackStack() },
                     onSaveRoutine = { routine -> viewModel.saveRoutine(routine) },
                     isMetric = isMetric,
-                    exercises = apiLibrary,
-                    isLoading = isLoading,
-                    onSearch = { viewModel.searchLibrary(it) }
+                    exercises = exercises
                 )
             }
             composable(Screen.EditRoutine.route) { backStackEntry ->
@@ -182,17 +173,14 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                 val routines by viewModel.routines.collectAsState()
                 val routine = routines.find { it.id == routineId }
                 val isMetric by viewModel.isMetric.collectAsState()
-                val apiLibrary by viewModel.apiLibrary.collectAsState()
-                val isLoading by viewModel.isLoading.collectAsState()
+                val exercises by viewModel.exercises.collectAsState()
                 
                 CreateRoutineScreen(
                     onNavigateBack = { navController.popBackStack() },
                     onSaveRoutine = { updatedRoutine -> viewModel.saveRoutine(updatedRoutine) },
                     routine = routine,
                     isMetric = isMetric,
-                    exercises = apiLibrary,
-                    isLoading = isLoading,
-                    onSearch = { viewModel.searchLibrary(it) }
+                    exercises = exercises
                 )
             }
             composable(Screen.RoutineSession.route) { backStackEntry ->
@@ -200,22 +188,17 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
                 val routines by viewModel.routines.collectAsState()
                 val routine = routines.find { it.id == routineId }
                 val isMetric by viewModel.isMetric.collectAsState()
-                val apiLibrary by viewModel.apiLibrary.collectAsState()
                 
                 com.example.gymdietplanner.screens.RoutineSessionScreen(
                     routine = routine,
-                    library = apiLibrary,
                     onNavigateBack = { navController.popBackStack() },
                     isMetric = isMetric
                 )
             }
             composable(Screen.Workouts.route) { 
-                val apiLibrary by viewModel.apiLibrary.collectAsState()
-                val isLoading by viewModel.isLoading.collectAsState()
+                val exercises by viewModel.exercises.collectAsState()
                 WorkoutsScreen(
-                    exercises = apiLibrary,
-                    isLoading = isLoading,
-                    onSearch = { viewModel.searchLibrary(it) },
+                    exercises = exercises,
                     onSaveExercise = { name, equipment, category -> 
                         viewModel.saveExercise(name, equipment, category)
                     }
