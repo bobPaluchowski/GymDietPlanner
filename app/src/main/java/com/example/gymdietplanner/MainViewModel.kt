@@ -82,6 +82,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun fetchLibrary() {
         viewModelScope.launch {
+<<<<<<< HEAD
             _isLoading.value = true
             try {
                 Log.d("GymApp", "Fetching exercises from AscendAPI...")
@@ -101,6 +102,45 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 Log.e("GymApp", "Exception fetching exercises: ${e.message}", e)
             } finally {
                 _isLoading.value = false
+=======
+            if (exerciseDao.getExerciseCount() == 0) {
+                try {
+                    val assetManager = getApplication<Application>().assets
+                    val dbFile = assetManager.open("exercises_preseed.db")
+                    val dbBytes = dbFile.readBytes()
+                    dbFile.close()
+
+                    // Write to a temp file so SQLite can open it
+                    val tempFile = java.io.File(getApplication<Application>().cacheDir, "exercises_temp.db")
+                    tempFile.writeBytes(dbBytes)
+
+                    val seedConn = android.database.sqlite.SQLiteDatabase.openDatabase(
+                        tempFile.absolutePath, null,
+                        android.database.sqlite.SQLiteDatabase.OPEN_READONLY
+                    )
+
+                    val cursor = seedConn.rawQuery("SELECT name, equipment, category, isCustom, iconName FROM exercises", null)
+                    val exercises = mutableListOf<ExerciseEntity>()
+                    while (cursor.moveToNext()) {
+                        exercises.add(
+                            ExerciseEntity(
+                                name = cursor.getString(0) ?: "",
+                                equipment = cursor.getString(1) ?: "",
+                                category = cursor.getString(2) ?: "Other",
+                                isCustom = cursor.getInt(3) != 0,
+                                iconName = cursor.getString(4)
+                            )
+                        )
+                    }
+                    cursor.close()
+                    seedConn.close()
+                    tempFile.delete()
+
+                    exerciseDao.insertExercises(exercises)
+                } catch (e: Exception) {
+                    android.util.Log.e("GymApp", "Failed to seed exercises from asset DB", e)
+                }
+>>>>>>> feature/locally-stored-exercises
             }
         }
     }

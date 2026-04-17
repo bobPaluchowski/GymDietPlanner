@@ -1,0 +1,2080 @@
+🗑️   Cleared old exercises table for fresh run.
+🔍  Step 1: Discovering category pages...
+   Found 49 category pages
+🔍  Step 2: Collecting exercise URLs (with pagination)...
+   band: 57 exercises
+   barbell: 159 exercises
+   bodyweight: 763 exercises
+   bosu-ball: 3 exercises
+   cable: 123 exercises
+   dumbbell: 231 exercises
+   ez-barbell: 8 exercises
+   hammer: 1 exercises
+   kettlebell: 88 exercises
+   leverage-machine: 43 exercises
+   medicine-ball: 16 exercises
+   resistance-band: 38 exercises
+   roll: 4 exercises
+   rope: 11 exercises
+   sled-machine: 3 exercises
+   smith-machine: 29 exercises
+   stability-ball: 17 exercises
+   stick: 2 exercises
+   suspension: 11 exercises
+   trap-bar: 4 exercises
+   weights: 37 exercises
+   wheel-roller: 2 exercises
+   abs: 120 exercises
+   back: 216 exercises
+   biceps: 45 exercises
+   calves: 69 exercises
+   cardio: 65 exercises
+   chest: 147 exercises
+   forearms: 61 exercises
+   front-deltoid: 85 exercises
+   glutes: 267 exercises
+   hamstrings: 60 exercises
+   hips: 265 exercises
+   latissimus-dorsi: 105 exercises
+   neck: 15 exercises
+   obliques: 82 exercises
+   quadriceps: 183 exercises
+   rear-deltoid: 35 exercises
+   shoulders: 160 exercises
+   side-deltoid: 52 exercises
+   spine: 52 exercises
+   thighs: 286 exercises
+   traps: 81 exercises
+   triceps: 82 exercises
+   upper-arms: 147 exercises
+   waist: 254 exercises
+   weightlifting: 38 exercises
+   wrist: 18 exercises
+   yoga: 16 exercises
+
+🚀  1657 unique exercise URLs found. Scraping...
+
+✅  Roll Back Stretch  [Back, Latissimus Dorsi, Spine]  🖼 roll_back_stretch.webp
+✅  Dumbbell Straight Leg Deadlift  [Back, Glutes, Spine]  🖼 dumbbell_straight_leg_deadlift.webp
+✅  Kettlebell Single Arm Clean  [Weightlifting]  🖼 kettlebell_single_arm_clean.webp
+✅  Dumbbell One Arm Incline Chest Press  [Chest]  🖼 dumbbell_one_arm_incline_chest_press.webp
+✅  Run on Treadmill  [Cardio]  🖼 run_on_treadmill.webp
+✅  Double Leg Stretch  [Abs, Hips, Obliques, Thighs, Waist]  🖼 double_leg_stretch.webp
+✅  Dumbbell Decline Sit Up  [Waist]  🖼 dumbbell_decline_sit_up.webp
+✅  Kettlebell One Arm Push Press  [Front Deltoid, Shoulders]  🖼 kettlebell_one_arm_push_press.webp
+✅  Archer Pull-up  [Back, Latissimus Dorsi, Traps]  🖼 archer_pull_up.webp
+✅  Sumo Deadlift High Pull  [Glutes, Quadriceps, Shoulders, Side Deltoid]  🖼 sumo_deadlift_high_pull.webp
+✅  Backward Jump  [Plyometrics]  🖼 backward_jump.webp
+✅  Lying Leg Tuck Hip Stretch  [Thighs]  🖼 lying_leg_tuck_hip_stretch.webp
+✅  Dumbbell Lying Leg Curl  [Thighs]  🖼 dumbbell_lying_leg_curl.webp
+✅  Cable Side Crunch  [Obliques, Waist]  🖼 cable_side_crunch.webp
+✅  Resistance Band Split Squat  [Glutes, Quadriceps, Thighs]  🖼 resistance_band_split_squat.webp
+✅  Sphinx  [Abs, Back, Spine]  🖼 sphinx.webp
+✅  Barbell Olympic Squat  [Thighs]  🖼 barbell_olympic_squat.webp
+✅  Cable Reverse Wrist Curl  [Forearms, Wrist]  🖼 cable_reverse_wrist_curl.webp
+✅  Supinated Grip Inverted Row  [Back]  🖼 supinated_grip_inverted_row.webp
+✅  Walking  [Calves, Cardio, Hamstrings, Quadriceps, Sartorius]  🖼 walking.webp
+✅  Dumbbell Hang Clean  [Weightlifting]  🖼 dumbbell_hang_clean.webp
+✅  Landmine Front Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 landmine_front_squat.webp
+✅  Standing Scissors  [Plyometrics]  🖼 standing_scissors.webp
+✅  Barbell Preacher Curl  [Upper Arms]  🖼 barbell_preacher_curl.webp
+✅  Thumb Stretch  [Forearms]  🖼 thumb_stretch.webp
+✅  Band Bent Over Row  [Back, Latissimus Dorsi, Traps]  🖼 band_bent_over_row.webp
+✅  Jack Burpee  [Cardio]  🖼 jack_burpee.webp
+✅  Band Pushdown  [Triceps, Upper Arms]  🖼 band_pushdown.webp
+✅  High Knee Twist  [Cardio]  🖼 high_knee_twist.webp
+✅  Dumbbell Rear Delt Row  [Shoulders]  🖼 dumbbell_rear_delt_row.webp
+✅  Band Hip Extension  [Glutes, Hips]  🖼 band_hip_extension.webp
+✅  Standing Pelvic Tilt  [Back, Spine]  🖼 standing_pelvic_tilt.webp
+✅  Plank Lateral Raise  [Waist]  🖼 plank_lateral_raise.webp
+✅  Barbell Decline Pullover  [Chest]  🖼 barbell_decline_pullover.webp
+✅  Barbell Curl  [Biceps, Upper Arms]  🖼 barbell_curl.webp
+✅  Warrior Iii Pose  [Stretching]  🖼 warrior_iii_pose.webp
+✅  Duck Walk  [Cardio]  🖼 duck_walk.webp
+✅  One Arm Dip  [Triceps, Upper Arms]  🖼 one_arm_dip.webp
+✅  Dumbbell Incline Y-raise  [Shoulders, Traps]  🖼 dumbbell_incline_y_raise.webp
+✅  Cobra Push Up  [Chest, Glutes, Hips, Spine]  🖼 cobra_push_up.webp
+✅  Dumbbell Standing Single Spider Curl  [Biceps, Upper Arms]  🖼 dumbbell_standing_single_spider_curl.webp
+✅  Standing W Raise  [Back]  🖼 standing_w_raise.webp
+✅  Cable Crossover  [Chest]  🖼 cable_crossover.webp
+✅  Cable Incline Pushdown  [Back, Latissimus Dorsi]  🖼 cable_incline_pushdown.webp
+✅  Side Plank Pull  [Waist]  🖼 side_plank_pull.webp
+✅  Band Face Pull  [Rear Deltoid, Shoulders]  🖼 band_face_pull.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-triceps-kickback/]
+✅  Potty Squat  [Abs, Hips]  🖼 potty_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/forearm-pronator-stretch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/rear-deltoid-stretch/]
+  ⏳ Rate limited (429), waiting 10s... [https://liftmanual.com/band-triceps-kickback/]
+  ⏳ Rate limited (429), waiting 10s... [https://liftmanual.com/forearm-pronator-stretch/]
+  ⏳ Rate limited (429), waiting 10s... [https://liftmanual.com/rear-deltoid-stretch/]
+  ⏳ Rate limited (429), waiting 20s... [https://liftmanual.com/band-triceps-kickback/]
+  ⏳ Rate limited (429), waiting 20s... [https://liftmanual.com/forearm-pronator-stretch/]
+  ⏳ Rate limited (429), waiting 20s... [https://liftmanual.com/rear-deltoid-stretch/]
+  ❌ HTTP None: https://liftmanual.com/band-triceps-kickback/
+  ❌ HTTP None: https://liftmanual.com/forearm-pronator-stretch/
+  ❌ HTTP None: https://liftmanual.com/rear-deltoid-stretch/
+  📊 Progress: 50/1657 done, 47 saved, 0 skipped
+✅  Standing Toe Up Calf Stretch  [Calves]  🖼 standing_toe_up_calf_stretch.webp
+✅  Hip Swirls  [Glutes, Hips, Quadriceps]  🖼 hip_swirls.webp
+✅  Barbell Hang Power Clean  [Weightlifting]  🖼 barbell_hang_power_clean.webp
+✅  Weighted Lying Hip Abduction  [Glutes, Hips]  🖼 weighted_lying_hip_abduction.webp
+✅  Swimmer Kicks  [Hips]  🖼 swimmer_kicks.webp
+✅  Landmine Sumo Squat  [Hips]  🖼 landmine_sumo_squat.webp
+✅  Kettlebell Overhead Carry  [Thighs]  🖼 kettlebell_overhead_carry.webp
+✅  Seated Flutter Kick  [Abs, Waist]  🖼 seated_flutter_kick.webp
+✅  Knee Raise  [Hips, Thighs]  🖼 knee_raise.webp
+✅  Pulse Row  [Back]  🖼 pulse_row.webp
+✅  Mountain Climber Lunge  [Thighs]  🖼 mountain_climber_lunge.webp
+✅  Knee to Chest Stretch  [Glutes, Waist]  🖼 knee_to_chest_stretch.webp
+✅  Ez Bar Seated Close Grip Concentration Curl  [Upper Arms]  🖼 ez_bar_seated_close_grip_concentration_curl.webp
+✅  Wall Walks  [Chest]  🖼 wall_walks.webp
+✅  Cable Kneeling One Arm Lat Pulldown  [Back, Latissimus Dorsi]  🖼 cable_kneeling_one_arm_lat_pulldown.webp
+✅  Dumbbell Fly on Exercise Ball  [Chest]  🖼 dumbbell_fly_on_exercise_ball.webp
+✅  Bodyweight Overhead Squat  [Glutes, Quadriceps, Thighs]  🖼 bodyweight_overhead_squat.webp
+✅  Standing Lateral Side Stretch  [Waist]  🖼 standing_lateral_side_stretch.webp
+✅  Barbell Rollout  [Abs, Waist]  🖼 barbell_rollout.webp
+✅  Cable One Arm Bent Over Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_one_arm_bent_over_row.webp
+✅  Lever Chest Press  [Chest]  🖼 lever_chest_press.webp
+✅  Cable Hip Adduction  [Hips]  🖼 cable_hip_adduction.webp
+✅  Band Split Squat  [Glutes, Quadriceps, Thighs]  🖼 band_split_squat.webp
+✅  Reverse Crunch Kick  [Abs, Quadriceps, Waist]  🖼 reverse_crunch_kick.webp
+✅  Dumbbell Incline Row  [Back, Latissimus Dorsi, Traps]  🖼 dumbbell_incline_row.webp
+✅  Dumbbell Lateral Step Up  [Thighs]  🖼 dumbbell_lateral_step_up.webp
+✅  Jackknife  [Abs, Hips, Obliques, Thighs, Waist]  🖼 jackknife.webp
+✅  Smith Chair Squat  [Quadriceps, Thighs]  🖼 smith_chair_squat.webp
+✅  Barbell Full Clean  [Weightlifting]  🖼 barbell_full_clean.webp
+✅  Elbow Flexor Stretch  [Upper Arms]  🖼 elbow_flexor_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/bent-over-row-with-towel/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/push-up-to-side-plank/]
+✅  Cable Decline Press  [Chest]  🖼 cable_decline_press.webp
+✅  Dumbbell Single Arm Floor Press  [Chest]  🖼 dumbbell_single_arm_floor_press.webp
+✅  Standing Wheel Rollout  [Abs, Waist]  🖼 standing_wheel_rollout.webp
+✅  Barbell Hang Snatch  [Biceps, Calves, Forearms, Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Weightlifting]  🖼 barbell_hang_snatch.webp
+✅  Dumbbell Reverse Grip Row  [Back]  🖼 dumbbell_reverse_grip_row.webp
+✅  Cable Upper Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_upper_row.webp
+✅  Bent Over Row With Towel  [Back]  🖼 bent_over_row_with_towel.webp
+✅  Inverted Row  [Back, Latissimus Dorsi, Traps]  🖼 inverted_row.webp
+✅  Push Up to Side Plank  [Obliques, Waist]  🖼 push_up_to_side_plank.webp
+✅  Resistance Band Triceps Pushdown  [Triceps, Upper Arms]  🖼 resistance_band_triceps_pushdown.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/standing-side-leg-raise/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-duck-walk/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/rotate-push-up/]
+✅  Resistance Band Duck Walk  [Hips]  🖼 resistance_band_duck_walk.webp
+✅  Standing Side Leg Raise  [Glutes, Hips, Obliques]  🖼 standing_side_leg_raise.webp
+✅  Band Overhead Triceps Extension  [Triceps, Upper Arms]  🖼 band_overhead_triceps_extension.webp
+✅  Rotate Push Up  [Obliques, Waist]  🖼 rotate_push_up.webp
+✅  Resistance Band Calf Raise  [Calves]  🖼 resistance_band_calf_raise.webp
+✅  Barbell Speed Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_speed_squat.webp
+✅  Strongman Crucifix Hold  [Shoulders]  🖼 strongman_crucifix_hold.webp
+✅  Rounded Back Extension  [Hips]  🖼 rounded_back_extension.webp
+✅  Lever Seated Crunch  [Abs, Waist]  🖼 lever_seated_crunch.webp
+✅  Single Leg Hopping  [Plyometrics]  🖼 single_leg_hopping.webp
+  📊 Progress: 100/1657 done, 97 saved, 0 skipped
+✅  Band Standing Chest Press  [Chest]  🖼 band_standing_chest_press.webp
+✅  Runners Stretch  [Calves, Glutes, Hamstrings, Thighs]  🖼 runners_stretch.webp
+✅  Barbell Curtsey Lunge  [Glutes, Hips, Quadriceps, Thighs]  🖼 barbell_curtsey_lunge.webp
+✅  Dips Between Chairs  [Chest, Triceps, Upper Arms]  🖼 dips_between_chairs.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/vertical-mountain-climber/]
+✅  Box Jump Down With 1 Leg Stabilization  [Calves]  🖼 box_jump_down_with_1_leg_stabilization.webp
+✅  Cable Bench Press  [Chest]  🖼 cable_bench_press.webp
+✅  Ring Reverse Fly  [Shoulders]  🖼 ring_reverse_fly.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/standing-back-rotation-stretch/]
+✅  Ez Barbell Curl  [Biceps, Upper Arms]  🖼 ez_barbell_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-overhead-curl/]
+✅  Vertical Mountain Climber  [Cardio]  🖼 vertical_mountain_climber.webp
+✅  Standing Back Rotation Stretch  [Back, Spine]  🖼 standing_back_rotation_stretch.webp
+✅  Cable Overhead Curl  [Biceps, Upper Arms]  🖼 cable_overhead_curl.webp
+✅  Smith Seated Shoulder Press  [Front Deltoid, Shoulders]  🖼 smith_seated_shoulder_press.webp
+✅  Lying Around the World  [Rear Deltoid, Shoulders, Side Deltoid]  🖼 lying_around_the_world.webp
+✅  Suspension Fly  [Chest]  🖼 suspension_fly.webp
+✅  Cable Wide Pulldown  [Back, Latissimus Dorsi]  🖼 cable_wide_pulldown.webp
+✅  Lying Rear Lateral Raise  [Rear Deltoid, Shoulders]  🖼 lying_rear_lateral_raise.webp
+✅  Side Bear Crawl  [Plyometrics]  🖼 side_bear_crawl.webp
+✅  Cable Lateral Lunge  [Glutes, Quadriceps, Thighs]  🖼 cable_lateral_lunge.webp
+✅  Lateral Ladder Drill  [Plyometrics]  🖼 lateral_ladder_drill.webp
+✅  Dumbbell Wall Squat  [Thighs]  🖼 dumbbell_wall_squat.webp
+✅  Knee Tuck Jump  [Plyometrics]  🖼 knee_tuck_jump.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/high-lunge/]
+✅  Boxing Right Hook  [Plyometrics]  🖼 boxing_right_hook.webp
+✅  Swimmer  [Hips]  🖼 swimmer.webp
+✅  Kettlebell Alternating Renegade Row  [Back, Latissimus Dorsi, Traps]  🖼 kettlebell_alternating_renegade_row.webp
+✅  Dumbbell Alternating Floor Press  [Chest]  🖼 dumbbell_alternating_floor_press.webp
+✅  Half Seated Leg Circle  [Hips]  🖼 half_seated_leg_circle.webp
+✅  Deep Push Up  [Chest]  🖼 deep_push_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-deadlift/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cross-jacks/]
+✅  High Lunge  [Stretching]  🖼 high_lunge.webp
+✅  Barbell Narrow Stance Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_narrow_stance_squat.webp
+✅  Band Deadlift  [Glutes, Hips]  🖼 band_deadlift.webp
+✅  Double Jump Rope  [Cardio]  🖼 double_jump_rope.webp
+✅  Cossack Squats  [Thighs]  🖼 cossack_squats.webp
+✅  Cable Horizontal Pallof Press  [Obliques, Waist]  🖼 cable_horizontal_pallof_press.webp
+✅  Medicine Ball Rotational Throw  [Waist]  🖼 medicine_ball_rotational_throw.webp
+✅  Kettlebell Single Arm Swing  [Hips, Thighs]  🖼 kettlebell_single_arm_swing.webp
+✅  Decline Crunch  [Abs, Waist]  🖼 decline_crunch.webp
+✅  Dumbbell Incline Shrug  [Back, Traps]  🖼 dumbbell_incline_shrug.webp
+✅  Barbell Pendlay Row  [Back, Latissimus Dorsi, Traps]  🖼 barbell_pendlay_row.webp
+✅  Smith Sumo Squat  [Glutes, Hips, Quadriceps]  🖼 smith_sumo_squat.webp
+✅  Dumbbell Around Pullover  [Chest]  🖼 dumbbell_around_pullover.webp
+✅  Cross Jacks  [Cardio]  🖼 cross_jacks.webp
+✅  T Drill  [Plyometrics]  🖼 t_drill.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/smith-single-leg-split-squat/]
+✅  Backwards Run  [Cardio]  🖼 backwards_run.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-bird-dog/]
+✅  Spider Crawl Push Up  [Abs, Glutes, Waist]  🖼 spider_crawl_push_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/impossible-dips/]
+✅  Resistance Band Bird Dog  [Glutes, Hips, Spine]  🖼 resistance_band_bird_dog.webp
+✅  Smith Single Leg Split Squat  [Glutes, Quadriceps, Thighs]  🖼 smith_single_leg_split_squat.webp
+✅  Barbell Pause Bench Press  [Chest]  🖼 barbell_pause_bench_press.webp
+✅  Impossible Dips  [Upper Arms, Waist]  🖼 impossible_dips.webp
+✅  Side Lying Leg Raise  [Hips]  🖼 side_lying_leg_raise.webp
+✅  Standing Side Stretch  [Back, Waist]  🖼 standing_side_stretch.webp
+  📊 Progress: 150/1657 done, 147 saved, 0 skipped
+✅  Dumbbell Side Lunge  [Glutes, Hips]  🖼 dumbbell_side_lunge.webp
+✅  Bodyweight Rear Lunge  [Glutes, Quadriceps, Thighs]  🖼 bodyweight_rear_lunge.webp
+✅  Weighted Donkey Calf Raise  [Calves]  🖼 weighted_donkey_calf_raise.webp
+✅  Kettlebell Two Arm Military Press  [Front Deltoid, Shoulders]  🖼 kettlebell_two_arm_military_press.webp
+✅  Dumbbell Glute Bridge  [Glutes, Hips]  🖼 dumbbell_glute_bridge.webp
+✅  Cable Standing Leg Curl  [Thighs]  🖼 cable_standing_leg_curl.webp
+✅  Band Lying Leg Curl  [Hamstrings, Thighs]  🖼 band_lying_leg_curl.webp
+✅  Medicine Ball Catch and Overhead Throw  [Back, Latissimus Dorsi]  🖼 medicine_ball_catch_and_overhead_throw.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/briskly-walking/]
+✅  Band Seated Twist  [Obliques, Waist]  🖼 band_seated_twist.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-front-raise/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-step-up/]
+✅  Briskly Walking  [Cardio]  🖼 briskly_walking.webp
+✅  Dumbbell Straight Arm Crunch  [Abs, Waist]  🖼 dumbbell_straight_arm_crunch.webp
+✅  Band Step Up  [Glutes, Thighs]  🖼 band_step_up.webp
+✅  Band Front Raise  [Front Deltoid, Shoulders]  🖼 band_front_raise.webp
+✅  Lunge With Leg Lift  [Glutes, Quadriceps, Thighs]  🖼 lunge_with_leg_lift.webp
+✅  Step Up  [Glutes, Quadriceps, Thighs]  🖼 step_up.webp
+✅  Dumbbell Devils Press  [Chest]  🖼 dumbbell_devils_press.webp
+✅  Lying Leg Raise  [Abs, Waist]  🖼 lying_leg_raise.webp
+✅  Seated Single Leg Hamstring Stretch  [Hamstrings, Thighs]  🖼 seated_single_leg_hamstring_stretch.webp
+✅  Lateral Side Plank  [Glutes, Waist]  🖼 lateral_side_plank.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-single-leg-deadlift/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/pigeon-hip-stretch/]
+✅  Wrist Extensor Stretch  [Forearms, Wrist]  🖼 wrist_extensor_stretch.webp
+✅  High Knee Tap  [Plyometrics]  🖼 high_knee_tap.webp
+✅  Frankenstein Squat  [Glutes, Quadriceps, Thighs]  🖼 frankenstein_squat.webp
+✅  Kipping Muscle Up  [Abs, Latissimus Dorsi, Waist]  🖼 kipping_muscle_up.webp
+✅  Wrist Roller  [Forearms, Wrist]  🖼 wrist_roller.webp
+✅  Dumbbell Standing Calf Raise  [Calves]  🖼 dumbbell_standing_calf_raise.webp
+✅  Pigeon Hip Stretch  [Glutes, Hamstrings, Hips, Quadriceps, Spine]  🖼 pigeon_hip_stretch.webp
+✅  Dumbbell Single Leg Deadlift  [Glutes, Hips, Spine]  🖼 dumbbell_single_leg_deadlift.webp
+✅  Landmine Kneeling Squeeze Press  [Chest]  🖼 landmine_kneeling_squeeze_press.webp
+✅  Dumbbell Curtsey Lunge  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_curtsey_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dead-bug-with-medicine-ball/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/pyramid-pose/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/decline-twisting-sit-up/]
+✅  Decline Twisting Sit Up  [Waist]  🖼 decline_twisting_sit_up.webp
+✅  Dead Bug With Medicine Ball  [Waist]  🖼 dead_bug_with_medicine_ball.webp
+✅  Pyramid Pose  [Stretching]  🖼 pyramid_pose.webp
+✅  Squat Tuck Jump  [Plyometrics]  🖼 squat_tuck_jump.webp
+✅  Crescent Moon Pose  [Yoga]  🖼 crescent_moon_pose.webp
+✅  Dumbbell Seated Bent Over Rear Delt Row  [Rear Deltoid, Shoulders]  🖼 dumbbell_seated_bent_over_rear_delt_row.webp
+✅  Single Leg Bridge  [Abs, Glutes, Hips]  🖼 single_leg_bridge.webp
+✅  Barbell Side Split Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_side_split_squat.webp
+✅  Barbell Hip Thrust With Resistance Band  [Hips]  🖼 barbell_hip_thrust_with_resistance_band.webp
+✅  Dumbbell Close Grip Curl  [Biceps, Upper Arms]  🖼 dumbbell_close_grip_curl.webp
+✅  Dumbbell Fly  [Chest]  🖼 dumbbell_fly.webp
+✅  Dumbbell Reverse Preacher Curl  [Forearms]  🖼 dumbbell_reverse_preacher_curl.webp
+✅  Dynamic Chest Stretch  [Chest]  🖼 dynamic_chest_stretch.webp
+✅  Cable Bent Over Row  [Back]  🖼 cable_bent_over_row.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-middle-fly/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kneeling-wrist-flexor-stretch/]
+✅  Rocker With Open Legs  [Hips, Waist]  🖼 rocker_with_open_legs.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-goblet-squat/]
+✅  Cable Middle Fly  [Chest]  🖼 cable_middle_fly.webp
+✅  Push-up Plus  [Chest]  🖼 push_up_plus.webp
+✅  Kettlebell Goblet Squat  [Glutes, Quadriceps, Thighs]  🖼 kettlebell_goblet_squat.webp
+✅  Kneeling Wrist Flexor Stretch  [Forearms, Wrist]  🖼 kneeling_wrist_flexor_stretch.webp
+✅  Smith Incline Bench Press  [Chest]  🖼 smith_incline_bench_press.webp
+✅  Kettlebell Seated Press  [Front Deltoid, Shoulders]  🖼 kettlebell_seated_press.webp
+  📊 Progress: 200/1657 done, 197 saved, 0 skipped
+✅  Captains Chair Leg Raise  [Hips]  🖼 captains_chair_leg_raise.webp
+✅  Tuck Crunch  [Abs, Waist]  🖼 tuck_crunch.webp
+✅  Front Hamstring Stretch  [Hips, Thighs]  🖼 front_hamstring_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/standing-ab-twist/]
+✅  Strongman Car Flip  [Back, Chest, Hips, Thighs, Upper Arms, Waist]  🖼 strongman_car_flip.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/spine-twist/]
+✅  Trap Bar Squat  [Thighs]  🖼 trap_bar_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/chair-leg-extended-stretch/]
+✅  Standing Ab Twist  [Waist]  🖼 standing_ab_twist.webp
+✅  Chair Leg Extended Stretch  [Thighs]  🖼 chair_leg_extended_stretch.webp
+✅  Spine Twist  [Obliques, Waist]  🖼 spine_twist.webp
+✅  Cable Curl  [Biceps, Upper Arms]  🖼 cable_curl.webp
+✅  Ski Step  [Cardio]  🖼 ski_step.webp
+✅  Kneeling Plank  [Waist]  🖼 kneeling_plank.webp
+✅  Dumbbell Seated Lateral Raise  [Shoulders, Side Deltoid]  🖼 dumbbell_seated_lateral_raise.webp
+✅  Kettlebell Half Turkish Get-up  [Thighs]  🖼 kettlebell_half_turkish_get_up.webp
+✅  Kettlebell Rear Lunge  [Thighs]  🖼 kettlebell_rear_lunge.webp
+✅  Mountain Pose  [Stretching]  🖼 mountain_pose.webp
+✅  Worlds Greatest Stretch  [Stretching]  🖼 worlds_greatest_stretch.webp
+✅  Resistance Band Punch  [Chest]  🖼 resistance_band_punch.webp
+✅  Shoulder Circle  [Back]  🖼 shoulder_circle.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/inverted-row-on-bench/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/curl-up/]
+✅  Alternate Leg Raise  [Hips]  🖼 alternate_leg_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/scapular-pull-up/]
+✅  Curl-up  [Abs, Waist]  🖼 curl_up.webp
+✅  Scapular Pull Up  [Back, Traps]  🖼 scapular_pull_up.webp
+✅  Inverted Row on Bench  [Back, Latissimus Dorsi, Traps]  🖼 inverted_row_on_bench.webp
+✅  Dumbbell Overhead Walking Lunge  [Thighs]  🖼 dumbbell_overhead_walking_lunge.webp
+✅  Cable One Arm Reverse Fly  [Shoulders]  🖼 cable_one_arm_reverse_fly.webp
+✅  Warrior Pose  [Back, Hips, Thighs]  🖼 warrior_pose.webp
+✅  Straight Leg Dead Bug  [Waist]  🖼 straight_leg_dead_bug.webp
+✅  Dumbbell Press on Exercise Ball  [Chest]  🖼 dumbbell_press_on_exercise_ball.webp
+✅  Humble Warrior Pose  [Stretching]  🖼 humble_warrior_pose.webp
+✅  Smith Decline Bench Press  [Chest]  🖼 smith_decline_bench_press.webp
+✅  Astride Jumps  [Cardio]  🖼 astride_jumps.webp
+✅  Dumbbell Bent Over Row  [Back, Latissimus Dorsi, Traps]  🖼 dumbbell_bent_over_row.webp
+✅  Lying Glute Stretch  [Glutes, Hips]  🖼 lying_glute_stretch.webp
+✅  Elbow to Knee  [Abs, Obliques, Waist]  🖼 elbow_to_knee.webp
+✅  Frog Hops  [Cardio]  🖼 frog_hops.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-squat-to-shoulder-press/]
+✅  Kettlebell Split Snatch  [Hips]  🖼 kettlebell_split_snatch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-standing-lateral-raise/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/body-up/]
+✅  Barbell Squat to Shoulder Press  [Thighs]  🖼 barbell_squat_to_shoulder_press.webp
+✅  Dumbbell Standing Lateral Raise  [Shoulders]  🖼 dumbbell_standing_lateral_raise.webp
+✅  Body Up  [Triceps, Upper Arms]  🖼 body_up.webp
+✅  Barbell Larsen Press  [Chest]  🖼 barbell_larsen_press.webp
+✅  Dumbbell Hammer Curl  [Forearms, Upper Arms]  🖼 dumbbell_hammer_curl.webp
+✅  Rotating Neck Stretch  [Neck]  🖼 rotating_neck_stretch.webp
+✅  Scapula Dips  [Back]  🖼 scapula_dips.webp
+✅  Safety Bar Good Morning  [Hips]  🖼 safety_bar_good_morning.webp
+✅  Mixed Grip Chin Up  [Back, Latissimus Dorsi]  🖼 mixed_grip_chin_up.webp
+✅  Dumbbell Incline Triceps Extension  [Triceps, Upper Arms]  🖼 dumbbell_incline_triceps_extension.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hip-roll-plank/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-sumo-deadlift/]
+✅  Thoracic Bridge  [Calves, Glutes, Hamstrings, Latissimus Dorsi, Obliques, Stretching, Traps]  🖼 thoracic_bridge.webp
+✅  Barbell Low Bar Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_low_bar_squat.webp
+✅  Lever Chair Squat  [Glutes, Quadriceps, Thighs]  🖼 lever_chair_squat.webp
+✅  Skin the Cat  [Back, Waist]  🖼 skin_the_cat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/weighted-bench-dip/]
+✅  Kettlebell Sumo Deadlift  [Hips]  🖼 kettlebell_sumo_deadlift.webp
+  📊 Progress: 250/1657 done, 247 saved, 0 skipped
+✅  Hip Roll Plank  [Waist]  🖼 hip_roll_plank.webp
+✅  Kettlebell Straight Leg Deadlift  [Glutes, Hips, Spine]  🖼 kettlebell_straight_leg_deadlift.webp
+✅  Partner Shuffle  [Plyometrics]  🖼 partner_shuffle.webp
+✅  Bicycle Crunch  [Waist]  🖼 bicycle_crunch.webp
+✅  Kettlebell Snatch  [Weightlifting]  🖼 kettlebell_snatch.webp
+✅  Cycle Cross Trainer  [Cardio]  🖼 cycle_cross_trainer.webp
+✅  Weighted Bench Dip  [Triceps, Upper Arms]  🖼 weighted_bench_dip.webp
+✅  Kettlebell Farmers Walk  [Cardio, Forearms, Traps]  🖼 kettlebell_farmers_walk.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/neck-circle-stretch/]
+✅  Dumbbell Biceps Curl Squat  [Biceps, Upper Arms]  🖼 dumbbell_biceps_curl_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/handstand/]
+✅  Middle Back Stretch  [Back, Obliques]  🖼 middle_back_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/pvc-external-rotation/]
+✅  Handstand  [Triceps, Upper Arms]  🖼 handstand.webp
+✅  Resistance Band Seated Hip Abduction  [Glutes, Hips]  🖼 resistance_band_seated_hip_abduction.webp
+✅  Cable Upright Row  [Shoulders, Side Deltoid]  🖼 cable_upright_row.webp
+✅  Dumbbell Single Leg Split Squat  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_single_leg_split_squat.webp
+✅  Prone Cervical Extension  [Neck]  🖼 prone_cervical_extension.webp
+✅  Neck Circle Stretch  [Neck, Traps]  🖼 neck_circle_stretch.webp
+✅  Pvc External Rotation  [Back]  🖼 pvc_external_rotation.webp
+✅  Barbell Single Leg Split Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_single_leg_split_squat.webp
+✅  Dumbbell One Arm Bent Over Row  [Shoulders]  🖼 dumbbell_one_arm_bent_over_row.webp
+✅  Body Extension  [Thighs]  🖼 body_extension.webp
+✅  Split Jacks  [Cardio]  🖼 split_jacks.webp
+✅  Squat to Overhead Reach  [Plyometrics]  🖼 squat_to_overhead_reach.webp
+✅  Hyperextension  [Hips, Spine]  🖼 hyperextension.webp
+✅  Cable One Arm Front Raise  [Shoulders]  🖼 cable_one_arm_front_raise.webp
+✅  Shoulder Tap  [Abs, Chest, Obliques, Waist]  🖼 shoulder_tap.webp
+✅  Corkscrew Push Up  [Obliques, Waist]  🖼 corkscrew_push_up.webp
+✅  Kettlebell Good Morning  [Hamstrings, Hips]  🖼 kettlebell_good_morning.webp
+✅  Lying Lower Back Stretch  [Back, Hips]  🖼 lying_lower_back_stretch.webp
+✅  Exercise Ball Back Stretch  [Back, Spine]  🖼 exercise_ball_back_stretch.webp
+✅  Superman  [Back, Glutes, Hamstrings, Hips]  🖼 superman.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-scott-press/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/45-side-bend/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/elevated-single-leg-squat/]
+✅  Dumbbell Scott Press  [Shoulders, Side Deltoid]  🖼 dumbbell_scott_press.webp
+✅  Elevated Single Leg Squat  [Thighs]  🖼 elevated_single_leg_squat.webp
+✅  45 Side Bend  [Waist]  🖼 45_side_bend.webp
+✅  Frogger  [Abs, Glutes, Quadriceps, Waist]  🖼 frogger.webp
+✅  Ring Rollout  [Waist]  🖼 ring_rollout.webp
+✅  Dumbbell Reverse Spider Curl  [Upper Arms]  🖼 dumbbell_reverse_spider_curl.webp
+✅  Bear Crawl  [Cardio]  🖼 bear_crawl.webp
+✅  Kneeling Push-up  [Chest]  🖼 kneeling_push_up.webp
+✅  Bodyweight Single Leg Deadlift  [Glutes, Thighs]  🖼 bodyweight_single_leg_deadlift.webp
+✅  Sumo Squat Floor Touch  [Glutes, Hips, Quadriceps]  🖼 sumo_squat_floor_touch.webp
+✅  Alternate Heel Touchers  [Obliques, Waist]  🖼 alternate_heel_touchers.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-jump-squat/]
+✅  Dumbbell Russian Twist  [Obliques, Waist]  🖼 dumbbell_russian_twist.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-romanian-deadlift/]
+✅  Seal Push Up  [Back]  🖼 seal_push_up.webp
+✅  Barbell Bench Squat  [Quadriceps, Thighs]  🖼 barbell_bench_squat.webp
+✅  Lever Donkey Calf Raise  [Calves]  🖼 lever_donkey_calf_raise.webp
+✅  Cable Side Bend  [Obliques, Waist]  🖼 cable_side_bend.webp
+✅  Isometric Wipers  [Chest]  🖼 isometric_wipers.webp
+✅  Barbell Jump Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_jump_squat.webp
+✅  Barbell Romanian Deadlift  [Back, Glutes, Hamstrings, Hips]  🖼 barbell_romanian_deadlift.webp
+✅  Tiger Tail Forearm  [Forearms]  🖼 tiger_tail_forearm.webp
+  📊 Progress: 300/1657 done, 297 saved, 0 skipped
+✅  Side to Side Jump Rope  [Cardio]  🖼 side_to_side_jump_rope.webp
+✅  Landmine 180  [Obliques, Waist]  🖼 landmine_180.webp
+✅  Lying Elbow to Knee  [Obliques, Waist]  🖼 lying_elbow_to_knee.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kneeling-hip-flexor-stretch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/burpee/]
+✅  Pull Up  [Back, Latissimus Dorsi]  🖼 pull_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-bent-over-wide-grip-row/]
+✅  Burpee  [Cardio, Plyometrics]  🖼 burpee.webp
+✅  Kneeling Hip Flexor Stretch  [Glutes, Hips]  🖼 kneeling_hip_flexor_stretch.webp
+✅  Suspended Row  [Back, Latissimus Dorsi, Traps]  🖼 suspended_row.webp
+✅  Barbell Bent Over Wide Grip Row  [Back, Latissimus Dorsi, Traps]  🖼 barbell_bent_over_wide_grip_row.webp
+✅  Cat Stretch  [Back, Spine]  🖼 cat_stretch.webp
+✅  Resistance Band Rear Delt Row  [Back]  🖼 resistance_band_rear_delt_row.webp
+✅  Side Lying Floor Stretch  [Back, Latissimus Dorsi]  🖼 side_lying_floor_stretch.webp
+✅  Push Ups  [Chest, Shoulders, Triceps]  🖼 push_ups.webp
+✅  Side Lunge  [Glutes, Hips, Quadriceps, Thighs]  🖼 side_lunge.webp
+✅  Cable Standing High Cross Triceps Extension  [Triceps, Upper Arms]  🖼 cable_standing_high_cross_triceps_extension.webp
+✅  Cable Standing Crunch  [Abs, Waist]  🖼 cable_standing_crunch.webp
+✅  Squat Jacks  [Cardio]  🖼 squat_jacks.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-hang-power-clean-and-jerk/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/toe-jump/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/balance-board/]
+✅  Toe Jump  [Plyometrics]  🖼 toe_jump.webp
+✅  Dumbbell Hang Power Clean and Jerk  [Weightlifting]  🖼 dumbbell_hang_power_clean_and_jerk.webp
+✅  Balance Board  [Calves, Glutes, Quadriceps, Thighs]  🖼 balance_board.webp
+✅  Barbell Pullover  [Back, Latissimus Dorsi]  🖼 barbell_pullover.webp
+✅  Table Top Bridge  [Abs, Glutes, Hamstrings, Hips, Quadriceps, Rear Deltoid, Traps]  🖼 table_top_bridge.webp
+✅  Smith Machine Bicep Curl  [Biceps, Upper Arms]  🖼 smith_machine_bicep_curl.webp
+✅  Dumbbell Cuban Press  [Rear Deltoid, Shoulders, Side Deltoid]  🖼 dumbbell_cuban_press.webp
+✅  Dumbbell Seated Preacher Curl  [Forearms]  🖼 dumbbell_seated_preacher_curl.webp
+✅  Shin Box Switch  [Stretching]  🖼 shin_box_switch.webp
+✅  Jump Rope  [Calves, Cardio]  🖼 jump_rope.webp
+✅  Half Moon Pose Ardha Chandrasana  [Yoga]  🖼 half_moon_pose_ardha_chandrasana.webp
+✅  Side Neck Stretch  [Neck]  🖼 side_neck_stretch.webp
+✅  Captains Chair Straight Leg Raise  [Abs, Waist]  🖼 captains_chair_straight_leg_raise.webp
+✅  Kettlebell Single Arm Clean and Press  [Weightlifting]  🖼 kettlebell_single_arm_clean_and_press.webp
+✅  Kettlebell Bottoms Up Clean From the Hang Position  [Forearms, Upper Arms]  🖼 kettlebell_bottoms_up_clean_from_the_hang_position.webp
+✅  Dumbbell Seated External Rotation  [Shoulders]  🖼 dumbbell_seated_external_rotation.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-full-squat/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-single-leg-step-up/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-leg-extension/]
+✅  Barbell Full Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_full_squat.webp
+✅  Dumbbell Single Leg Step Up  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_single_leg_step_up.webp
+✅  Resistance Band Leg Extension  [Quadriceps, Thighs]  🖼 resistance_band_leg_extension.webp
+✅  Side Bend  [Waist]  🖼 side_bend.webp
+✅  Barbell Hang Clean  [Weightlifting]  🖼 barbell_hang_clean.webp
+✅  Single Leg Squat With Support  [Thighs]  🖼 single_leg_squat_with_support.webp
+✅  Resistance Band External Rotation  [Back]  🖼 resistance_band_external_rotation.webp
+✅  London Bridge  [Back, Latissimus Dorsi, Traps]  🖼 london_bridge.webp
+✅  Dumbbell Reverse Fly  [Rear Deltoid, Shoulders]  🖼 dumbbell_reverse_fly.webp
+✅  Barbell Muscle Clean  [Weightlifting]  🖼 barbell_muscle_clean.webp
+✅  Rocking Frog Stretch  [Glutes, Hips]  🖼 rocking_frog_stretch.webp
+✅  Barbell Snatch  [Biceps, Forearms, Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Triceps, Weightlifting]  🖼 barbell_snatch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/lever-front-pulldown/]
+✅  Kettlebell One Arm Jerk  [Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Thighs, Triceps]  🖼 kettlebell_one_arm_jerk.webp
+✅  Barbell Front Rack Split Squat  [Thighs]  🖼 barbell_front_rack_split_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/pike-to-cobra-push-up/]
+✅  Barbell One Leg Squat  [Quadriceps, Thighs]  🖼 barbell_one_leg_squat.webp
+✅  Resistance Band Walk  [Thighs]  🖼 resistance_band_walk.webp
+✅  Neck Flexor Stretch  [Neck]  🖼 neck_flexor_stretch.webp
+✅  Resistance Band Seated Leg Curl  [Hamstrings, Thighs]  🖼 resistance_band_seated_leg_curl.webp
+  📊 Progress: 350/1657 done, 347 saved, 0 skipped
+✅  Lever Front Pulldown  [Back, Latissimus Dorsi]  🖼 lever_front_pulldown.webp
+✅  Pike to Cobra Push-up  [Chest, Hips]  🖼 pike_to_cobra_push_up.webp
+✅  Cable Lying Triceps Extension  [Triceps, Upper Arms]  🖼 cable_lying_triceps_extension.webp
+✅  Barbell Palms Down Wrist Curl Over a Bench  [Forearms, Wrist]  🖼 barbell_palms_down_wrist_curl_over_a_bench.webp
+✅  Kettlebell One Legged Deadlift  [Glutes, Hips]  🖼 kettlebell_one_legged_deadlift.webp
+✅  Barbell Lunge  [Glutes, Quadriceps, Thighs]  🖼 barbell_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-romanian-deadlift/]
+✅  Sprinter Crunch  [Waist]  🖼 sprinter_crunch.webp
+✅  Boat Stretch  [Abs, Waist]  🖼 boat_stretch.webp
+✅  Triceps Dips Floor  [Triceps, Upper Arms]  🖼 triceps_dips_floor.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/one-leg-donkey-calf-raise/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/weighted-front-raise/]
+✅  Dumbbell Romanian Deadlift  [Glutes, Hamstrings, Thighs]  🖼 dumbbell_romanian_deadlift.webp
+✅  Dumbbell Twisting Bench Press  [Upper Arms]  🖼 dumbbell_twisting_bench_press.webp
+✅  One Leg Donkey Calf Raise  [Calves]  🖼 one_leg_donkey_calf_raise.webp
+✅  Single Leg Hip Thrusts  [Glutes, Hips]  🖼 single_leg_hip_thrusts.webp
+✅  Cable Kneeling Crunch  [Abs, Waist]  🖼 cable_kneeling_crunch.webp
+✅  Cable Shoulder Internal Rotation  [Front Deltoid, Shoulders]  🖼 cable_shoulder_internal_rotation.webp
+✅  Weighted Front Raise  [Front Deltoid, Shoulders]  🖼 weighted_front_raise.webp
+✅  Resistance Band Glute Bridge  [Glutes, Hips]  🖼 resistance_band_glute_bridge.webp
+✅  One Leg Quarter Squat  [Glutes, Quadriceps, Thighs]  🖼 one_leg_quarter_squat.webp
+✅  Dumbbell Lying Triceps Extension  [Triceps, Upper Arms]  🖼 dumbbell_lying_triceps_extension.webp
+✅  Medicine Ball Squat Jump  [Thighs]  🖼 medicine_ball_squat_jump.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/straddle-maltese/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/3-leg-dog-pose/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/tuck-up/]
+✅  Tuck-up  [Waist]  🖼 tuck_up.webp
+✅  Straddle Maltese  [Waist]  🖼 straddle_maltese.webp
+✅  3 Leg Dog Pose  [Stretching]  🖼 3_leg_dog_pose.webp
+✅  Seated Pull Up  [Back, Latissimus Dorsi, Traps]  🖼 seated_pull_up.webp
+✅  Standing Figure Four Pose  [Stretching]  🖼 standing_figure_four_pose.webp
+✅  Dumbbell Close Grip Press  [Triceps, Upper Arms]  🖼 dumbbell_close_grip_press.webp
+✅  Swing 360  [Back]  🖼 swing_360.webp
+✅  Bird Dog  [Spine, Waist]  🖼 bird_dog.webp
+✅  Dumbbell Floor Fly  [Chest]  🖼 dumbbell_floor_fly.webp
+✅  Ankle Circles  [Calves]  🖼 ankle_circles.webp
+✅  Kettlebell Russian Twist  [Waist]  🖼 kettlebell_russian_twist.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/above-head-chest-stretch/]
+✅  Prisoner Squat  [Thighs]  🖼 prisoner_squat.webp
+✅  Sumo Air Squat  [Hips, Thighs]  🖼 sumo_air_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/bodyweight-swing/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/scorpion-stretch/]
+✅  Above Head Chest Stretch  [Chest]  🖼 above_head_chest_stretch.webp
+✅  Squat Jerk  [Thighs]  🖼 squat_jerk.webp
+✅  Bodyweight Swing  [Hips]  🖼 bodyweight_swing.webp
+✅  Scorpion Stretch  [Stretching]  🖼 scorpion_stretch.webp
+✅  Plow Yoga Pose  [Abs, Obliques, Waist]  🖼 plow_yoga_pose.webp
+✅  Decline Knee Raise  [Waist]  🖼 decline_knee_raise.webp
+✅  45 Degrees Back Extension  [Hips, Spine]  🖼 45_degrees_back_extension.webp
+✅  Smith Stiff Legged Deadlift  [Hips]  🖼 smith_stiff_legged_deadlift.webp
+✅  Resistance Band Rear Fly  [Rear Deltoid, Shoulders]  🖼 resistance_band_rear_fly.webp
+✅  Strongman Tire Flip  [Weightlifting]  🖼 strongman_tire_flip.webp
+✅  Weighted Hanging Leg Hip Raise  [Waist]  🖼 weighted_hanging_leg_hip_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/standing-abdominal-vacuum/]
+✅  Triceps Press  [Triceps, Upper Arms]  🖼 triceps_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/lying-toe-tap/]
+✅  Groin Crunch  [Abs, Waist]  🖼 groin_crunch.webp
+✅  Straddle Planche  [Waist]  🖼 straddle_planche.webp
+✅  Landmine Squat and Press  [Front Deltoid, Glutes, Quadriceps, Shoulders, Thighs]  🖼 landmine_squat_and_press.webp
+✅  Barbell Deadlift  [Back, Glutes, Hamstrings, Hips]  🖼 barbell_deadlift.webp
+✅  Barbell Wide Grip Upright Row  [Shoulders]  🖼 barbell_wide_grip_upright_row.webp
+  📊 Progress: 400/1657 done, 397 saved, 0 skipped
+✅  Medicine Ball Single Leg Deadlift  [Hips]  🖼 medicine_ball_single_leg_deadlift.webp
+✅  Standing Abdominal Vacuum  [Waist]  🖼 standing_abdominal_vacuum.webp
+✅  Triceps Stretch  [Triceps, Upper Arms]  🖼 triceps_stretch.webp
+✅  Lying Toe Tap  [Hips]  🖼 lying_toe_tap.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/jack-press/]
+✅  Dumbbell Static Lunge  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_static_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/spine-stretch-forward/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-single-arm-high-row/]
+✅  Cable Single Arm High Row  [Back]  🖼 cable_single_arm_high_row.webp
+✅  Spine Stretch Forward  [Abs, Hips, Obliques, Spine, Waist]  🖼 spine_stretch_forward.webp
+✅  Jack Press  [Cardio]  🖼 jack_press.webp
+✅  Dumbbell Hang Power Clean  [Biceps, Calves, Forearms, Front Deltoid, Hamstrings, Quadriceps, Side Deltoid, Weightlifting]  🖼 dumbbell_hang_power_clean.webp
+✅  Single Leg Box Jump  [Plyometrics]  🖼 single_leg_box_jump.webp
+✅  Kneeling Shoulder Tap  [Chest]  🖼 kneeling_shoulder_tap.webp
+✅  Weighted Front Plank  [Waist]  🖼 weighted_front_plank.webp
+✅  Dumbbell Incline Bench Press  [Chest]  🖼 dumbbell_incline_bench_press.webp
+✅  Dumbbell Seated Hammer Curl  [Forearms, Upper Arms]  🖼 dumbbell_seated_hammer_curl.webp
+✅  Sun Salutation  [Stretching]  🖼 sun_salutation.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-standing-kickback/]
+✅  Jackknife Sit Up  [Abs, Waist]  🖼 jackknife_sit_up.webp
+✅  Dumbbell Alternate Lateral Raise  [Shoulders]  🖼 dumbbell_alternate_lateral_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-standing-wide-grip-biceps-curl/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-overhead-squat/]
+✅  Dumbbell Standing Kickback  [Triceps, Upper Arms]  🖼 dumbbell_standing_kickback.webp
+✅  Barbell Standing Wide-grip Biceps Curl  [Biceps, Upper Arms]  🖼 barbell_standing_wide_grip_biceps_curl.webp
+✅  Dumbbell Single Arm Bent Over Row  [Back]  🖼 dumbbell_single_arm_bent_over_row.webp
+✅  Rolling Bridge  [Abs, Obliques, Waist]  🖼 rolling_bridge.webp
+✅  Barbell Overhead Squat  [Quadriceps, Thighs]  🖼 barbell_overhead_squat.webp
+✅  Barbell Bent Over Row  [Back, Latissimus Dorsi, Traps]  🖼 barbell_bent_over_row.webp
+✅  Cable Judo Flip  [Obliques, Waist]  🖼 cable_judo_flip.webp
+✅  Plank on Hands  [Abs, Waist]  🖼 plank_on_hands.webp
+✅  Wide Grip Rear Pull Up  [Back, Latissimus Dorsi]  🖼 wide_grip_rear_pull_up.webp
+✅  Dumbbell Suitcase Carry  [Thighs]  🖼 dumbbell_suitcase_carry.webp
+✅  Frog Pose Mandukasana  [Stretching]  🖼 frog_pose_mandukasana.webp
+✅  One Arm Against Wall  [Back, Latissimus Dorsi]  🖼 one_arm_against_wall.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-clean-deadlift/]
+✅  Kettlebell Angled Press  [Back, Front Deltoid, Traps]  🖼 kettlebell_angled_press.webp
+✅  Dumbbell Stiff Leg Deadlift  [Glutes, Hips, Spine]  🖼 dumbbell_stiff_leg_deadlift.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-incline-twist-press/]
+✅  Plyo Jacks  [Cardio]  🖼 plyo_jacks.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/rope-climb/]
+✅  Barbell Clean Deadlift  [Thighs]  🖼 barbell_clean_deadlift.webp
+✅  Dumbbell Incline Twist Press  [Chest]  🖼 dumbbell_incline_twist_press.webp
+✅  Dumbbell Seated Kickback  [Triceps, Upper Arms]  🖼 dumbbell_seated_kickback.webp
+✅  Cable Standing Hip Thrust  [Hips]  🖼 cable_standing_hip_thrust.webp
+✅  Barbell Guillotine Bench Press  [Chest]  🖼 barbell_guillotine_bench_press.webp
+✅  Rope Climb  [Back, Latissimus Dorsi, Traps]  🖼 rope_climb.webp
+✅  Calves Stretch  [Calves]  🖼 calves_stretch.webp
+✅  Jump Step Up  [Cardio]  🖼 jump_step_up.webp
+✅  Rocket Jump  [Thighs]  🖼 rocket_jump.webp
+✅  Lever Triceps Extension  [Triceps, Upper Arms]  🖼 lever_triceps_extension.webp
+✅  Side Plank Leg Raise  [Hips]  🖼 side_plank_leg_raise.webp
+✅  Standing Quadriceps Stretch  [Quadriceps, Stretching, Thighs]  🖼 standing_quadriceps_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/lateral-step-up/]
+✅  Hands Bike  [Cardio]  🖼 hands_bike.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/leg-raise-hip-lift/]
+✅  Kettlebell Swing  [Glutes, Hamstrings, Hips]  🖼 kettlebell_swing.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/shoulder-tap-push-up/]
+✅  Leg Raise Hip Lift  [Abs, Waist]  🖼 leg_raise_hip_lift.webp
+✅  Downward Facing Dog  [Back, Hamstrings, Shoulders, Stretching, Yoga]  🖼 downward_facing_dog.webp
+✅  Lateral Step Up  [Glutes, Quadriceps, Thighs]  🖼 lateral_step_up.webp
+✅  Barbell Straight Leg Deadlift  [Back, Hamstrings, Spine]  🖼 barbell_straight_leg_deadlift.webp
+  📊 Progress: 450/1657 done, 447 saved, 0 skipped
+✅  Shoulder Tap Push Up  [Chest]  🖼 shoulder_tap_push_up.webp
+✅  Skater  [Cardio]  🖼 skater.webp
+✅  Weighted Dead Bug  [Waist]  🖼 weighted_dead_bug.webp
+✅  Dumbbell Pullover on Floor  [Back]  🖼 dumbbell_pullover_on_floor.webp
+✅  Cable Front Squat  [Glutes, Quadriceps, Thighs]  🖼 cable_front_squat.webp
+✅  Dumbbell Prone Incline Curl  [Upper Arms]  🖼 dumbbell_prone_incline_curl.webp
+✅  Dumbbell Push Press  [Front Deltoid, Hamstrings, Quadriceps, Shoulders, Side Deltoid, Triceps]  🖼 dumbbell_push_press.webp
+✅  Barbell Overhead Shrug  [Back, Traps]  🖼 barbell_overhead_shrug.webp
+✅  Barbell Rear Delt Raise  [Rear Deltoid, Shoulders]  🖼 barbell_rear_delt_raise.webp
+✅  Barbell Front Raise and Pullover  [Chest]  🖼 barbell_front_raise_and_pullover.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/bulgarian-jump-squat/]
+✅  Lying Hip Flexor Stretch  [Glutes, Hips]  🖼 lying_hip_flexor_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-one-arm-bench-press/]
+✅  Depth Jump  [Plyometrics]  🖼 depth_jump.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-sumo-romanian-deadlift/]
+✅  Bulgarian Jump Squat  [Thighs]  🖼 bulgarian_jump_squat.webp
+✅  Kettlebell One Arm Bench Press  [Chest]  🖼 kettlebell_one_arm_bench_press.webp
+✅  Dumbbell Swing  [Front Deltoid, Glutes, Hamstrings, Hips, Shoulders, Thighs]  🖼 dumbbell_swing.webp
+✅  Barbell Clean and Jerk  [Weightlifting]  🖼 barbell_clean_and_jerk.webp
+✅  Barbell Sumo Romanian Deadlift  [Glutes, Hips, Spine]  🖼 barbell_sumo_romanian_deadlift.webp
+✅  Barbell Standing Twist  [Obliques, Waist]  🖼 barbell_standing_twist.webp
+✅  Cable Shrug  [Back, Traps]  🖼 cable_shrug.webp
+✅  Forward Lunge  [Thighs]  🖼 forward_lunge.webp
+✅  Dumbbell Lying Hamstring Curl  [Hamstrings, Thighs]  🖼 dumbbell_lying_hamstring_curl.webp
+✅  Scapula Push-up  [Chest]  🖼 scapula_push_up.webp
+✅  Lever Seated Leg Press  [Glutes, Hips, Quadriceps, Thighs]  🖼 lever_seated_leg_press.webp
+✅  Shrimp Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 shrimp_squat.webp
+✅  Weighted Svend Press  [Chest]  🖼 weighted_svend_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/bodyweight-wall-squat/]
+✅  Inchworm  [Abs, Front Deltoid, Obliques, Plyometrics, Triceps]  🖼 inchworm.webp
+✅  Cable Twisting Overhead Press  [Front Deltoid, Shoulders]  🖼 cable_twisting_overhead_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-bent-over-rear-delt-fly/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/corpse-pose/]
+✅  Bodyweight Wall Squat  [Glutes, Quadriceps, Thighs]  🖼 bodyweight_wall_squat.webp
+✅  Resistance Band Bent Over Rear Delt Fly  [Shoulders]  🖼 resistance_band_bent_over_rear_delt_fly.webp
+✅  Cable Seated Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_seated_row.webp
+✅  Corpse Pose  [Stretching]  🖼 corpse_pose.webp
+✅  Alternate Oblique Crunch  [Obliques, Waist]  🖼 alternate_oblique_crunch.webp
+✅  Kettlebell Thruster  [Calves, Front Deltoid, Hamstrings, Quadriceps, Shoulders, Side Deltoid, Triceps]  🖼 kettlebell_thruster.webp
+✅  Heel Press  [Stretching]  🖼 heel_press.webp
+✅  Landmine Press  [Shoulders]  🖼 landmine_press.webp
+✅  Lever Leg Extension  [Quadriceps, Thighs]  🖼 lever_leg_extension.webp
+✅  Plank Jack  [Waist]  🖼 plank_jack.webp
+✅  Cable One Arm Curl  [Biceps, Upper Arms]  🖼 cable_one_arm_curl.webp
+✅  Bridge Hip Abduction  [Glutes, Hips]  🖼 bridge_hip_abduction.webp
+✅  Smith Hex Press  [Chest]  🖼 smith_hex_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/handstand-push-up/]
+✅  Strongman Truck Pull  [Weightlifting]  🖼 strongman_truck_pull.webp
+✅  Reverse Push-up  [Triceps, Upper Arms]  🖼 reverse_push_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-overhead-squat/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-reverse-curl/]
+✅  Handstand Push Up  [Triceps, Upper Arms]  🖼 handstand_push_up.webp
+✅  Dumbbell Overhead Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 dumbbell_overhead_squat.webp
+✅  Cable Reverse Curl  [Forearms]  🖼 cable_reverse_curl.webp
+✅  Reverse Crunch to Dead Bug  [Waist]  🖼 reverse_crunch_to_dead_bug.webp
+✅  Kettlebell Romanian Deadlift  [Hips]  🖼 kettlebell_romanian_deadlift.webp
+✅  Side Squat  [Glutes, Quadriceps, Thighs]  🖼 side_squat.webp
+✅  Hamstring Stretch  [Hamstrings, Stretching, Thighs]  🖼 hamstring_stretch.webp
+✅  Chin Tuck  [Neck]  🖼 chin_tuck.webp
+  📊 Progress: 500/1657 done, 497 saved, 0 skipped
+✅  Wheel Rollout  [Waist]  🖼 wheel_rollout.webp
+✅  Bodyweight Good Morning  [Hips]  🖼 bodyweight_good_morning.webp
+✅  Dumbbell Good Morning  [Hips]  🖼 dumbbell_good_morning.webp
+✅  Cat Cow Stretch  [Abs, Obliques, Spine, Waist]  🖼 cat_cow_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/full-lotus-yoga-pose/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-seated-shoulder-internal-rotation/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-hip-flexion/]
+✅  Full Lotus Yoga Pose  [Glutes, Hips]  🖼 full_lotus_yoga_pose.webp
+✅  Cable Seated Shoulder Internal Rotation  [Back]  🖼 cable_seated_shoulder_internal_rotation.webp
+✅  Spine Stretch  [Back, Spine]  🖼 spine_stretch.webp
+✅  Double Jump Squat  [Plyometrics]  🖼 double_jump_squat.webp
+✅  Band Hip Flexion  [Hips]  🖼 band_hip_flexion.webp
+✅  Revolved Head to Knee Pose  [Stretching]  🖼 revolved_head_to_knee_pose.webp
+✅  Air Squat  [Hips, Thighs]  🖼 air_squat.webp
+✅  Dumbbell Svend Press  [Chest]  🖼 dumbbell_svend_press.webp
+✅  Band Skull Crusher  [Upper Arms]  🖼 band_skull_crusher.webp
+✅  Cable Pulldown  [Back, Latissimus Dorsi]  🖼 cable_pulldown.webp
+✅  Lying Chin Tucks  [Neck]  🖼 lying_chin_tucks.webp
+✅  Wrist Circles  [Forearms, Wrist]  🖼 wrist_circles.webp
+✅  Band Pull Apart  [Shoulders]  🖼 band_pull_apart.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-kas-glute-bridge/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-banded-romanian-deadlift/]
+✅  Abdominal Stretch  [Waist]  🖼 abdominal_stretch.webp
+✅  Single Leg Heel Touch Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 single_leg_heel_touch_squat.webp
+✅  Transverse Step Up  [Thighs]  🖼 transverse_step_up.webp
+✅  Seated Ballerina  [Shoulders]  🖼 seated_ballerina.webp
+✅  Barbell Kas Glute Bridge  [Hips]  🖼 barbell_kas_glute_bridge.webp
+✅  Barbell Banded Romanian Deadlift  [Hips]  🖼 barbell_banded_romanian_deadlift.webp
+✅  Resistance Band Seated Shoulder Press  [Shoulders]  🖼 resistance_band_seated_shoulder_press.webp
+✅  Cable Incline Bench Press  [Chest]  🖼 cable_incline_bench_press.webp
+✅  Prayer Squat Yoga Pose  [Stretching]  🖼 prayer_squat_yoga_pose.webp
+✅  Jack Plank  [Glutes, Hips]  🖼 jack_plank.webp
+✅  Brachialis Pull Up  [Forearms]  🖼 brachialis_pull_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/reverse-shoulder-stretch/]
+✅  Standing Upper Body Rotation  [Waist]  🖼 standing_upper_body_rotation.webp
+✅  Exercise Ball Lat Stretch  [Back, Latissimus Dorsi]  🖼 exercise_ball_lat_stretch.webp
+✅  Cable Rear Drive  [Triceps, Upper Arms]  🖼 cable_rear_drive.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/pike-to-cobra/]
+✅  Barbell Split Jump  [Plyometrics]  🖼 barbell_split_jump.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/lying-single-leg-circle/]
+✅  Reverse Shoulder Stretch  [Shoulders]  🖼 reverse_shoulder_stretch.webp
+✅  Negative Push-up  [Chest]  🖼 negative_push_up.webp
+✅  Pike to Cobra  [Hips]  🖼 pike_to_cobra.webp
+✅  Band Assisted Pull Up  [Back, Latissimus Dorsi]  🖼 band_assisted_pull_up.webp
+✅  Smith Machine Incline Tricep Extension  [Triceps, Upper Arms]  🖼 smith_machine_incline_tricep_extension.webp
+✅  Lying Single Leg Circle  [Hips, Waist]  🖼 lying_single_leg_circle.webp
+✅  Bulgarian Split Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 bulgarian_split_squat.webp
+✅  Full Squat Mobility  [Glutes, Hips, Quadriceps, Thighs]  🖼 full_squat_mobility.webp
+✅  Floor Hyperextension  [Back]  🖼 floor_hyperextension.webp
+✅  Dumbbell Sit Up  [Waist]  🖼 dumbbell_sit_up.webp
+✅  Single Leg Push Off  [Thighs]  🖼 single_leg_push_off.webp
+✅  Front to Side Plank  [Chest, Waist]  🖼 front_to_side_plank.webp
+✅  Dumbbells Sumo Squat  [Thighs]  🖼 dumbbells_sumo_squat.webp
+✅  Dumbbell Incline Around the World  [Chest, Front Deltoid, Shoulders]  🖼 dumbbell_incline_around_the_world.webp
+✅  Dumbbell Incline Rear Fly  [Shoulders]  🖼 dumbbell_incline_rear_fly.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/smith-hip-thrust/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/sled-hack-squat/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-sots-press/]
+✅  Smith Hip Thrust  [Glutes, Hips]  🖼 smith_hip_thrust.webp
+✅  Kettlebell Sots Press  [Front Deltoid, Glutes, Hips, Quadriceps, Shoulders, Thighs]  🖼 kettlebell_sots_press.webp
+✅  Sled Hack Squat  [Glutes, Quadriceps, Thighs]  🖼 sled_hack_squat.webp
+  📊 Progress: 550/1657 done, 547 saved, 0 skipped
+✅  Dumbbell Z Press  [Shoulders]  🖼 dumbbell_z_press.webp
+✅  Dumbbell Larsen Press  [Chest]  🖼 dumbbell_larsen_press.webp
+✅  Band Push Up  [Chest]  🖼 band_push_up.webp
+✅  Dumbbell Clean  [Front Deltoid, Glutes, Quadriceps, Shoulders]  🖼 dumbbell_clean.webp
+✅  Full Maltese  [Waist]  🖼 full_maltese.webp
+✅  Kettlebell Double Jerk  [Shoulders]  🖼 kettlebell_double_jerk.webp
+✅  Clock Push Up  [Chest]  🖼 clock_push_up.webp
+✅  Dumbbell Plyo Squat  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_plyo_squat.webp
+✅  Band Kneeling Pulldown  [Back, Latissimus Dorsi]  🖼 band_kneeling_pulldown.webp
+✅  Snatch Pull  [Biceps, Calves, Forearms, Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Thighs]  🖼 snatch_pull.webp
+✅  Side Split  [Hips, Thighs]  🖼 side_split.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-lying-on-floor-chest-press/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/standing-achilles-stretch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-lying-bicep-curl/]
+✅  Dumbbell Lying on Floor Chest Press  [Chest]  🖼 dumbbell_lying_on_floor_chest_press.webp
+✅  Cable Lying Bicep Curl  [Biceps, Upper Arms]  🖼 cable_lying_bicep_curl.webp
+✅  Standing Achilles Stretch  [Calves]  🖼 standing_achilles_stretch.webp
+✅  Alternate Lateral Pulldown  [Back, Latissimus Dorsi]  🖼 alternate_lateral_pulldown.webp
+✅  Band Reverse Crunch  [Waist]  🖼 band_reverse_crunch.webp
+✅  Barbell Step Up  [Glutes, Quadriceps, Thighs]  🖼 barbell_step_up.webp
+✅  Cluster  [Weightlifting]  🖼 cluster.webp
+✅  Weighted Frog Pump  [Glutes, Hips]  🖼 weighted_frog_pump.webp
+✅  Lever Seated Calf Press  [Calves]  🖼 lever_seated_calf_press.webp
+✅  Kettlebell One Arm Row  [Abs, Back, Latissimus Dorsi, Traps]  🖼 kettlebell_one_arm_row.webp
+✅  Back Lever  [Back, Latissimus Dorsi, Spine, Traps]  🖼 back_lever.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hanging-toes-to-bar/]
+✅  The Eagle Yoga Pose  [Stretching]  🖼 the_eagle_yoga_pose.webp
+✅  Lunge  [Glutes, Quadriceps, Thighs]  🖼 lunge.webp
+✅  Dumbbell Squat to Overhead Press  [Thighs]  🖼 dumbbell_squat_to_overhead_press.webp
+✅  Barbell Decline Bench Press  [Chest]  🖼 barbell_decline_bench_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/side-push-up/]
+✅  Finger Extensor Stretch  [Forearms]  🖼 finger_extensor_stretch.webp
+✅  Cable Wrist Curl  [Forearms, Wrist]  🖼 cable_wrist_curl.webp
+✅  Barbell Shrug  [Back, Traps]  🖼 barbell_shrug.webp
+✅  Seated Quadriceps Stretch  [Thighs]  🖼 seated_quadriceps_stretch.webp
+✅  L-sit on Floor  [Abs, Quadriceps, Triceps, Waist]  🖼 l_sit_on_floor.webp
+✅  One Leg Squat  [Glutes, Quadriceps, Thighs]  🖼 one_leg_squat.webp
+✅  Hanging Toes to Bar  [Abs, Waist]  🖼 hanging_toes_to_bar.webp
+✅  Push Up Medicine Ball  [Chest]  🖼 push_up_medicine_ball.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-alternate-shoulder-press/]
+✅  Cable Shoulder Press  [Front Deltoid, Shoulders]  🖼 cable_shoulder_press.webp
+✅  Side Push Up  [Triceps, Upper Arms]  🖼 side_push_up.webp
+✅  Dumbbell Deadlift  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_deadlift.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-medius-kickback/]
+✅  Cat Pose  [Yoga]  🖼 cat_pose.webp
+✅  Resistance Band Squat  [Thighs]  🖼 resistance_band_squat.webp
+✅  Stability Ball Single Leg Squat  [Glutes, Quadriceps, Thighs]  🖼 stability_ball_single_leg_squat.webp
+✅  Double Leg Butt Kick  [Plyometrics]  🖼 double_leg_butt_kick.webp
+✅  Kettlebell Deck Squat  [Back, Hips, Thighs, Waist]  🖼 kettlebell_deck_squat.webp
+✅  Twist Sit Up  [Abs, Obliques, Waist]  🖼 twist_sit_up.webp
+✅  Dumbbell Alternate Shoulder Press  [Shoulders]  🖼 dumbbell_alternate_shoulder_press.webp
+✅  Band Chest Fly  [Chest]  🖼 band_chest_fly.webp
+✅  Cable Medius Kickback  [Hips]  🖼 cable_medius_kickback.webp
+✅  Child Pose  [Back, Hips, Stretching, Yoga]  🖼 child_pose.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-front-step-up/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/depth-jump-to-broad-jump/]
+✅  Star Jump  [Cardio]  🖼 star_jump.webp
+✅  Cable Incline Triceps Extension  [Triceps, Upper Arms]  🖼 cable_incline_triceps_extension.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/diagonal-lunge/]
+✅  Barbell Front Step Up  [Glutes, Quadriceps, Thighs]  🖼 barbell_front_step_up.webp
+  📊 Progress: 600/1657 done, 597 saved, 0 skipped
+✅  Depth Jump to Broad Jump  [Plyometrics]  🖼 depth_jump_to_broad_jump.webp
+✅  Dumbbell Lunge  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_lunge.webp
+✅  Diagonal Lunge  [Plyometrics]  🖼 diagonal_lunge.webp
+✅  Butt Kicks  [Cardio]  🖼 butt_kicks.webp
+✅  Smith Rear Delt Row  [Shoulders]  🖼 smith_rear_delt_row.webp
+✅  Lever Standing Hip Extension  [Hips, Triceps]  🖼 lever_standing_hip_extension.webp
+✅  Lying Scissor Kick  [Waist]  🖼 lying_scissor_kick.webp
+✅  Single Arm Push Up  [Chest, Triceps]  🖼 single_arm_push_up.webp
+✅  Swaying Palm Tree Yoga Pose  [Stretching]  🖼 swaying_palm_tree_yoga_pose.webp
+✅  Trap Bar Deadlift  [Glutes, Quadriceps, Thighs]  🖼 trap_bar_deadlift.webp
+✅  Dumbbell V Up  [Abs, Waist]  🖼 dumbbell_v_up.webp
+✅  Revolved Side Angle Pose  [Stretching]  🖼 revolved_side_angle_pose.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/monster-walk/]
+✅  Standing Iliotibial Stretch  [Hips]  🖼 standing_iliotibial_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/janda-sit-up/]
+✅  Boxer Shuffle  [Hips, Thighs]  🖼 boxer_shuffle.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/floor-t-raise/]
+✅  Monster Walk  [Glutes, Hips]  🖼 monster_walk.webp
+✅  Janda Sit Up  [Abs, Waist]  🖼 janda_sit_up.webp
+✅  Kettlebell Clean and Jerk  [Weightlifting]  🖼 kettlebell_clean_and_jerk.webp
+✅  Barbell Floor Calf Raise  [Calves]  🖼 barbell_floor_calf_raise.webp
+✅  Floor T-raise  [Hips]  🖼 floor_t_raise.webp
+✅  Strongman Yoke Walk  [Hips, Thighs]  🖼 strongman_yoke_walk.webp
+✅  Lever Seated Hip Adduction  [Hips]  🖼 lever_seated_hip_adduction.webp
+✅  Kettlebell Concentration Curl  [Upper Arms]  🖼 kettlebell_concentration_curl.webp
+✅  Band Lateral Raise  [Shoulders, Side Deltoid]  🖼 band_lateral_raise.webp
+✅  Posterior Tibialis Stretch  [Calves]  🖼 posterior_tibialis_stretch.webp
+✅  Overhead Clap  [Shoulders]  🖼 overhead_clap.webp
+✅  High Knee Jump Rope  [Cardio]  🖼 high_knee_jump_rope.webp
+✅  Hip Circles Stretch  [Glutes, Hips]  🖼 hip_circles_stretch.webp
+✅  Dumbbell Plank Pass Through  [Abs, Obliques, Traps, Waist]  🖼 dumbbell_plank_pass_through.webp
+✅  Standing Side Crunch  [Waist]  🖼 standing_side_crunch.webp
+✅  Dumbbell Archer  [Shoulders]  🖼 dumbbell_archer.webp
+✅  Incline Twisting Situp  [Waist]  🖼 incline_twisting_situp.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-reverse-grip-skullcrusher/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/tire-flip/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/smith-split-squat/]
+✅  Tire Flip  [Thighs]  🖼 tire_flip.webp
+✅  Barbell Reverse Grip Skullcrusher  [Upper Arms]  🖼 barbell_reverse_grip_skullcrusher.webp
+✅  Band Assisted Chin Up  [Back]  🖼 band_assisted_chin_up.webp
+✅  Smith Split Squat  [Hips, Thighs]  🖼 smith_split_squat.webp
+✅  Jumping Jack  [Cardio]  🖼 jumping_jack.webp
+✅  Squat Mobility  [Thighs]  🖼 squat_mobility.webp
+✅  Incline Push Up  [Chest]  🖼 incline_push_up.webp
+✅  Landmine Lateral Raise  [Shoulders, Side Deltoid]  🖼 landmine_lateral_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/roll-upper-back/]
+✅  Dumbbell Walking Lunges  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_walking_lunges.webp
+✅  Butt Bridge  [Abs, Waist]  🖼 butt_bridge.webp
+✅  Dumbbell Curl to Press  [Shoulders]  🖼 dumbbell_curl_to_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/high-knee-run/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-forward-lunge/]
+✅  Roll Upper Back  [Back, Rhomboids, Traps]  🖼 roll_upper_back.webp
+✅  High Knee Run  [Calves, Hips, Thighs]  🖼 high_knee_run.webp
+✅  Band Biceps Curl  [Biceps, Upper Arms]  🖼 band_biceps_curl.webp
+✅  Cable Seated Rear Lateral Raise  [Rear Deltoid, Shoulders]  🖼 cable_seated_rear_lateral_raise.webp
+✅  Kettlebell Forward Lunge  [Hips, Thighs]  🖼 kettlebell_forward_lunge.webp
+✅  Kettlebell Dead Bug  [Waist]  🖼 kettlebell_dead_bug.webp
+✅  Weighted Hip Thrusts  [Hips]  🖼 weighted_hip_thrusts.webp
+✅  Barbell Reverse Wrist Curl  [Forearms, Wrist]  🖼 barbell_reverse_wrist_curl.webp
+  📊 Progress: 650/1657 done, 647 saved, 0 skipped
+✅  Kettlebell Bent Press  [Front Deltoid, Obliques, Waist]  🖼 kettlebell_bent_press.webp
+✅  Smith Rack Pull  [Hips]  🖼 smith_rack_pull.webp
+✅  Dumbbell Rear Lunge  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_rear_lunge.webp
+✅  Upward Facing Dog  [Back, Spine]  🖼 upward_facing_dog.webp
+✅  Dumbbell Zottman Curl  [Biceps, Upper Arms]  🖼 dumbbell_zottman_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/straight-angle-yoga-pose/]
+✅  Band Hip Adduction  [Hips]  🖼 band_hip_adduction.webp
+✅  Pistol Squat to Box  [Thighs]  🖼 pistol_squat_to_box.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/bent-knee-side-plank/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/tiger-curl-pose/]
+✅  Straight Angle Yoga Pose  [Stretching]  🖼 straight_angle_yoga_pose.webp
+✅  Bent Knee Side Plank  [Waist]  🖼 bent_knee_side_plank.webp
+✅  Tiger Curl Pose  [Stretching]  🖼 tiger_curl_pose.webp
+✅  Twisting Crunch  [Obliques, Waist]  🖼 twisting_crunch.webp
+✅  Medicine Ball Standing Overhead Throw  [Chest, Triceps, Upper Arms]  🖼 medicine_ball_standing_overhead_throw.webp
+✅  Scapula Retraction Protraction  [Back]  🖼 scapula_retraction_protraction.webp
+✅  Cable Standing Chest Press  [Chest]  🖼 cable_standing_chest_press.webp
+✅  Cable Pulldown Bicep Curl  [Biceps, Upper Arms]  🖼 cable_pulldown_bicep_curl.webp
+✅  Kettlebell Dead Clean  [Weightlifting]  🖼 kettlebell_dead_clean.webp
+✅  Barbell Overhead Carry  [Thighs]  🖼 barbell_overhead_carry.webp
+✅  Strongman Mas Wrestling  [Weightlifting]  🖼 strongman_mas_wrestling.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/crab-pose/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/pvc-pass-through/]
+✅  Suspender Fly  [Chest]  🖼 suspender_fly.webp
+✅  Assault Run  [Cardio]  🖼 assault_run.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/weighted-russian-twist/]
+✅  Weighted Russian Twist  [Obliques, Waist]  🖼 weighted_russian_twist.webp
+✅  Pvc Pass Through  [Front Deltoid, Rear Deltoid, Shoulders, Side Deltoid]  🖼 pvc_pass_through.webp
+✅  Crab Pose  [Stretching]  🖼 crab_pose.webp
+✅  Barbell Squat  [Hips, Thighs]  🖼 barbell_squat.webp
+✅  Dumbbell Single Leg Squat  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_single_leg_squat.webp
+✅  Twisted Leg Raise  [Waist]  🖼 twisted_leg_raise.webp
+✅  Single Leg Step Up  [Glutes, Quadriceps, Thighs]  🖼 single_leg_step_up.webp
+✅  Cable Seated Chest Press  [Chest]  🖼 cable_seated_chest_press.webp
+✅  Kettlebell Pistol Squat  [Glutes, Quadriceps, Thighs]  🖼 kettlebell_pistol_squat.webp
+✅  Safety Bar Front Squat  [Thighs]  🖼 safety_bar_front_squat.webp
+✅  Lever Lateral Raise  [Shoulders, Side Deltoid]  🖼 lever_lateral_raise.webp
+✅  Push Press  [Calves, Front Deltoid, Glutes, Quadriceps, Shoulders, Side Deltoid, Triceps]  🖼 push_press.webp
+✅  Arm Circles  [Front Deltoid, Rear Deltoid, Shoulders, Side Deltoid]  🖼 arm_circles.webp
+✅  Lever Decline Chest Press  [Chest]  🖼 lever_decline_chest_press.webp
+✅  Crossover Reverse Lunge  [Thighs]  🖼 crossover_reverse_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-close-grip-curl/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-pull-apart/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/l-pull-up/]
+✅  Cable Close Grip Curl  [Upper Arms]  🖼 cable_close_grip_curl.webp
+✅  Resistance Band Pull Apart  [Rear Deltoid, Shoulders]  🖼 resistance_band_pull_apart.webp
+✅  Elevated Standing Calf Raise  [Calves]  🖼 elevated_standing_calf_raise.webp
+✅  L-Pull-Up  [Back, Waist]  🖼 l_pull_up.webp
+✅  Leg Extension Plank  [Waist]  🖼 leg_extension_plank.webp
+✅  Smith Seated Calf Raise  [Calves]  🖼 smith_seated_calf_raise.webp
+✅  Lying Crossover Stretch  [Obliques, Waist]  🖼 lying_crossover_stretch.webp
+✅  Smith Close Grip Bench Press  [Upper Arms]  🖼 smith_close_grip_bench_press.webp
+✅  Cable Rear Delt Row  [Shoulders]  🖼 cable_rear_delt_row.webp
+✅  Crunch Single Leg Lift  [Abs, Waist]  🖼 crunch_single_leg_lift.webp
+✅  Barbell Power Snatch  [Biceps, Calves, Forearms, Front Deltoid, Hamstrings, Quadriceps, Side Deltoid, Weightlifting]  🖼 barbell_power_snatch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-standing-calf-raise/]
+✅  Ab Roller Crunch  [Abs, Waist]  🖼 ab_roller_crunch.webp
+✅  Smith Behind Neck Press  [Front Deltoid, Shoulders]  🖼 smith_behind_neck_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/suspended-reverse-crunch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cheat-curl/]
+✅  Barbell Standing Calf Raise  [Calves]  🖼 barbell_standing_calf_raise.webp
+✅  Suspended Reverse Crunch  [Abs, Waist]  🖼 suspended_reverse_crunch.webp
+  📊 Progress: 700/1657 done, 697 saved, 0 skipped
+✅  Dumbbell Single Stiff Leg Deadlift  [Glutes, Hips, Spine]  🖼 dumbbell_single_stiff_leg_deadlift.webp
+✅  Cheat Curl  [Upper Arms]  🖼 cheat_curl.webp
+✅  Glute March  [Abs, Glutes, Hips]  🖼 glute_march.webp
+✅  Kettlebell Lunge With Twist  [Thighs]  🖼 kettlebell_lunge_with_twist.webp
+✅  Barbell High Bar Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_high_bar_squat.webp
+✅  Weighted Pull Up  [Back, Latissimus Dorsi]  🖼 weighted_pull_up.webp
+✅  Chin to Chest Stretch  [Abs, Waist]  🖼 chin_to_chest_stretch.webp
+✅  Strongman Atlas Stones  [Back, Thighs]  🖼 strongman_atlas_stones.webp
+✅  Dumbbell Thruster  [Front Deltoid, Glutes, Hips, Quadriceps, Shoulders, Thighs]  🖼 dumbbell_thruster.webp
+✅  Elevated Single Leg Hip Thrust  [Hips]  🖼 elevated_single_leg_hip_thrust.webp
+✅  Barbell Snatch Balance  [Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Triceps, Weightlifting]  🖼 barbell_snatch_balance.webp
+✅  Elbow Push Up  [Waist]  🖼 elbow_push_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-side-plank/]
+✅  Barbell Reverse Grip Bent Over Row  [Back, Latissimus Dorsi, Traps]  🖼 barbell_reverse_grip_bent_over_row.webp
+✅  Rocking Ankle Stretch  [Calves]  🖼 rocking_ankle_stretch.webp
+✅  Smith Hack Squat  [Glutes, Hips, Quadriceps]  🖼 smith_hack_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/spell-caster/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/rear-pull-up/]
+✅  Kettlebell Side Plank  [Waist]  🖼 kettlebell_side_plank.webp
+✅  Resistance Band Clam  [Glutes, Hips]  🖼 resistance_band_clam.webp
+✅  Rear Pull Up  [Back, Latissimus Dorsi]  🖼 rear_pull_up.webp
+✅  Lying Glute Squeeze  [Hips]  🖼 lying_glute_squeeze.webp
+✅  Jump Shrug  [Calves, Glutes, Quadriceps, Thighs, Traps]  🖼 jump_shrug.webp
+✅  Spell Caster  [Abs, Obliques, Waist]  🖼 spell_caster.webp
+✅  Lever Seated Hip Abduction  [Glutes, Hips]  🖼 lever_seated_hip_abduction.webp
+✅  Dead Bug With Stability Ball  [Waist]  🖼 dead_bug_with_stability_ball.webp
+✅  Dumbbell Incline Raise  [Front Deltoid, Shoulders]  🖼 dumbbell_incline_raise.webp
+✅  Side Lying Hip Adduction  [Hips]  🖼 side_lying_hip_adduction.webp
+✅  Archer Push-up  [Chest]  🖼 archer_push_up.webp
+✅  Band Concentration Curl  [Upper Arms]  🖼 band_concentration_curl.webp
+✅  Dumbbell Cross Body Hammer Curl  [Forearms, Upper Arms]  🖼 dumbbell_cross_body_hammer_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dot-drill/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/frog-sit-up/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-lying-one-arm-rear-lateral-raise/]
+✅  Dot Drill  [Plyometrics]  🖼 dot_drill.webp
+✅  Frog Sit-up  [Abs, Waist]  🖼 frog_sit_up.webp
+✅  Dumbbell Lying One Arm Rear Lateral Raise  [Rear Deltoid, Shoulders]  🖼 dumbbell_lying_one_arm_rear_lateral_raise.webp
+✅  Wide Legged Forward Bend Prasarita Padottanasana  [Yoga]  🖼 wide_legged_forward_bend_prasarita_padottanasana.webp
+✅  Barbell Split Jerk  [Calves, Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Triceps, Weightlifting]  🖼 barbell_split_jerk.webp
+✅  Dumbbell Incline Breeding  [Chest]  🖼 dumbbell_incline_breeding.webp
+✅  Strongman Hercules Hold  [Chest, Forearms, Shoulders, Upper Arms]  🖼 strongman_hercules_hold.webp
+✅  Kettlebell Wrist Curl  [Forearms]  🖼 kettlebell_wrist_curl.webp
+✅  Cable Squatting Curl  [Upper Arms]  🖼 cable_squatting_curl.webp
+✅  Kettlebell Lunge Pass Through  [Glutes, Quadriceps, Thighs]  🖼 kettlebell_lunge_pass_through.webp
+✅  Front Lever Reps  [Back, Waist]  🖼 front_lever_reps.webp
+✅  Lever Lying Leg Curl  [Hamstrings, Thighs]  🖼 lever_lying_leg_curl.webp
+✅  Ring Chest Fly  [Chest]  🖼 ring_chest_fly.webp
+✅  Pulse Up  [Waist]  🖼 pulse_up.webp
+✅  Spider Plank  [Hips, Waist]  🖼 spider_plank.webp
+✅  Pvc Front Rack Stretch  [Back]  🖼 pvc_front_rack_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-wide-squat/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-hammer-curl/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-seated-twist/]
+✅  Barbell Wide Squat  [Quadriceps, Thighs]  🖼 barbell_wide_squat.webp
+✅  Cable Hammer Curl  [Forearms, Upper Arms]  🖼 cable_hammer_curl.webp
+✅  Dumbbell Clean and Press  [Biceps, Calves, Forearms, Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Spine, Traps, Weightlifting]  🖼 dumbbell_clean_and_press.webp
+✅  Cable Seated Twist  [Obliques, Waist]  🖼 cable_seated_twist.webp
+✅  Frog Crunch  [Abs, Waist]  🖼 frog_crunch.webp
+✅  Barbell Rear Delt Row  [Back, Rear Deltoid]  🖼 barbell_rear_delt_row.webp
+  📊 Progress: 750/1657 done, 747 saved, 0 skipped
+✅  Band Calf Raise  [Calves]  🖼 band_calf_raise.webp
+✅  Seated Rotation Stretch  [Stretching]  🖼 seated_rotation_stretch.webp
+✅  Barbell Snatch Deadlift  [Calves, Glutes, Hamstrings, Quadriceps, Thighs]  🖼 barbell_snatch_deadlift.webp
+✅  Resistance Band Inverted Row  [Back]  🖼 resistance_band_inverted_row.webp
+✅  Skater Hops  [Cardio]  🖼 skater_hops.webp
+✅  Side Kick Kneeling  [Hips, Thighs, Waist]  🖼 side_kick_kneeling.webp
+✅  Dumbbell Seated Calf Raise  [Calves]  🖼 dumbbell_seated_calf_raise.webp
+✅  Resistance Band Leg Curl  [Hamstrings, Thighs]  🖼 resistance_band_leg_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-standing-up-straight-crossovers/]
+✅  Barbell Standing Overhead Triceps Extension  [Triceps, Upper Arms]  🖼 barbell_standing_overhead_triceps_extension.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/tiger-yoga-pose/]
+✅  Lunge Push Up  [Glutes, Quadriceps, Thighs]  🖼 lunge_push_up.webp
+✅  Standing Hamstring Stretch  [Hamstrings, Spine, Thighs]  🖼 standing_hamstring_stretch.webp
+✅  Dumbbell Standing Biceps Curl  [Biceps, Upper Arms]  🖼 dumbbell_standing_biceps_curl.webp
+✅  Kettlebell Alternating Hang Clean  [Biceps, Forearms, Upper Arms]  🖼 kettlebell_alternating_hang_clean.webp
+✅  Weighted Crunch  [Abs, Waist]  🖼 weighted_crunch.webp
+✅  Spine Backbend Stretch  [Hips, Spine]  🖼 spine_backbend_stretch.webp
+✅  Cable Standing Up Straight Crossovers  [Chest]  🖼 cable_standing_up_straight_crossovers.webp
+✅  Kettlebell Front Raise  [Shoulders]  🖼 kettlebell_front_raise.webp
+  ⏳ Rate limited (429), waiting 10s... [https://liftmanual.com/tiger-yoga-pose/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-kneeling-pull-through/]
+✅  High Knee Sprints  [Cardio]  🖼 high_knee_sprints.webp
+✅  Barbell Standing Leg Calf Raise  [Calves]  🖼 barbell_standing_leg_calf_raise.webp
+✅  Human Flag  [Upper Arms, Waist]  🖼 human_flag.webp
+✅  Finger Flexor Stretch  [Forearms]  🖼 finger_flexor_stretch.webp
+✅  Walking on Incline Treadmill  [Cardio]  🖼 walking_on_incline_treadmill.webp
+✅  Incline Push Press  [Chest]  🖼 incline_push_press.webp
+✅  Cable Kneeling Pull Through  [Glutes, Hips]  🖼 cable_kneeling_pull_through.webp
+✅  Lower Back Curl  [Back, Spine]  🖼 lower_back_curl.webp
+✅  Cable Romanian Deadlift  [Hips]  🖼 cable_romanian_deadlift.webp
+✅  Squat Mobility Complex  [Glutes, Quadriceps, Thighs]  🖼 squat_mobility_complex.webp
+✅  Barbell Lying Triceps Extension  [Triceps, Upper Arms]  🖼 barbell_lying_triceps_extension.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-twist/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/bulgarian-split-squat-with-chair/]
+✅  Tiger Yoga Pose  [Stretching]  🖼 tiger_yoga_pose.webp
+✅  Dumbbell One Arm Lateral Raise  [Shoulders, Side Deltoid]  🖼 dumbbell_one_arm_lateral_raise.webp
+✅  Cable Pushdown  [Triceps, Upper Arms]  🖼 cable_pushdown.webp
+✅  Dumbbell One Arm Triceps Extension  [Triceps, Upper Arms]  🖼 dumbbell_one_arm_triceps_extension.webp
+✅  Bulgarian Split Squat With Chair  [Glutes, Quadriceps, Thighs]  🖼 bulgarian_split_squat_with_chair.webp
+✅  Cable Twist  [Obliques, Waist]  🖼 cable_twist.webp
+✅  Hanging Pike  [Abs, Waist]  🖼 hanging_pike.webp
+✅  Barbell Wrist Curl  [Forearms, Wrist]  🖼 barbell_wrist_curl.webp
+✅  Half Sun Salutation  [Stretching]  🖼 half_sun_salutation.webp
+✅  Dumbbell Front Raise  [Front Deltoid, Shoulders]  🖼 dumbbell_front_raise.webp
+✅  Dumbbell Side Bend  [Obliques, Waist]  🖼 dumbbell_side_bend.webp
+✅  Side Bridge Hip Abduction  [Glutes, Hips]  🖼 side_bridge_hip_abduction.webp
+✅  Plank Arm Lifts  [Abs, Back]  🖼 plank_arm_lifts.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/exercise-ball-one-legged-diagonal-kick-hamstring-curl/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-seated-triceps-extension/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-twisting-standing-high-row/]
+✅  Exercise Ball One Legged Diagonal Kick Hamstring Curl  [Glutes, Hips]  🖼 exercise_ball_one_legged_diagonal_kick_hamstring_curl.webp
+✅  Cable Twisting Standing High Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_twisting_standing_high_row.webp
+✅  Dumbbell Seated Triceps Extension  [Triceps, Upper Arms]  🖼 dumbbell_seated_triceps_extension.webp
+✅  Medicine Ball Chest Pass  [Chest]  🖼 medicine_ball_chest_pass.webp
+✅  Drop Push Up  [Chest]  🖼 drop_push_up.webp
+✅  Ez Bar Standing Overhead Press  [Front Deltoid, Shoulders]  🖼 ez_bar_standing_overhead_press.webp
+✅  Barbell Zercher Carry  [Thighs]  🖼 barbell_zercher_carry.webp
+✅  Dumbbell Lateral to Front Raise  [Front Deltoid, Shoulders, Side Deltoid]  🖼 dumbbell_lateral_to_front_raise.webp
+✅  Self Assisted Inverse Leg Curl  [Hamstrings, Thighs]  🖼 self_assisted_inverse_leg_curl.webp
+  📊 Progress: 800/1657 done, 797 saved, 0 skipped
+✅  Sledge Hammer  [Abs, Obliques, Waist]  🖼 sledge_hammer.webp
+✅  Iron Cross Plank  [Abs, Back, Glutes, Latissimus Dorsi, Obliques, Traps]  🖼 iron_cross_plank.webp
+✅  Landmine Single Leg Hip Thrust  [Hips]  🖼 landmine_single_leg_hip_thrust.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-concentration-curl/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/crunch-with-medicine-ball/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-standing-lift/]
+✅  Dumbbell Concentration Curl  [Upper Arms]  🖼 dumbbell_concentration_curl.webp
+✅  Crunch With Medicine Ball  [Abs, Waist]  🖼 crunch_with_medicine_ball.webp
+✅  Single Leg Stride Jump  [Plyometrics]  🖼 single_leg_stride_jump.webp
+✅  Cable Standing Lift  [Obliques, Waist]  🖼 cable_standing_lift.webp
+✅  Chaturanga Pose  [Stretching]  🖼 chaturanga_pose.webp
+✅  Dumbbell Incline Curl  [Biceps, Upper Arms]  🖼 dumbbell_incline_curl.webp
+✅  Split Squats  [Glutes, Quadriceps, Thighs]  🖼 split_squats.webp
+✅  Hip Raise Bridge  [Abs, Waist]  🖼 hip_raise_bridge.webp
+✅  Squat on Bosu Ball  [Glutes, Quadriceps, Thighs]  🖼 squat_on_bosu_ball.webp
+✅  Barbell Pullover to Press  [Back, Latissimus Dorsi]  🖼 barbell_pullover_to_press.webp
+✅  Ring Dips  [Triceps, Upper Arms]  🖼 ring_dips.webp
+✅  Dumbbell Incline Low Fly  [Chest]  🖼 dumbbell_incline_low_fly.webp
+✅  Donkey Calf Raise  [Calves]  🖼 donkey_calf_raise.webp
+✅  Cable Drag Curl  [Upper Arms]  🖼 cable_drag_curl.webp
+✅  Trap Bar Farmers Carry  [Thighs]  🖼 trap_bar_farmers_carry.webp
+✅  Otis Up  [Abs, Waist]  🖼 otis_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/side-lying-clam/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/modified-push-up-to-forearms/]
+✅  Hanging Leg Hip Raise  [Abs, Waist]  🖼 hanging_leg_hip_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/90-to-90-stretch/]
+✅  Side Lying Clam  [Glutes, Hips]  🖼 side_lying_clam.webp
+✅  Modified Push Up to Forearms  [Forearms, Wrist]  🖼 modified_push_up_to_forearms.webp
+✅  Reaching Upper Back Stretch  [Back]  🖼 reaching_upper_back_stretch.webp
+✅  Dumbbell Lying Rear Delt Row  [Back, Latissimus Dorsi, Traps]  🖼 dumbbell_lying_rear_delt_row.webp
+✅  90 to 90 Stretch  [Stretching]  🖼 90_to_90_stretch.webp
+✅  Resistance Band Hip Thrusts  [Glutes, Hips]  🖼 resistance_band_hip_thrusts.webp
+✅  Wind Sprints  [Abs, Waist]  🖼 wind_sprints.webp
+✅  Dumbbell Lying Single Extension  [Triceps, Upper Arms]  🖼 dumbbell_lying_single_extension.webp
+✅  Incline Close Grip Push Up  [Triceps, Upper Arms]  🖼 incline_close_grip_push_up.webp
+✅  V-sit on Floor  [Abs, Quadriceps, Rear Deltoid, Sartorius, Traps, Triceps, Waist]  🖼 v_sit_on_floor.webp
+✅  Standing Lean Back Stomach Stretch  [Waist]  🖼 standing_lean_back_stomach_stretch.webp
+✅  Lateral Box Jump  [Thighs]  🖼 lateral_box_jump.webp
+✅  Low Lunge  [Stretching]  🖼 low_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/standing-calf-raise/]
+✅  Ez Barbell Preacher Curl  [Upper Arms]  🖼 ez_barbell_preacher_curl.webp
+✅  Kettlebell Lateral Lunge  [Thighs]  🖼 kettlebell_lateral_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/weighted-sissy-squat/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-hammer-curl/]
+✅  Standing Calf Raise  [Calves]  🖼 standing_calf_raise.webp
+✅  Standing Reverse Shoulder Stretch  [Shoulders]  🖼 standing_reverse_shoulder_stretch.webp
+✅  Resistance Band Hammer Curl  [Forearms, Upper Arms]  🖼 resistance_band_hammer_curl.webp
+✅  Landmine Single Leg Romanian Deadlift  [Hips]  🖼 landmine_single_leg_romanian_deadlift.webp
+✅  Front Plank  [Abs, Waist]  🖼 front_plank.webp
+✅  Weighted Sissy Squat  [Quadriceps, Thighs]  🖼 weighted_sissy_squat.webp
+✅  Kettlebell Goblet Carry  [Thighs]  🖼 kettlebell_goblet_carry.webp
+✅  Climbing Monkey Bars  [Plyometrics]  🖼 climbing_monkey_bars.webp
+✅  Landmine Romanian Deadlift  [Hips]  🖼 landmine_romanian_deadlift.webp
+✅  Cross Body Crunch  [Abs, Obliques, Waist]  🖼 cross_body_crunch.webp
+✅  Back Relaxation  [Back, Spine]  🖼 back_relaxation.webp
+✅  Lying Hip Flexor  [Thighs]  🖼 lying_hip_flexor.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-hang-clean/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/medicine-ball-crunch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-sumo-high-pull/]
+✅  Kettlebell Hang Clean  [Biceps, Calves, Forearms, Front Deltoid, Glutes, Hamstrings, Quadriceps, Shoulders, Side Deltoid]  🖼 kettlebell_hang_clean.webp
+✅  Kettlebell Sumo High Pull  [Biceps, Calves, Forearms, Front Deltoid, Glutes, Hamstrings, Hips, Quadriceps, Side Deltoid]  🖼 kettlebell_sumo_high_pull.webp
+✅  High Knee Squat  [Cardio]  🖼 high_knee_squat.webp
+  📊 Progress: 850/1657 done, 847 saved, 0 skipped
+✅  Medicine Ball Crunch  [Waist]  🖼 medicine_ball_crunch.webp
+✅  Dumbbell Low Fly  [Chest]  🖼 dumbbell_low_fly.webp
+✅  Barbell Front Raise  [Front Deltoid, Shoulders]  🖼 barbell_front_raise.webp
+✅  Cable Front Shoulder Raise  [Front Deltoid, Shoulders]  🖼 cable_front_shoulder_raise.webp
+✅  Dumbbell Standing Wrist Curl  [Forearms]  🖼 dumbbell_standing_wrist_curl.webp
+✅  Crocodile Yoga Pose  [Stretching]  🖼 crocodile_yoga_pose.webp
+✅  Crunch Hold  [Abs, Waist]  🖼 crunch_hold.webp
+✅  Step Up on Chair  [Glutes, Hips, Quadriceps, Thighs]  🖼 step_up_on_chair.webp
+✅  Ring Leg Curl  [Thighs]  🖼 ring_leg_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/adductor-stretch/]
+✅  EZ Barbell Lying Triceps Extension  [Triceps, Upper Arms]  🖼 ez_barbell_lying_triceps_extension.webp
+✅  Dumbbell Raise  [Front Deltoid, Rear Deltoid, Shoulders, Side Deltoid]  🖼 dumbbell_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-one-arm-swing/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hyght-dumbbell-fly/]
+✅  Adductor Stretch  [Glutes, Hips]  🖼 adductor_stretch.webp
+✅  Kettlebell One Arm Swing  [Front Deltoid, Glutes, Hamstrings, Weightlifting]  🖼 kettlebell_one_arm_swing.webp
+✅  Hyght Dumbbell Fly  [Chest]  🖼 hyght_dumbbell_fly.webp
+✅  Standing Air Bike  [Waist]  🖼 standing_air_bike.webp
+✅  Superman Chest Stretch  [Front Deltoid, Hips, Spine, Traps]  🖼 superman_chest_stretch.webp
+✅  Vertical Sit-up  [Waist]  🖼 vertical_sit_up.webp
+✅  Wheel Pose Yoga Pose  [Waist]  🖼 wheel_pose_yoga_pose.webp
+✅  Arm Crossover  [Chest]  🖼 arm_crossover.webp
+✅  Resistance Band Overhead Squat  [Hips]  🖼 resistance_band_overhead_squat.webp
+✅  Glute Bridge March  [Abs, Glutes, Hips]  🖼 glute_bridge_march.webp
+✅  Stalder Press  [Upper Arms]  🖼 stalder_press.webp
+✅  Cable Kickback  [Triceps, Upper Arms]  🖼 cable_kickback.webp
+✅  Barbell Power Shrug  [Back]  🖼 barbell_power_shrug.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/strongman-keg-toss/]
+✅  Reverse Hyper on Flat Bench  [Glutes, Hips]  🖼 reverse_hyper_on_flat_bench.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-incline-shoulder-raise/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-burpee/]
+✅  Strongman Keg Toss  [Back, Hips, Shoulders]  🖼 strongman_keg_toss.webp
+✅  Barbell Incline Shoulder Raise  [Chest]  🖼 barbell_incline_shoulder_raise.webp
+✅  Kettlebell Burpee  [Plyometrics]  🖼 kettlebell_burpee.webp
+✅  Hack Calf Raise  [Calves]  🖼 hack_calf_raise.webp
+✅  High Knee Step Up  [Cardio]  🖼 high_knee_step_up.webp
+✅  Cable One Arm Lateral Raise  [Shoulders, Side Deltoid]  🖼 cable_one_arm_lateral_raise.webp
+✅  Close Grip Pull-up  [Back]  🖼 close_grip_pull_up.webp
+✅  Dumbbell Lying Rear Lateral Raise  [Rear Deltoid, Shoulders]  🖼 dumbbell_lying_rear_lateral_raise.webp
+✅  Kettlebell Front Squat  [Glutes, Quadriceps, Thighs]  🖼 kettlebell_front_squat.webp
+✅  One Handed Hang  [Back, Latissimus Dorsi]  🖼 one_handed_hang.webp
+✅  Strongman Power Stairs  [Hips, Thighs]  🖼 strongman_power_stairs.webp
+✅  Kettlebell Suitcase Deadlift  [Hips]  🖼 kettlebell_suitcase_deadlift.webp
+✅  Vinyasa  [Stretching]  🖼 vinyasa.webp
+✅  Weighted Decline Sit-up  [Abs, Front Deltoid, Shoulders, Waist]  🖼 weighted_decline_sit_up.webp
+✅  Pelvic Tilt Into Bridge  [Glutes, Hips]  🖼 pelvic_tilt_into_bridge.webp
+✅  Band Seated Row  [Back, Latissimus Dorsi, Traps]  🖼 band_seated_row.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/rollover/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-pull-through/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/boxing-block/]
+✅  Rollover  [Hips, Waist]  🖼 rollover.webp
+✅  Boxing Block  [Plyometrics]  🖼 boxing_block.webp
+✅  Smith Shoulder Press  [Front Deltoid, Shoulders]  🖼 smith_shoulder_press.webp
+✅  Resistance Band Pull Through  [Hips]  🖼 resistance_band_pull_through.webp
+✅  Barbell Seated Front Raise  [Front Deltoid, Shoulders]  🖼 barbell_seated_front_raise.webp
+✅  Cable Standing Shoulder External Rotation  [Back]  🖼 cable_standing_shoulder_external_rotation.webp
+✅  Strongman Timber Carry  [Thighs]  🖼 strongman_timber_carry.webp
+✅  Kettlebell Lateral Raise  [Shoulders, Side Deltoid]  🖼 kettlebell_lateral_raise.webp
+✅  Hanging Oblique Knee Raise  [Obliques, Waist]  🖼 hanging_oblique_knee_raise.webp
+  📊 Progress: 900/1657 done, 897 saved, 0 skipped
+✅  Kettlebell Alternating Press  [Front Deltoid, Shoulders]  🖼 kettlebell_alternating_press.webp
+✅  Dumbbell Biceps Curl  [Biceps, Upper Arms]  🖼 dumbbell_biceps_curl.webp
+✅  Triangle Pose Trikonasana  [Yoga]  🖼 triangle_pose_trikonasana.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-standing-triceps-extension/]
+✅  Dumbbell Seated Curl  [Biceps, Upper Arms]  🖼 dumbbell_seated_curl.webp
+✅  Dumbbell Push Jerk  [Weightlifting]  🖼 dumbbell_push_jerk.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hip-external-rotator-stretch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/high-jump-rope/]
+✅  Dumbbell Standing Triceps Extension  [Triceps, Upper Arms]  🖼 dumbbell_standing_triceps_extension.webp
+✅  Kettlebell Sumo Squat  [Hips]  🖼 kettlebell_sumo_squat.webp
+✅  High Jump Rope  [Cardio]  🖼 high_jump_rope.webp
+✅  Lever Bicep Curl  [Biceps, Upper Arms]  🖼 lever_bicep_curl.webp
+✅  Bench Dip on Floor  [Triceps, Upper Arms]  🖼 bench_dip_on_floor.webp
+✅  Hip External Rotator Stretch  [Thighs]  🖼 hip_external_rotator_stretch.webp
+✅  Static Lunge  [Glutes, Quadriceps, Thighs]  🖼 static_lunge.webp
+✅  Cable Rope Seated Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_rope_seated_row.webp
+✅  Assisted Parallel Close Grip Pull Up  [Back]  🖼 assisted_parallel_close_grip_pull_up.webp
+✅  Burpee Twist  [Plyometrics]  🖼 burpee_twist.webp
+✅  Dumbbell High Curl  [Upper Arms]  🖼 dumbbell_high_curl.webp
+✅  Lizard Pose  [Stretching]  🖼 lizard_pose.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-goblet-squat/]
+✅  Side Lat Stretch  [Back]  🖼 side_lat_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-hip-thrust/]
+✅  Ardha Matsyendrasana Yoga Pose  [Thighs]  🖼 ardha_matsyendrasana_yoga_pose.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/arm-up-rotator-stretch/]
+✅  Cable Goblet Squat  [Thighs]  🖼 cable_goblet_squat.webp
+✅  Resistance Band Hip Thrust  [Glutes, Hips]  🖼 resistance_band_hip_thrust.webp
+✅  Reaching Up Shoulder Stretch  [Back]  🖼 reaching_up_shoulder_stretch.webp
+✅  Dumbbell Goblet Split Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 dumbbell_goblet_split_squat.webp
+✅  Warrior Ii Yoga Pose  [Stretching]  🖼 warrior_ii_yoga_pose.webp
+✅  Barbell Reverse Grip Bench Press  [Chest]  🖼 barbell_reverse_grip_bench_press.webp
+✅  Arm Up Rotator Stretch  [Shoulders]  🖼 arm_up_rotator_stretch.webp
+✅  Kettlebell Single Arm Thruster  [Shoulders, Thighs]  🖼 kettlebell_single_arm_thruster.webp
+✅  Couch Stretch  [Thighs, Waist]  🖼 couch_stretch.webp
+✅  Dumbbell Rear Delt Fly  [Shoulders]  🖼 dumbbell_rear_delt_fly.webp
+✅  Strongman Deadlift  [Hips, Thighs]  🖼 strongman_deadlift.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hanging-knees-to-elbows/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-reverse-crunch/]
+✅  Bow Yoga Pose  [Glutes, Hamstrings, Hips, Spine]  🖼 bow_yoga_pose.webp
+✅  Crab Walk  [Plyometrics]  🖼 crab_walk.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/jack-step/]
+✅  Resistance Band Reverse Crunch  [Waist]  🖼 resistance_band_reverse_crunch.webp
+✅  Plyo Push Up  [Chest]  🖼 plyo_push_up.webp
+✅  Hanging Knees to Elbows  [Abs, Waist]  🖼 hanging_knees_to_elbows.webp
+✅  Lever Belt Squat  [Thighs]  🖼 lever_belt_squat.webp
+✅  Jack Step  [Cardio]  🖼 jack_step.webp
+✅  Wide Air Squat  [Hips]  🖼 wide_air_squat.webp
+✅  Barbell Lateral Lunge  [Glutes, Quadriceps, Thighs]  🖼 barbell_lateral_lunge.webp
+✅  Kettlebell Figure 8  [Obliques, Waist]  🖼 kettlebell_figure_8.webp
+✅  Cable Lying Fly  [Chest]  🖼 cable_lying_fly.webp
+✅  Full Planche  [Abs, Waist]  🖼 full_planche.webp
+✅  Sled 45 Leg Press  [Thighs]  🖼 sled_45_leg_press.webp
+✅  Dumbbell Burpee  [Cardio]  🖼 dumbbell_burpee.webp
+✅  Barbell Zercher Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_zercher_squat.webp
+✅  Cable Standing Hip Extension  [Glutes, Hips]  🖼 cable_standing_hip_extension.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-superman/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/jumping-pistol-squat/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hanging-straight-leg-raise/]
+✅  Jumping Pistol Squat  [Plyometrics]  🖼 jumping_pistol_squat.webp
+✅  Dumbbell Superman  [Glutes, Hips, Spine]  🖼 dumbbell_superman.webp
+✅  Plank Push-up Row  [Back, Chest]  🖼 plank_push_up_row.webp
+✅  Hanging Straight Leg Raise  [Waist]  🖼 hanging_straight_leg_raise.webp
+  📊 Progress: 950/1657 done, 947 saved, 0 skipped
+✅  Hollow Rock  [Waist]  🖼 hollow_rock.webp
+✅  Cable Front Raise  [Front Deltoid, Shoulders]  🖼 cable_front_raise.webp
+✅  Close Grip Push Up  [Upper Arms]  🖼 close_grip_push_up.webp
+✅  Suspension Chest Press  [Chest]  🖼 suspension_chest_press.webp
+✅  Barbell Muscle Snatch  [Weightlifting]  🖼 barbell_muscle_snatch.webp
+✅  Dumbbell Incline Hammer Curl  [Biceps, Upper Arms]  🖼 dumbbell_incline_hammer_curl.webp
+✅  Bar Biceps Curl  [Biceps, Upper Arms]  🖼 bar_biceps_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-behind-the-back-shrug/]
+✅  Barbell Rear Lunge  [Glutes, Quadriceps, Thighs]  🖼 barbell_rear_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kick-side-jump/]
+✅  Seated Neck Stretch  [Neck, Traps]  🖼 seated_neck_stretch.webp
+✅  Kneeling Chest Stretch  [Chest]  🖼 kneeling_chest_stretch.webp
+✅  Dumbbell Preacher Curl  [Upper Arms]  🖼 dumbbell_preacher_curl.webp
+✅  Cable Standing Fly  [Chest]  🖼 cable_standing_fly.webp
+✅  Ez Bar Reverse Grip Bent Over Row  [Back, Latissimus Dorsi, Traps]  🖼 ez_bar_reverse_grip_bent_over_row.webp
+✅  Skip Jump Rope  [Cardio]  🖼 skip_jump_rope.webp
+✅  Barbell Behind the Back Shrug  [Back, Traps]  🖼 barbell_behind_the_back_shrug.webp
+✅  Good Morning Squat  [Hamstrings, Hips]  🖼 good_morning_squat.webp
+✅  Plank Jump  [Waist]  🖼 plank_jump.webp
+✅  Cable Forward Lunge  [Glutes, Quadriceps, Thighs]  🖼 cable_forward_lunge.webp
+✅  Dumbbell Incline Squeeze Press  [Upper Arms]  🖼 dumbbell_incline_squeeze_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-close-grip-pulldown/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-incline-t-raise/]
+✅  Kick Side Jump  [Plyometrics]  🖼 kick_side_jump.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/gorilla-chin/]
+✅  Dumbbell Incline T-raise  [Rear Deltoid, Shoulders]  🖼 dumbbell_incline_t_raise.webp
+✅  Band Close Grip Pulldown  [Back]  🖼 band_close_grip_pulldown.webp
+✅  Gorilla Chin  [Abs, Waist]  🖼 gorilla_chin.webp
+✅  Band Back Extension  [Back, Spine]  🖼 band_back_extension.webp
+✅  Seated Chin Tuck  [Neck]  🖼 seated_chin_tuck.webp
+✅  Exercise Ball Dip  [Upper Arms]  🖼 exercise_ball_dip.webp
+✅  Lever Preacher Curl  [Forearms]  🖼 lever_preacher_curl.webp
+✅  Jump Lunge to Feet Jack  [Cardio]  🖼 jump_lunge_to_feet_jack.webp
+✅  Squat  [Glutes, Quadriceps, Thighs]  🖼 squat.webp
+✅  Barbell Bent Arm Pullover  [Back, Latissimus Dorsi]  🖼 barbell_bent_arm_pullover.webp
+✅  Standing Side Bend  [Waist]  🖼 standing_side_bend.webp
+✅  Jump Squat  [Glutes, Quadriceps, Thighs]  🖼 jump_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/twist-squat/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-power-clean-and-jerk/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/side-lunge-adductor-stretch/]
+✅  Twist Squat  [Glutes, Obliques, Quadriceps, Waist]  🖼 twist_squat.webp
+✅  Dumbbell Power Clean and Jerk  [Weightlifting]  🖼 dumbbell_power_clean_and_jerk.webp
+✅  Side Lunge Adductor Stretch  [Hips]  🖼 side_lunge_adductor_stretch.webp
+✅  Dumbbell Lateral Raise  [Shoulders, Side Deltoid]  🖼 dumbbell_lateral_raise.webp
+✅  Side Plank Oblique Crunch  [Glutes, Obliques, Waist]  🖼 side_plank_oblique_crunch.webp
+✅  Band Standing Crunch  [Abs, Waist]  🖼 band_standing_crunch.webp
+✅  Dumbbell Overhead Sit Up  [Abs, Waist]  🖼 dumbbell_overhead_sit_up.webp
+✅  Side Plank Leg Lift  [Waist]  🖼 side_plank_leg_lift.webp
+✅  Strongman Log Lift  [Weightlifting]  🖼 strongman_log_lift.webp
+✅  Shuffle  [Plyometrics]  🖼 shuffle.webp
+✅  Upper Back Stretch  [Back, Traps]  🖼 upper_back_stretch.webp
+✅  Walking Lunge  [Glutes, Quadriceps, Thighs]  🖼 walking_lunge.webp
+✅  Dumbbell Lying Hammer Press  [Chest]  🖼 dumbbell_lying_hammer_press.webp
+✅  Front Plank With Arm Lift  [Waist]  🖼 front_plank_with_arm_lift.webp
+✅  Barbell Standing Military Press  [Front Deltoid, Shoulders]  🖼 barbell_standing_military_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/heel-drops/]
+✅  Wide Grip Pull Up  [Back, Latissimus Dorsi]  🖼 wide_grip_pull_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-walking-calf-raise/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hip-flexor-stretch-rear-foot-elevated/]
+✅  Heel Drops  [Hips]  🖼 heel_drops.webp
+✅  Dumbbell Walking Calf Raise  [Calves]  🖼 dumbbell_walking_calf_raise.webp
+  📊 Progress: 1000/1657 done, 997 saved, 0 skipped
+✅  Hip Flexor Stretch Rear Foot Elevated  [Hips]  🖼 hip_flexor_stretch_rear_foot_elevated.webp
+✅  Standing Gastrocnemius Calf Stretch  [Calves]  🖼 standing_gastrocnemius_calf_stretch.webp
+✅  Plank Walk-up  [Chest, Waist]  🖼 plank_walk_up.webp
+✅  Wrist Flexor Stretch  [Forearms, Wrist]  🖼 wrist_flexor_stretch.webp
+✅  Dumbbell Side Squat  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_side_squat.webp
+✅  Long Arm Crunch  [Abs, Waist]  🖼 long_arm_crunch.webp
+✅  Dumbbell Hip Thrust  [Hips]  🖼 dumbbell_hip_thrust.webp
+✅  Standing Shin Stretch  [Calves]  🖼 standing_shin_stretch.webp
+✅  Side Bridge  [Obliques, Waist]  🖼 side_bridge.webp
+✅  Run and Hop  [Cardio]  🖼 run_and_hop.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/landmine-hack-squat/]
+✅  Lying Leg Hip Raise  [Waist]  🖼 lying_leg_hip_raise.webp
+✅  Cable Seated Pullover  [Back]  🖼 cable_seated_pullover.webp
+✅  Quick Feet  [Hips, Thighs]  🖼 quick_feet.webp
+✅  Side Hip Abduction  [Glutes, Hips]  🖼 side_hip_abduction.webp
+✅  Dumbbell Rollout  [Abs, Obliques, Waist]  🖼 dumbbell_rollout.webp
+✅  Straight Leg Hip Bridge  [Hips]  🖼 straight_leg_hip_bridge.webp
+✅  Resistance Band Bent Over Row  [Back]  🖼 resistance_band_bent_over_row.webp
+✅  Dumbbell Floor Wiper  [Waist]  🖼 dumbbell_floor_wiper.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/seated-knee-flexor-stretch/]
+✅  Pelvic Tilt  [Abs, Glutes, Hips, Waist]  🖼 pelvic_tilt.webp
+✅  Landmine Hack Squat  [Glutes, Quadriceps, Thighs]  🖼 landmine_hack_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-seated-calf-stretch/]
+✅  Barbell Seated Shrug  [Back, Traps]  🖼 barbell_seated_shrug.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-sumo-squat/]
+✅  Seated Knee Flexor Stretch  [Calves, Glutes, Hamstrings, Thighs]  🖼 seated_knee_flexor_stretch.webp
+✅  Dynamic Back Stretch  [Back, Latissimus Dorsi]  🖼 dynamic_back_stretch.webp
+✅  Standing Single Leg Curl  [Hamstrings, Thighs]  🖼 standing_single_leg_curl.webp
+✅  Resistance Band Seated Calf Stretch  [Calves]  🖼 resistance_band_seated_calf_stretch.webp
+✅  Barbell Sumo Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_sumo_squat.webp
+✅  Side Lying Scissors  [Glutes, Hips]  🖼 side_lying_scissors.webp
+✅  Cable Tuck Reverse Crunch  [Abs, Waist]  🖼 cable_tuck_reverse_crunch.webp
+✅  Cable Incline Fly  [Chest]  🖼 cable_incline_fly.webp
+✅  Lean Forward Stretch  [Hips]  🖼 lean_forward_stretch.webp
+✅  Lever Back Extension  [Back, Spine]  🖼 lever_back_extension.webp
+✅  V Up  [Abs, Waist]  🖼 v_up.webp
+✅  Dumbbell Overhead Lunge  [Thighs]  🖼 dumbbell_overhead_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/reverse-grip-machine-lat-pulldown/]
+✅  Kettlebell One Arm Clean and Jerk  [Biceps, Calves, Forearms, Front Deltoid, Glutes, Hamstrings, Quadriceps, Shoulders, Side Deltoid, Triceps]  🖼 kettlebell_one_arm_clean_and_jerk.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/quadruped-leg-curl/]
+✅  Rotator Cuff Stretch  [Back]  🖼 rotator_cuff_stretch.webp
+✅  Barbell Spider Curl  [Upper Arms]  🖼 barbell_spider_curl.webp
+✅  Dumbbell Step Up Lunge  [Thighs]  🖼 dumbbell_step_up_lunge.webp
+✅  Dumbbell Sumo Deadlift  [Hips]  🖼 dumbbell_sumo_deadlift.webp
+✅  Skater Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 skater_squat.webp
+✅  Handstand Walk  [Front Deltoid, Rear Deltoid, Shoulders, Side Deltoid, Spine]  🖼 handstand_walk.webp
+✅  Cable Bar Lateral Pulldown  [Back, Latissimus Dorsi]  🖼 cable_bar_lateral_pulldown.webp
+✅  Reverse Grip Machine Lat Pulldown  [Back, Latissimus Dorsi]  🖼 reverse_grip_machine_lat_pulldown.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-twisting-standing-row/]
+✅  Elbow Out Rotator Stretch  [Shoulders]  🖼 elbow_out_rotator_stretch.webp
+✅  Quadruped Leg Curl  [Hamstrings, Thighs]  🖼 quadruped_leg_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-single-leg-deadlift/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-rack-pull/]
+✅  Barbell Single Leg Deadlift  [Glutes, Hips]  🖼 barbell_single_leg_deadlift.webp
+✅  Cable Twisting Standing Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_twisting_standing_row.webp
+✅  Barbell Rack Pull  [Back, Glutes, Spine]  🖼 barbell_rack_pull.webp
+✅  Barbell Bench Press  [Chest, Front Deltoid, Triceps]  🖼 barbell_bench_press.webp
+✅  Pvc Hip Hinge  [Glutes, Hips]  🖼 pvc_hip_hinge.webp
+✅  Frog Squat  [Cardio]  🖼 frog_squat.webp
+  📊 Progress: 1050/1657 done, 1047 saved, 0 skipped
+✅  Burpee With Push-up  [Cardio]  🖼 burpee_with_push_up.webp
+✅  Fixed Bar Back Stretch  [Back, Latissimus Dorsi, Traps]  🖼 fixed_bar_back_stretch.webp
+✅  Dumbbell One Arm Upright Row  [Shoulders, Side Deltoid]  🖼 dumbbell_one_arm_upright_row.webp
+✅  Single Straight Leg Stretch  [Abs, Hips, Thighs, Waist]  🖼 single_straight_leg_stretch.webp
+✅  Barbell Stiff Legged Deadlift  [Glutes, Hips, Spine]  🖼 barbell_stiff_legged_deadlift.webp
+✅  Diamond Push Up  [Triceps, Upper Arms]  🖼 diamond_push_up.webp
+✅  Incline Reverse Grip Push Up  [Chest]  🖼 incline_reverse_grip_push_up.webp
+✅  Dumbbell Squat  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_squat.webp
+✅  Single Leg Stand  [Plyometrics]  🖼 single_leg_stand.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-reverse-curl/]
+✅  Superman Push Up  [Abs, Waist]  🖼 superman_push_up.webp
+✅  Negative Crunch  [Abs, Waist]  🖼 negative_crunch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/figure-run/]
+✅  Single Leg Bench Squat  [Glutes, Quadriceps, Thighs]  🖼 single_leg_bench_squat.webp
+✅  Side Plank  [Obliques, Waist]  🖼 side_plank.webp
+✅  Dumbbell Rear Lateral Raise  [Rear Deltoid, Shoulders]  🖼 dumbbell_rear_lateral_raise.webp
+✅  Shoulder Backbend Stretch  [Front Deltoid, Rear Deltoid, Shoulders, Side Deltoid]  🖼 shoulder_backbend_stretch.webp
+✅  Dumbbell Seated One Leg Calf Raise  [Calves]  🖼 dumbbell_seated_one_leg_calf_raise.webp
+✅  Kettlebell Deadlift  [Glutes, Hips, Quadriceps, Thighs]  🖼 kettlebell_deadlift.webp
+✅  Barbell Reverse Curl  [Forearms, Upper Arms]  🖼 barbell_reverse_curl.webp
+✅  Figure Run  [Plyometrics]  🖼 figure_run.webp
+✅  Cable Low Fly  [Chest]  🖼 cable_low_fly.webp
+✅  Double Pigeon Pose  [Stretching]  🖼 double_pigeon_pose.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hip-thrusts/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-incline-fly/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-one-arm-side-deadlift/]
+✅  Hip Thrusts  [Hips]  🖼 hip_thrusts.webp
+✅  Barbell One Arm Side Deadlift  [Glutes, Quadriceps, Thighs]  🖼 barbell_one_arm_side_deadlift.webp
+✅  Side Lunge Stretch  [Glutes, Quadriceps, Thighs]  🖼 side_lunge_stretch.webp
+✅  Dumbbell Incline Fly  [Chest]  🖼 dumbbell_incline_fly.webp
+✅  Band Y Raise  [Shoulders, Side Deltoid]  🖼 band_y_raise.webp
+✅  Weighted Muscle-up  [Back]  🖼 weighted_muscle_up.webp
+✅  Smith Leg Press  [Glutes, Quadriceps, Thighs]  🖼 smith_leg_press.webp
+✅  Smith Front Squat  [Thighs]  🖼 smith_front_squat.webp
+✅  Standing Knee to Chest Stretch  [Hips]  🖼 standing_knee_to_chest_stretch.webp
+✅  Dumbbell Incline Hammer Press  [Chest]  🖼 dumbbell_incline_hammer_press.webp
+✅  Knuckle Push-up  [Chest]  🖼 knuckle_push_up.webp
+✅  Dumbbell Narrow Stance Squat  [Thighs]  🖼 dumbbell_narrow_stance_squat.webp
+✅  Barbell Hip Thrust  [Glutes, Hamstrings, Hips]  🖼 barbell_hip_thrust.webp
+✅  Lever Seated Shoulder Press  [Front Deltoid, Shoulders]  🖼 lever_seated_shoulder_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kneeling-lat-stretch/]
+✅  Crossover Kneeling Hip Flexor Stretch  [Glutes, Hips]  🖼 crossover_kneeling_hip_flexor_stretch.webp
+✅  Barbell Power Jerk  [Calves, Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Triceps, Weightlifting]  🖼 barbell_power_jerk.webp
+✅  Chest and Front of Shoulder Stretch  [Chest, Front Deltoid]  🖼 chest_and_front_of_shoulder_stretch.webp
+✅  Band Stiff Leg Deadlift  [Glutes, Hips]  🖼 band_stiff_leg_deadlift.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/garland-pose-malasana/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-reverse-grip-incline-bench-press/]
+✅  Kneeling Lat Stretch  [Back, Latissimus Dorsi]  🖼 kneeling_lat_stretch.webp
+✅  Smith Squat  [Glutes, Quadriceps, Thighs]  🖼 smith_squat.webp
+✅  Barbell Reverse Grip Incline Bench Press  [Chest]  🖼 barbell_reverse_grip_incline_bench_press.webp
+✅  Dumbbell Shrug  [Back, Traps]  🖼 dumbbell_shrug.webp
+✅  Weighted Inverted Row  [Back, Latissimus Dorsi, Traps]  🖼 weighted_inverted_row.webp
+✅  Square Hop  [Cardio]  🖼 square_hop.webp
+✅  Garland Pose Malasana  [Yoga]  🖼 garland_pose_malasana.webp
+✅  Dumbbell Iron Cross  [Glutes, Quadriceps, Rear Deltoid, Shoulders, Side Deltoid]  🖼 dumbbell_iron_cross.webp
+✅  Lever Seated Reverse Fly  [Rear Deltoid, Shoulders]  🖼 lever_seated_reverse_fly.webp
+✅  Double Kneeling Shin Stretch  [Calves]  🖼 double_kneeling_shin_stretch.webp
+✅  Strongman Viking Press  [Shoulders, Thighs]  🖼 strongman_viking_press.webp
+  📊 Progress: 1100/1657 done, 1097 saved, 0 skipped
+✅  Kneeling Jump Squat  [Glutes, Quadriceps, Thighs]  🖼 kneeling_jump_squat.webp
+✅  Sit Up  [Abs, Waist]  🖼 sit_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-windmill/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/lying-floor-hyperextension/]
+✅  Reverse Crunch  [Abs, Waist]  🖼 reverse_crunch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-kneeling-triceps-extension/]
+✅  Lying Floor Hyperextension  [Hips, Spine]  🖼 lying_floor_hyperextension.webp
+✅  Kettlebell Windmill  [Obliques, Waist]  🖼 kettlebell_windmill.webp
+✅  Cable Kneeling Triceps Extension  [Triceps, Upper Arms]  🖼 cable_kneeling_triceps_extension.webp
+✅  Squat Tip Toe  [Glutes, Quadriceps, Thighs]  🖼 squat_tip_toe.webp
+✅  Dumbbell Staggered Stance Romanian Deadlift  [Hips]  🖼 dumbbell_staggered_stance_romanian_deadlift.webp
+✅  Lever Incline Chest Press  [Chest]  🖼 lever_incline_chest_press.webp
+✅  Cobra Yoga Pose  [Abs, Waist]  🖼 cobra_yoga_pose.webp
+✅  Resistance Band Shoulder Adduction  [Back]  🖼 resistance_band_shoulder_adduction.webp
+✅  Air Bike  [Obliques, Waist]  🖼 air_bike.webp
+✅  Barbell Glute Bridge  [Glutes, Hips]  🖼 barbell_glute_bridge.webp
+✅  Prisoner Jump Squat  [Plyometrics]  🖼 prisoner_jump_squat.webp
+✅  Cross Over Shoulder Stretch  [Back]  🖼 cross_over_shoulder_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-farmers-carry/]
+✅  Negative Dragon Flag  [Abs, Waist]  🖼 negative_dragon_flag.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-clean-high-pull/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-split-squat/]
+✅  Kettlebell Farmers Carry  [Glutes, Hips, Quadriceps, Thighs]  🖼 kettlebell_farmers_carry.webp
+✅  Dumbbell Split Squat  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_split_squat.webp
+✅  Barbell Clean High Pull  [Glutes, Quadriceps, Side Deltoid, Weightlifting]  🖼 barbell_clean_high_pull.webp
+✅  Cable Underhand Pulldown  [Back, Latissimus Dorsi]  🖼 cable_underhand_pulldown.webp
+✅  Exercise Ball Wall Squat  [Glutes, Quadriceps, Thighs]  🖼 exercise_ball_wall_squat.webp
+✅  Forearm Wall Slide  [Back]  🖼 forearm_wall_slide.webp
+✅  Weighted Cossack Squats  [Hips, Thighs]  🖼 weighted_cossack_squats.webp
+✅  Agility Ball Drill  [Plyometrics]  🖼 agility_ball_drill.webp
+✅  Criss Cross Leg Raises  [Abs, Glutes, Hips]  🖼 criss_cross_leg_raises.webp
+✅  Svend Bench Press  [Upper Arms]  🖼 svend_bench_press.webp
+✅  Tree Pose Vrksasana  [Yoga]  🖼 tree_pose_vrksasana.webp
+✅  Lotus Yoga Pose Padmasana  [Yoga]  🖼 lotus_yoga_pose_padmasana.webp
+✅  Dumbbell Split Jump  [Plyometrics]  🖼 dumbbell_split_jump.webp
+✅  Barbell Chest Press on Stability Ball  [Chest]  🖼 barbell_chest_press_on_stability_ball.webp
+✅  Ski Ergometer  [Plyometrics]  🖼 ski_ergometer.webp
+✅  Lunge With Twist  [Glutes, Obliques, Quadriceps, Waist]  🖼 lunge_with_twist.webp
+✅  Dumbbell Lying Supination  [Forearms]  🖼 dumbbell_lying_supination.webp
+✅  Dumbbell Decline Fly  [Chest]  🖼 dumbbell_decline_fly.webp
+✅  Ladder Drill  [Plyometrics]  🖼 ladder_drill.webp
+✅  Kettlebell One Arm Floor Press  [Chest]  🖼 kettlebell_one_arm_floor_press.webp
+✅  Barbell Upright Row  [Shoulders, Side Deltoid]  🖼 barbell_upright_row.webp
+✅  Smith Deadlift  [Glutes, Hips, Spine]  🖼 smith_deadlift.webp
+✅  Roman Chair Sit Up  [Abs, Waist]  🖼 roman_chair_sit_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-leaning-lateral-raise/]
+✅  External Shoulder Rotation Stretch  [Shoulders]  🖼 external_shoulder_rotation_stretch.webp
+✅  Band Rear Delt Row  [Rear Deltoid, Shoulders]  🖼 band_rear_delt_row.webp
+✅  Hanging Straight Leg Hip Raise  [Abs, Waist]  🖼 hanging_straight_leg_hip_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/prone-single-arm-trap-raise/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-elevated-row/]
+✅  Cable Leaning Lateral Raise  [Shoulders]  🖼 cable_leaning_lateral_raise.webp
+✅  Prone Single Arm Trap Raise  [Back]  🖼 prone_single_arm_trap_raise.webp
+✅  Revolved Triangle Pose  [Stretching]  🖼 revolved_triangle_pose.webp
+✅  Cable Elevated Row  [Back, Latissimus Dorsi]  🖼 cable_elevated_row.webp
+✅  Side Shuttle  [Hips, Thighs]  🖼 side_shuttle.webp
+✅  Dumbbell Upright Shoulder External Rotation  [Back]  🖼 dumbbell_upright_shoulder_external_rotation.webp
+✅  Cable Decline Fly  [Chest]  🖼 cable_decline_fly.webp
+✅  Seated Chin Up  [Back, Latissimus Dorsi, Traps]  🖼 seated_chin_up.webp
+  📊 Progress: 1150/1657 done, 1147 saved, 0 skipped
+✅  Hip Extension Stretch  [Glutes, Hips]  🖼 hip_extension_stretch.webp
+✅  Hero Pose Virasana  [Yoga]  🖼 hero_pose_virasana.webp
+✅  Cable Forward Raise  [Front Deltoid, Shoulders]  🖼 cable_forward_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/back-stretch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/reverse-dip/]
+✅  Cable Rear Pulldown  [Back, Latissimus Dorsi]  🖼 cable_rear_pulldown.webp
+✅  Standing Forward Bend Uttanasana  [Yoga]  🖼 standing_forward_bend_uttanasana.webp
+✅  Kettlebell Side Lunge  [Thighs]  🖼 kettlebell_side_lunge.webp
+✅  Triceps Dip  [Triceps, Upper Arms]  🖼 triceps_dip.webp
+✅  Kettlebell Press Up  [Chest]  🖼 kettlebell_press_up.webp
+✅  Lying Calf Stretch  [Calves]  🖼 lying_calf_stretch.webp
+✅  Back Stretch  [Back, Latissimus Dorsi]  🖼 back_stretch.webp
+✅  Reverse Dip  [Triceps, Upper Arms]  🖼 reverse_dip.webp
+✅  Cable Standing Inner Curl  [Biceps, Upper Arms]  🖼 cable_standing_inner_curl.webp
+✅  Prancing  [Plyometrics]  🖼 prancing.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/assisted-lying-hamstring-stretch/]
+✅  Assisted Sit-up  [Abs, Waist]  🖼 assisted_sit_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/standing-hip-flexor-stretch/]
+✅  Dead Bug  [Abs, Waist]  🖼 dead_bug.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/side-twist/]
+✅  Assisted Lying Hamstring Stretch  [Thighs]  🖼 assisted_lying_hamstring_stretch.webp
+✅  Standing Hip Flexor Stretch  [Thighs]  🖼 standing_hip_flexor_stretch.webp
+✅  Russian Twist  [Obliques, Waist]  🖼 russian_twist.webp
+✅  Neck Bridge Prone  [Neck]  🖼 neck_bridge_prone.webp
+✅  Side Twist  [Waist]  🖼 side_twist.webp
+✅  Barbell Hack Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_hack_squat.webp
+✅  Assisted Pull Up  [Back, Latissimus Dorsi]  🖼 assisted_pull_up.webp
+✅  Cable Upper Chest Crossovers  [Chest]  🖼 cable_upper_chest_crossovers.webp
+✅  Chin Up  [Back, Latissimus Dorsi]  🖼 chin_up.webp
+✅  Side Crunch  [Obliques, Waist]  🖼 side_crunch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-preacher-curl/]
+✅  Lever Seated Fly  [Chest]  🖼 lever_seated_fly.webp
+✅  Fish Pose Matsyasana  [Yoga]  🖼 fish_pose_matsyasana.webp
+✅  Resistance Band Push-up  [Chest]  🖼 resistance_band_push_up.webp
+✅  Depth Jump to Hurdle Hop  [Plyometrics]  🖼 depth_jump_to_hurdle_hop.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-incline-bench-press/]
+✅  Barbell Split Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 barbell_split_squat.webp
+✅  Hanging Half Windmill  [Waist]  🖼 hanging_half_windmill.webp
+✅  Weighted One Leg Hip Thrust  [Glutes, Hips]  🖼 weighted_one_leg_hip_thrust.webp
+✅  Stair Jump  [Plyometrics]  🖼 stair_jump.webp
+✅  Cable Preacher Curl  [Upper Arms]  🖼 cable_preacher_curl.webp
+✅  Dumbbell Alternate Biceps Curl  [Biceps, Upper Arms]  🖼 dumbbell_alternate_biceps_curl.webp
+✅  Side-to-side Leg Swings  [Hips]  🖼 side_to_side_leg_swings.webp
+✅  Plate Hyperextension  [Hips, Spine]  🖼 plate_hyperextension.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-wide-grip-lat-pulldown/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-shrug/]
+  ⏳ Rate limited (429), waiting 10s... [https://liftmanual.com/barbell-incline-bench-press/]
+✅  Cable Wide Grip Lat Pulldown  [Back]  🖼 cable_wide_grip_lat_pulldown.webp
+✅  Band Shrug  [Back, Traps]  🖼 band_shrug.webp
+✅  Dumbbell Farmers Carry  [Thighs]  🖼 dumbbell_farmers_carry.webp
+✅  Standing Leg Circle  [Glutes, Hips]  🖼 standing_leg_circle.webp
+✅  Weighted Side Crunch  [Abs, Obliques, Waist]  🖼 weighted_side_crunch.webp
+✅  Dumbbell Rear Fly  [Rear Deltoid, Shoulders]  🖼 dumbbell_rear_fly.webp
+✅  Stand Spread Leg Forward Fold  [Yoga]  🖼 stand_spread_leg_forward_fold.webp
+✅  Prone Y Raise  [Back]  🖼 prone_y_raise.webp
+✅  Cable Rope Crossover Seated Row  [Back, Latissimus Dorsi, Spine, Traps]  🖼 cable_rope_crossover_seated_row.webp
+✅  Exercise Ball Hip Flexor Stretch  [Hips]  🖼 exercise_ball_hip_flexor_stretch.webp
+✅  Dumbbell Reverse Bench Press  [Chest]  🖼 dumbbell_reverse_bench_press.webp
+✅  Cable Straight Back Seated Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_straight_back_seated_row.webp
+✅  Barbell Seated Good Morning  [Glutes, Hips]  🖼 barbell_seated_good_morning.webp
+  📊 Progress: 1200/1657 done, 1197 saved, 0 skipped
+✅  Inverted Row Bent Knees  [Back, Latissimus Dorsi, Traps]  🖼 inverted_row_bent_knees.webp
+✅  Barbell Incline Bench Press  [Chest]  🖼 barbell_incline_bench_press.webp
+✅  Weighted Lying Neck Flexion  [Neck]  🖼 weighted_lying_neck_flexion.webp
+✅  Skips  [Plyometrics]  🖼 skips.webp
+✅  Wall Ball  [Front Deltoid, Glutes, Quadriceps, Thighs]  🖼 wall_ball.webp
+✅  Reverse Plank With Leg Lift  [Hips, Quadriceps, Thighs]  🖼 reverse_plank_with_leg_lift.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/heel-to-toe-walk/]
+✅  Bent Arm Chest Stretch  [Chest, Front Deltoid]  🖼 bent_arm_chest_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/lever-incline-fly/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-single-leg-calf-raise/]
+✅  Heel to Toe Walk  [Plyometrics]  🖼 heel_to_toe_walk.webp
+✅  Lever Incline Fly  [Chest]  🖼 lever_incline_fly.webp
+✅  Seated Calf Stretch  [Calves]  🖼 seated_calf_stretch.webp
+✅  Dumbbell Single Leg Calf Raise  [Calves]  🖼 dumbbell_single_leg_calf_raise.webp
+✅  Barbell Seated Calf Raise  [Calves]  🖼 barbell_seated_calf_raise.webp
+✅  Dumbbell High Pull  [Weightlifting]  🖼 dumbbell_high_pull.webp
+✅  Side Kick  [Hips, Waist]  🖼 side_kick.webp
+✅  Cable Standing Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_standing_row.webp
+✅  Barbell Overhead Lunge  [Glutes, Quadriceps, Thighs]  🖼 barbell_overhead_lunge.webp
+✅  Heel Glute Bridge  [Hips]  🖼 heel_glute_bridge.webp
+✅  Body Saw Plank  [Abs, Latissimus Dorsi, Shoulders]  🖼 body_saw_plank.webp
+✅  Band Shoulder Press  [Front Deltoid, Shoulders]  🖼 band_shoulder_press.webp
+✅  Cable Palm Rotational Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_palm_rotational_row.webp
+✅  Push Up on Bosu Ball  [Chest]  🖼 push_up_on_bosu_ball.webp
+✅  Stability Ball Rollout  [Hips]  🖼 stability_ball_rollout.webp
+✅  Commando Pull Up  [Back, Latissimus Dorsi, Obliques, Traps, Waist]  🖼 commando_pull_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-seated-front-raise/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-lying-external-shoulder-rotation/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/side-to-side-toe-touch/]
+✅  Dumbbell Seated Front Raise  [Front Deltoid, Shoulders]  🖼 dumbbell_seated_front_raise.webp
+✅  Dumbbell Lying External Shoulder Rotation  [Shoulders]  🖼 dumbbell_lying_external_shoulder_rotation.webp
+✅  Side-to-side Toe Touch  [Hips, Waist]  🖼 side_to_side_toe_touch.webp
+✅  Dumbbell Incline Shoulder Raise  [Back]  🖼 dumbbell_incline_shoulder_raise.webp
+✅  Assisted Bulgarian Split Squat  [Thighs]  🖼 assisted_bulgarian_split_squat.webp
+✅  Kettlebell Box Squat  [Glutes, Hips, Quadriceps]  🖼 kettlebell_box_squat.webp
+✅  Roll Foot  [Calves]  🖼 roll_foot.webp
+✅  Side Plank Hip Adduction  [Glutes, Hips, Obliques]  🖼 side_plank_hip_adduction.webp
+✅  Cable Reverse Grip Pushdown  [Triceps, Upper Arms]  🖼 cable_reverse_grip_pushdown.webp
+✅  Cable Concentration Curl  [Upper Arms]  🖼 cable_concentration_curl.webp
+✅  Dumbbell Tate Press  [Triceps, Upper Arms]  🖼 dumbbell_tate_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-twisted-fly/]
+✅  Dumbbell Reverse Wrist Curl  [Forearms, Wrist]  🖼 dumbbell_reverse_wrist_curl.webp
+✅  Strongman Front Hold  [Shoulders]  🖼 strongman_front_hold.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/superman-row/]
+✅  Diagonal Punch  [Plyometrics]  🖼 diagonal_punch.webp
+✅  Back Extension on Exercise Ball  [Back, Spine]  🖼 back_extension_on_exercise_ball.webp
+✅  Cable Seated Wide Grip Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_seated_wide_grip_row.webp
+✅  Barbell Front Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_front_squat.webp
+✅  Barbell Suitcase Carry  [Thighs]  🖼 barbell_suitcase_carry.webp
+✅  Kettlebell Two Arm Clean  [Shoulders]  🖼 kettlebell_two_arm_clean.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/squat-side-kick/]
+✅  Dumbbell Twisted Fly  [Chest]  🖼 dumbbell_twisted_fly.webp
+✅  Cable One Arm Tricep Pushdown  [Triceps, Upper Arms]  🖼 cable_one_arm_tricep_pushdown.webp
+✅  Weighted Tricep Dips  [Triceps, Upper Arms]  🖼 weighted_tricep_dips.webp
+✅  Wide to Narrow Push Up  [Chest]  🖼 wide_to_narrow_push_up.webp
+✅  Jumping Pull Up  [Back, Latissimus Dorsi]  🖼 jumping_pull_up.webp
+✅  Superman Row  [Back]  🖼 superman_row.webp
+✅  Clap Push Up  [Chest]  🖼 clap_push_up.webp
+✅  Smith Sumo Deadlift  [Hips]  🖼 smith_sumo_deadlift.webp
+  📊 Progress: 1250/1657 done, 1247 saved, 0 skipped
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/bodyweight-single-leg-rdl/]
+  ⏳ Rate limited (429), waiting 10s... [https://liftmanual.com/squat-side-kick/]
+✅  Standing Lateral Stretch  [Back, Latissimus Dorsi]  🖼 standing_lateral_stretch.webp
+✅  Kettlebell Front Rack Walking Lunge  [Thighs]  🖼 kettlebell_front_rack_walking_lunge.webp
+✅  L Drill  [Plyometrics]  🖼 l_drill.webp
+✅  Dumbbell Renegade Row  [Back, Latissimus Dorsi, Traps, Waist]  🖼 dumbbell_renegade_row.webp
+✅  Dumbbell Full Swing  [Front Deltoid, Glutes, Hamstrings, Hips]  🖼 dumbbell_full_swing.webp
+✅  Dumbbell Decline Triceps Extension  [Triceps, Upper Arms]  🖼 dumbbell_decline_triceps_extension.webp
+✅  Resistance Band Side Walk  [Hips]  🖼 resistance_band_side_walk.webp
+✅  Bodyweight Single Leg Rdl  [Hips]  🖼 bodyweight_single_leg_rdl.webp
+✅  Medicine Ball Backward Throw  [Glutes, Hamstrings, Hips, Spine]  🖼 medicine_ball_backward_throw.webp
+✅  Bench Hip Extension  [Glutes, Hips]  🖼 bench_hip_extension.webp
+✅  Bench Pull-ups  [Back, Latissimus Dorsi]  🖼 bench_pull_ups.webp
+✅  Bent Knee Lying Twist  [Obliques, Waist]  🖼 bent_knee_lying_twist.webp
+✅  Decline Push Up  [Chest]  🖼 decline_push_up.webp
+✅  Half Knee Bends  [Cardio]  🖼 half_knee_bends.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/plyometric-agility-drill/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hollow-hold/]
+✅  Squat Side Kick  [Glutes, Hips, Quadriceps]  🖼 squat_side_kick.webp
+✅  Kettlebell Seesaw Press  [Front Deltoid, Shoulders]  🖼 kettlebell_seesaw_press.webp
+✅  Elbow to Knee Sit Up  [Obliques, Waist]  🖼 elbow_to_knee_sit_up.webp
+✅  Plyometric Agility Drill  [Plyometrics]  🖼 plyometric_agility_drill.webp
+✅  Hollow Hold  [Abs, Waist]  🖼 hollow_hold.webp
+✅  Side Wrist Pull Stretch  [Forearms, Wrist]  🖼 side_wrist_pull_stretch.webp
+✅  Cable Standing Wrist Curl  [Forearms]  🖼 cable_standing_wrist_curl.webp
+✅  Single Arm Overhead Dumbbell Squat  [Glutes, Quadriceps, Thighs]  🖼 single_arm_overhead_dumbbell_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/knee-touch-crunch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-box-squat/]
+✅  Barbell Quarter Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_quarter_squat.webp
+✅  Single Leg Vertical Jump  [Plyometrics]  🖼 single_leg_vertical_jump.webp
+✅  Machine Inner Chest Press  [Chest]  🖼 machine_inner_chest_press.webp
+✅  Standing Hip Abduction  [Glutes, Hips]  🖼 standing_hip_abduction.webp
+✅  High Knees Butt Kicks  [Cardio]  🖼 high_knees_butt_kicks.webp
+✅  Kettlebell Alternating Row  [Abs, Back, Latissimus Dorsi, Traps]  🖼 kettlebell_alternating_row.webp
+✅  Cocoons  [Abs, Waist]  🖼 cocoons.webp
+✅  Barbell Box Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 barbell_box_squat.webp
+✅  Knee Touch Crunch  [Abs, Waist]  🖼 knee_touch_crunch.webp
+✅  Resistance Band Reverse Hyperextension  [Glutes, Hips]  🖼 resistance_band_reverse_hyperextension.webp
+✅  Four Limbed Staff  [Stretching]  🖼 four_limbed_staff.webp
+✅  Standing Archer  [Back, Chest, Upper Arms]  🖼 standing_archer.webp
+✅  Tiger Tail Neck  [Neck]  🖼 tiger_tail_neck.webp
+✅  High Knee Skips  [Cardio]  🖼 high_knee_skips.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-z-press/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/seated-glute-stretch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-press-squat/]
+✅  Seated Glute Stretch  [Glutes, Hips]  🖼 seated_glute_stretch.webp
+✅  Barbell Z Press  [Shoulders]  🖼 barbell_z_press.webp
+✅  Dumbbell Press Squat  [Chest, Glutes, Hips, Quadriceps, Thighs]  🖼 dumbbell_press_squat.webp
+✅  Dead Hang Stretch  [Back, Latissimus Dorsi, Traps]  🖼 dead_hang_stretch.webp
+✅  3/4 Sit-up  [Abs, Waist]  🖼 3_4_sit_up.webp
+✅  Barbell Prone Incline Curl  [Upper Arms]  🖼 barbell_prone_incline_curl.webp
+✅  Double Under Jump Rope  [Cardio]  🖼 double_under_jump_rope.webp
+✅  Iron Cross Stretch  [Glutes, Hips]  🖼 iron_cross_stretch.webp
+✅  Dumbbell Finger Curls  [Forearms]  🖼 dumbbell_finger_curls.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-sumo-squat/]
+✅  Side to Side Box Shuffle  [Plyometrics]  🖼 side_to_side_box_shuffle.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/battling-ropes/]
+✅  Cable Standing Calf Raise  [Calves]  🖼 cable_standing_calf_raise.webp
+✅  Band Straight Leg Deadlift  [Back, Spine]  🖼 band_straight_leg_deadlift.webp
+✅  Cable Reverse Crunch  [Abs, Waist]  🖼 cable_reverse_crunch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-backward-lunge/]
+✅  Battling Ropes  [Rear Deltoid, Shoulders]  🖼 battling_ropes.webp
+  📊 Progress: 1300/1657 done, 1297 saved, 0 skipped
+✅  Barbell Drag Curl  [Biceps, Upper Arms]  🖼 barbell_drag_curl.webp
+✅  Dumbbell Sumo Squat  [Thighs]  🖼 dumbbell_sumo_squat.webp
+✅  Strongman Shield Carry  [Thighs]  🖼 strongman_shield_carry.webp
+✅  Barbell Pin Squat  [Thighs]  🖼 barbell_pin_squat.webp
+✅  Curtsey Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 curtsey_squat.webp
+✅  Diamond Press  [Back, Spine]  🖼 diamond_press.webp
+✅  Squat to Overhead Reach With Twist  [Plyometrics]  🖼 squat_to_overhead_reach_with_twist.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/lying-leg-cross/]
+✅  Kettlebell Backward Lunge  [Glutes, Hips, Quadriceps, Thighs]  🖼 kettlebell_backward_lunge.webp
+✅  Muscle Up  [Back, Latissimus Dorsi]  🖼 muscle_up.webp
+✅  Dumbbell Walking Lunge  [Thighs]  🖼 dumbbell_walking_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/assisted-triceps-dip/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/pvc-good-morning/]
+✅  Lying Leg Cross  [Glutes, Obliques, Waist]  🖼 lying_leg_cross.webp
+✅  Assisted Triceps Dip  [Triceps, Upper Arms]  🖼 assisted_triceps_dip.webp
+✅  Pretzel Stretch  [Glutes, Obliques, Waist]  🖼 pretzel_stretch.webp
+✅  Cable One Arm Lat Pulldown  [Back, Latissimus Dorsi]  🖼 cable_one_arm_lat_pulldown.webp
+✅  Leg Up Hamstring Stretch  [Thighs]  🖼 leg_up_hamstring_stretch.webp
+✅  Pvc Good Morning  [Hamstrings, Hips]  🖼 pvc_good_morning.webp
+✅  Dumbbell Rear Delt Raise  [Rear Deltoid, Shoulders]  🖼 dumbbell_rear_delt_raise.webp
+✅  Lateral Speed Step  [Cardio]  🖼 lateral_speed_step.webp
+✅  Dumbbell Single Leg Hip Thrust  [Hips]  🖼 dumbbell_single_leg_hip_thrust.webp
+✅  Downward Facing Dog Adho Mukha Svanasana  [Yoga]  🖼 downward_facing_dog_adho_mukha_svanasana.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-one-arm-clean/]
+✅  Smith Drag Curl  [Upper Arms]  🖼 smith_drag_curl.webp
+✅  Inverted Row Under Table  [Back]  🖼 inverted_row_under_table.webp
+✅  Lying Back Extension  [Hips]  🖼 lying_back_extension.webp
+✅  Front Plank With Leg Lift  [Waist]  🖼 front_plank_with_leg_lift.webp
+✅  Band Wrist Curl  [Forearms, Wrist]  🖼 band_wrist_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/jump-twist/]
+✅  Lateral Bound  [Cardio]  🖼 lateral_bound.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-pull-through/]
+✅  Kettlebell One Arm Clean  [Weightlifting]  🖼 kettlebell_one_arm_clean.webp
+✅  Extended Side Angle Yoga Pose  [Stretching]  🖼 extended_side_angle_yoga_pose.webp
+✅  Power Sled Push  [Thighs]  🖼 power_sled_push.webp
+✅  Jump Twist  [Plyometrics]  🖼 jump_twist.webp
+✅  Band Pull Through  [Glutes, Hips]  🖼 band_pull_through.webp
+✅  Neck Extensor Stretch  [Back]  🖼 neck_extensor_stretch.webp
+✅  Air Twisting Crunch  [Obliques, Waist]  🖼 air_twisting_crunch.webp
+✅  Suspended Split Squat  [Glutes, Quadriceps, Thighs]  🖼 suspended_split_squat.webp
+✅  Single Leg Butt Kick  [Plyometrics]  🖼 single_leg_butt_kick.webp
+✅  Grasshopper Push Up  [Abs, Quadriceps, Waist]  🖼 grasshopper_push_up.webp
+✅  Cable Straight Arm Pulldown  [Back, Latissimus Dorsi]  🖼 cable_straight_arm_pulldown.webp
+✅  Internal Shoulder Rotation Stretch  [Shoulders]  🖼 internal_shoulder_rotation_stretch.webp
+✅  Recumbent Hip External Rotator and Hip Extensor Stretch  [Hips]  🖼 recumbent_hip_external_rotator_and_hip_extensor_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/sitting-wide-leg-adductor-stretch/]
+✅  Band Hammer Curl  [Forearms, Upper Arms]  🖼 band_hammer_curl.webp
+✅  Default Pose  [Yoga]  🖼 default_pose.webp
+✅  Cambered Bar Lying Row  [Back, Latissimus Dorsi, Traps]  🖼 cambered_bar_lying_row.webp
+✅  Ab Mat Sit-up  [Waist]  🖼 ab_mat_sit_up.webp
+✅  Bodyweight Windmill  [Abs, Obliques, Waist]  🖼 bodyweight_windmill.webp
+✅  Dumbbell One Arm Zottman Preacher Curl  [Biceps, Upper Arms]  🖼 dumbbell_one_arm_zottman_preacher_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-bench-press/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-double-snatch/]
+✅  Sitting Wide Leg Adductor Stretch  [Glutes, Hips]  🖼 sitting_wide_leg_adductor_stretch.webp
+✅  Dumbbell Alternate Front Raise  [Shoulders]  🖼 dumbbell_alternate_front_raise.webp
+✅  Dumbbell Bench Press  [Chest]  🖼 dumbbell_bench_press.webp
+✅  Overhead Triceps Stretch  [Triceps, Upper Arms]  🖼 overhead_triceps_stretch.webp
+✅  Run  [Cardio]  🖼 run.webp
+  📊 Progress: 1350/1657 done, 1347 saved, 0 skipped
+✅  Kettlebell Double Snatch  [Upper Arms]  🖼 kettlebell_double_snatch.webp
+✅  Cable Rope Extension Incline Bench Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_rope_extension_incline_bench_row.webp
+✅  Split Squat  [Glutes, Quadriceps, Thighs]  🖼 split_squat.webp
+✅  Open Book Stretch  [Abs, Front Deltoid, Obliques, Waist]  🖼 open_book_stretch.webp
+✅  Neck Side Stretch  [Neck]  🖼 neck_side_stretch.webp
+✅  Front Plank With Twist  [Abs, Obliques, Waist]  🖼 front_plank_with_twist.webp
+✅  Front Lever  [Abs, Waist]  🖼 front_lever.webp
+✅  Lever Lying Crunch  [Abs, Waist]  🖼 lever_lying_crunch.webp
+✅  Lying Single Leg Raise  [Hips, Thighs]  🖼 lying_single_leg_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/pseudo-planche-push-up/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-seated-chest-fly/]
+✅  Kneeling Lat Stretch on Bench  [Back, Upper Arms]  🖼 kneeling_lat_stretch_on_bench.webp
+✅  Semi Squat Jump  [Cardio]  🖼 semi_squat_jump.webp
+✅  Dumbbell Hammer Preacher Curl  [Upper Arms]  🖼 dumbbell_hammer_preacher_curl.webp
+✅  Farmers Walk  [Calves, Glutes, Hamstrings, Quadriceps, Thighs]  🖼 farmers_walk.webp
+✅  Dumbbell Single Leg Glute Bridge  [Glutes, Hips]  🖼 dumbbell_single_leg_glute_bridge.webp
+✅  Sumo Squat  [Glutes, Quadriceps, Thighs]  🖼 sumo_squat.webp
+✅  Weighted Chin-up  [Back]  🖼 weighted_chin_up.webp
+✅  Pseudo Planche Push-up  [Abs, Chest]  🖼 pseudo_planche_push_up.webp
+✅  Cable Seated Chest Fly  [Chest]  🖼 cable_seated_chest_fly.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/finger-stretch/]
+✅  Dumbbell Standing One Arm Reverse Curl  [Forearms]  🖼 dumbbell_standing_one_arm_reverse_curl.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/shoulder-bridge/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-kas-glute-bridge/]
+✅  Finger Stretch  [Forearms]  🖼 finger_stretch.webp
+✅  Dumbbell Kas Glute Bridge  [Hips]  🖼 dumbbell_kas_glute_bridge.webp
+✅  Shoulder Bridge  [Thighs, Waist]  🖼 shoulder_bridge.webp
+✅  Side to Side Leg Swings  [Hips]  🖼 side_to_side_leg_swings.webp
+✅  Barbell Split Clean  [Biceps, Calves, Forearms, Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Weightlifting]  🖼 barbell_split_clean.webp
+✅  Pavanamuktasana Yoga Pose  [Waist]  🖼 pavanamuktasana_yoga_pose.webp
+✅  Weighted Seated Calf Raise  [Calves]  🖼 weighted_seated_calf_raise.webp
+✅  Kettlebell Two Arm Row  [Back, Latissimus Dorsi, Traps]  🖼 kettlebell_two_arm_row.webp
+✅  Lever Seated Leg Curl  [Hamstrings, Thighs]  🖼 lever_seated_leg_curl.webp
+✅  Leg Pull  [Abs, Back, Hips, Obliques, Thighs, Waist]  🖼 leg_pull.webp
+✅  Barbell Floor Chest Press  [Chest]  🖼 barbell_floor_chest_press.webp
+✅  Kettlebell Bent Over Row  [Back]  🖼 kettlebell_bent_over_row.webp
+✅  Dumbbell Palm Rotational Bent Over Row  [Back, Latissimus Dorsi, Traps]  🖼 dumbbell_palm_rotational_bent_over_row.webp
+✅  Medicine Ball Overhead Slam  [Back, Latissimus Dorsi, Traps]  🖼 medicine_ball_overhead_slam.webp
+✅  Band Straight Arm Pulldown  [Back, Latissimus Dorsi]  🖼 band_straight_arm_pulldown.webp
+✅  Strongman Duck Walk  [Thighs]  🖼 strongman_duck_walk.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/butterfly-yoga-pose/]
+✅  Squat Thrust  [Plyometrics]  🖼 squat_thrust.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-lying-curl/]
+✅  Dumbbell External Rotation  [Back]  🖼 dumbbell_external_rotation.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/one-arm-lat-stretch/]
+✅  Butterfly Yoga Pose  [Sartorius, Thighs]  🖼 butterfly_yoga_pose.webp
+✅  Seated Ankle Stretch  [Calves]  🖼 seated_ankle_stretch.webp
+✅  One Arm Lat Stretch  [Back]  🖼 one_arm_lat_stretch.webp
+✅  Cable Lying Curl  [Biceps, Upper Arms]  🖼 cable_lying_curl.webp
+✅  Dumbbell Step Up  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_step_up.webp
+✅  Cable Wide Neutral Grip Pulldown  [Back]  🖼 cable_wide_neutral_grip_pulldown.webp
+✅  Barbell Reverse Preacher Curl  [Forearms, Upper Arms]  🖼 barbell_reverse_preacher_curl.webp
+✅  EZ Bar Standing French Press  [Triceps, Upper Arms]  🖼 ez_bar_standing_french_press.webp
+✅  Push to Run  [Cardio]  🖼 push_to_run.webp
+✅  Flutter Kicks  [Glutes, Hips]  🖼 flutter_kicks.webp
+✅  Standing High Leg Bent Knee Hamstring Stretch  [Thighs]  🖼 standing_high_leg_bent_knee_hamstring_stretch.webp
+✅  Band Kickback  [Triceps, Upper Arms]  🖼 band_kickback.webp
+✅  Peroneals Stretch  [Calves]  🖼 peroneals_stretch.webp
+  📊 Progress: 1400/1657 done, 1397 saved, 0 skipped
+✅  Wheel Run  [Cardio]  🖼 wheel_run.webp
+✅  Barbell Clean Pull  [Weightlifting]  🖼 barbell_clean_pull.webp
+✅  Exercise Ball Leg Curl  [Hamstrings, Thighs]  🖼 exercise_ball_leg_curl.webp
+✅  Dip Hold  [Chest]  🖼 dip_hold.webp
+✅  Straight Leg Sit-up  [Abs, Waist]  🖼 straight_leg_sit_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-goblet-box-squat/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-squeeze-bench-press/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/wide-hand-push-up/]
+✅  Dumbbell Squeeze Bench Press  [Chest, Triceps]  🖼 dumbbell_squeeze_bench_press.webp
+✅  Dumbbell Goblet Box Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 dumbbell_goblet_box_squat.webp
+✅  Wide Hand Push Up  [Chest]  🖼 wide_hand_push_up.webp
+✅  Weighted Squat  [Glutes, Quadriceps, Thighs]  🖼 weighted_squat.webp
+✅  Kettlebell Biceps Curl  [Biceps, Upper Arms]  🖼 kettlebell_biceps_curl.webp
+✅  Dumbbell Kickback  [Triceps, Upper Arms]  🖼 dumbbell_kickback.webp
+✅  Outside Leg Kick Push Up  [Hips]  🖼 outside_leg_kick_push_up.webp
+✅  Toe Walk  [Calves]  🖼 toe_walk.webp
+✅  Lever Pec Deck Fly  [Biceps, Chest]  🖼 lever_pec_deck_fly.webp
+✅  Camel Pose  [Chest, Shoulders, Thighs, Waist]  🖼 camel_pose.webp
+✅  Chest Lift With Rotation  [Abs, Obliques, Waist]  🖼 chest_lift_with_rotation.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/kettlebell-one-arm-snatch/]
+✅  Dumbbell One Arm Snatch  [Front Deltoid, Glutes, Hips, Quadriceps, Shoulders, Spine, Thighs]  🖼 dumbbell_one_arm_snatch.webp
+✅  Band Reverse Fly  [Rear Deltoid, Shoulders]  🖼 band_reverse_fly.webp
+✅  Seated Piriformis Stretch  [Glutes, Hips]  🖼 seated_piriformis_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/toy-soldier-dynamic-stretch/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-donkey-kickback/]
+✅  Kettlebell One Arm Snatch  [Calves, Front Deltoid, Glutes, Hamstrings, Quadriceps, Shoulders, Side Deltoid, Triceps]  🖼 kettlebell_one_arm_snatch.webp
+✅  Cable Donkey Kickback  [Hips]  🖼 cable_donkey_kickback.webp
+✅  Dumbbell Power Clean  [Weightlifting]  🖼 dumbbell_power_clean.webp
+✅  Toy Soldier Dynamic Stretch  [Stretching]  🖼 toy_soldier_dynamic_stretch.webp
+✅  Standing Y Raise  [Shoulders]  🖼 standing_y_raise.webp
+✅  Reverse Warrior Pose  [Stretching]  🖼 reverse_warrior_pose.webp
+✅  Dumbbell Reverse Grip Incline Bench Two Arm Row  [Back, Latissimus Dorsi, Traps]  🖼 dumbbell_reverse_grip_incline_bench_two_arm_row.webp
+✅  Dumbbell Lying Pronation  [Forearms, Wrist]  🖼 dumbbell_lying_pronation.webp
+✅  Cable One Arm Pulldown  [Back, Latissimus Dorsi]  🖼 cable_one_arm_pulldown.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/puppy-pose/]
+✅  Standing Hip Circle  [Hips, Waist]  🖼 standing_hip_circle.webp
+✅  Behind Head Chest Stretch  [Chest]  🖼 behind_head_chest_stretch.webp
+✅  Kettlebell Sit Up  [Abs, Waist]  🖼 kettlebell_sit_up.webp
+✅  Standing Behind Neck Press  [Front Deltoid, Shoulders]  🖼 standing_behind_neck_press.webp
+✅  Dumbbell Bent Over Face Pull  [Shoulders]  🖼 dumbbell_bent_over_face_pull.webp
+✅  Dumbbell One Arm Seated Neutral Wrist Curl  [Forearms, Wrist]  🖼 dumbbell_one_arm_seated_neutral_wrist_curl.webp
+✅  Forward Jump  [Plyometrics]  🖼 forward_jump.webp
+✅  Mountain Climber  [Abs, Cardio, Waist]  🖼 mountain_climber.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-lunges/]
+✅  Cable Seated Crunch  [Abs, Waist]  🖼 cable_seated_crunch.webp
+  ⏳ Rate limited (429), waiting 10s... [https://liftmanual.com/puppy-pose/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-squat/]
+✅  Band Lunges  [Quadriceps, Thighs]  🖼 band_lunges.webp
+✅  Dumbbell Lateral Lunge  [Thighs]  🖼 dumbbell_lateral_lunge.webp
+✅  Incline Push Up Depth Jump  [Chest]  🖼 incline_push_up_depth_jump.webp
+✅  Band Squat  [Glutes, Hips]  🖼 band_squat.webp
+✅  Dumbbell Seated Bicep Curl  [Biceps, Upper Arms]  🖼 dumbbell_seated_bicep_curl.webp
+✅  Dumbbell Seated Inner Biceps Curl  [Biceps, Upper Arms]  🖼 dumbbell_seated_inner_biceps_curl.webp
+✅  Reverse Leg Extension  [Thighs]  🖼 reverse_leg_extension.webp
+✅  Chest Tap Push-up  [Chest]  🖼 chest_tap_push_up.webp
+✅  Standing Outer Hip Stretch  [Hips]  🖼 standing_outer_hip_stretch.webp
+✅  Kettlebell Strict Press  [Front Deltoid, Shoulders]  🖼 kettlebell_strict_press.webp
+✅  Dumbbell Straight Arm Pullover  [Back]  🖼 dumbbell_straight_arm_pullover.webp
+✅  Dumbbell Arnold Press  [Front Deltoid, Shoulders]  🖼 dumbbell_arnold_press.webp
+✅  Dumbbell Front Squat  [Glutes, Hips, Quadriceps, Thighs]  🖼 dumbbell_front_squat.webp
+  📊 Progress: 1450/1657 done, 1447 saved, 0 skipped
+✅  Barbell Close Grip Bench Press  [Upper Arms]  🖼 barbell_close_grip_bench_press.webp
+✅  Puppy Pose  [Stretching]  🖼 puppy_pose.webp
+✅  Barbell Incline Row  [Back, Latissimus Dorsi, Traps]  🖼 barbell_incline_row.webp
+✅  Resistance Band Lunge  [Glutes, Quadriceps, Thighs]  🖼 resistance_band_lunge.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-standing-arnold-press/]
+✅  Kettlebell Split Squat  [Thighs]  🖼 kettlebell_split_squat.webp
+✅  Scissor Jumps  [Cardio]  🖼 scissor_jumps.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-thruster/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/neck-extension-stretch/]
+✅  Dumbbell Standing Arnold Press  [Shoulders]  🖼 dumbbell_standing_arnold_press.webp
+✅  Isometric Chest Squeeze  [Chest]  🖼 isometric_chest_squeeze.webp
+✅  Barbell Thruster  [Front Deltoid, Glutes, Quadriceps, Shoulders, Thighs]  🖼 barbell_thruster.webp
+✅  Neck Extension Stretch  [Neck]  🖼 neck_extension_stretch.webp
+✅  Lying Knee Roll Over Stretch  [Hips, Waist]  🖼 lying_knee_roll_over_stretch.webp
+✅  Suspended Push Up  [Chest]  🖼 suspended_push_up.webp
+✅  Cable Y Raise  [Shoulders, Side Deltoid]  🖼 cable_y_raise.webp
+✅  Barbell Seated Overhead Press  [Front Deltoid, Shoulders]  🖼 barbell_seated_overhead_press.webp
+✅  Standing Hip Adduction Stretch  [Hips]  🖼 standing_hip_adduction_stretch.webp
+✅  Trap Bar Jump Squat  [Hips]  🖼 trap_bar_jump_squat.webp
+✅  Resistance Band Leg Lift  [Quadriceps, Thighs]  🖼 resistance_band_leg_lift.webp
+✅  Dumbbell Upright Row  [Side Deltoid, Upper Arms]  🖼 dumbbell_upright_row.webp
+✅  Korean Dips  [Chest]  🖼 korean_dips.webp
+✅  Weighted Hyperextension  [Hips, Spine]  🖼 weighted_hyperextension.webp
+✅  Hanging Hollow Hold  [Waist]  🖼 hanging_hollow_hold.webp
+✅  Dumbbell W Press  [Shoulders]  🖼 dumbbell_w_press.webp
+✅  Kettlebell Slingshot  [Front Deltoid, Rear Deltoid, Shoulders, Side Deltoid]  🖼 kettlebell_slingshot.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-lateral-walk/]
+✅  Smith Bent Over Row  [Back, Latissimus Dorsi, Traps]  🖼 smith_bent_over_row.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/weighted-lying-twist/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/landmine-single-arm-press/]
+✅  Resistance Band Lateral Walk  [Glutes, Hips]  🖼 resistance_band_lateral_walk.webp
+✅  Weighted Lying Twist  [Obliques, Waist]  🖼 weighted_lying_twist.webp
+✅  Landmine Single Arm Press  [Shoulders]  🖼 landmine_single_arm_press.webp
+✅  Barbell Front Rack Lunge  [Glutes, Quadriceps, Thighs]  🖼 barbell_front_rack_lunge.webp
+✅  Roll Calves  [Calves]  🖼 roll_calves.webp
+✅  Resistance Band Side Plank  [Glutes, Hips, Obliques, Waist]  🖼 resistance_band_side_plank.webp
+✅  Standing T Raise  [Shoulders]  🖼 standing_t_raise.webp
+✅  Lying Abductor Stretch  [Glutes, Hips]  🖼 lying_abductor_stretch.webp
+✅  Dumbbell Bench Squat  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_bench_squat.webp
+✅  Decline Sit Up  [Waist]  🖼 decline_sit_up.webp
+✅  Bodyweight Bench Squat  [Thighs]  🖼 bodyweight_bench_squat.webp
+✅  Band Hyperextension  [Back, Glutes, Spine]  🖼 band_hyperextension.webp
+✅  Dumbbell Standing Overhead Press  [Front Deltoid, Shoulders]  🖼 dumbbell_standing_overhead_press.webp
+✅  Three Bench Dip  [Upper Arms]  🖼 three_bench_dip.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-reverse-curl/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/single-leg-calf-raise-off-step/]
+✅  Lever Seated Row  [Back, Latissimus Dorsi, Traps]  🖼 lever_seated_row.webp
+✅  Side Split Squat  [Thighs]  🖼 side_split_squat.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/standing-leg-cross-abductor-stretch/]
+✅  Band Reverse Curl  [Forearms]  🖼 band_reverse_curl.webp
+✅  Single Leg Calf Raise Off Step  [Calves]  🖼 single_leg_calf_raise_off_step.webp
+✅  Band Upright Row  [Shoulders, Side Deltoid]  🖼 band_upright_row.webp
+✅  Dolphin Pose  [Stretching]  🖼 dolphin_pose.webp
+✅  Standing Leg Cross Abductor Stretch  [Hips]  🖼 standing_leg_cross_abductor_stretch.webp
+✅  Chest Dip  [Chest]  🖼 chest_dip.webp
+✅  Bear Plank  [Waist]  🖼 bear_plank.webp
+✅  One Arm Chin Up  [Back, Latissimus Dorsi]  🖼 one_arm_chin_up.webp
+✅  Lunge With Jump  [Glutes, Quadriceps, Thighs]  🖼 lunge_with_jump.webp
+✅  Sissy Squat Bodyweight  [Thighs]  🖼 sissy_squat_bodyweight.webp
+  📊 Progress: 1500/1657 done, 1497 saved, 0 skipped
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/smith-upright-row/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/glute-ham-raise/]
+✅  Mindful Breathing Meditation  [Stretching]  🖼 mindful_breathing_meditation.webp
+✅  Barbell Jefferson Squat  [Glutes, Quadriceps, Thighs]  🖼 barbell_jefferson_squat.webp
+✅  Finger Extension Stretch  [Forearms]  🖼 finger_extension_stretch.webp
+✅  Hip Raise Crunch  [Abs, Hips]  🖼 hip_raise_crunch.webp
+✅  Dumbbell Incline Rear Lateral Raise  [Rear Deltoid, Shoulders, Side Deltoid]  🖼 dumbbell_incline_rear_lateral_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-squat-row/]
+✅  Smith Upright Row  [Shoulders, Side Deltoid]  🖼 smith_upright_row.webp
+✅  Glute Ham Raise  [Hamstrings, Thighs]  🖼 glute_ham_raise.webp
+✅  Walking on Treadmill  [Calves, Cardio, Hamstrings, Quadriceps, Sartorius]  🖼 walking_on_treadmill.webp
+✅  Dumbbell Biceps Curl Reverse  [Biceps, Upper Arms]  🖼 dumbbell_biceps_curl_reverse.webp
+✅  Dumbbell Incline Biceps Curl  [Biceps, Upper Arms]  🖼 dumbbell_incline_biceps_curl.webp
+✅  Cow Stretch  [Hips, Waist]  🖼 cow_stretch.webp
+✅  Kettlebell Arnold Press  [Front Deltoid, Shoulders]  🖼 kettlebell_arnold_press.webp
+✅  Rotating Stomach Stretch  [Abs, Obliques, Waist]  🖼 rotating_stomach_stretch.webp
+✅  Cable Low Seated Row  [Back, Latissimus Dorsi, Traps]  🖼 cable_low_seated_row.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-thruster/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/finger-curls/]
+  ⏳ Rate limited (429), waiting 10s... [https://liftmanual.com/band-squat-row/]
+✅  Band Thruster  [Hips, Shoulders, Thighs]  🖼 band_thruster.webp
+✅  Finger Curls  [Forearms]  🖼 finger_curls.webp
+✅  Dumbbell Hang Clean and Jerk  [Weightlifting]  🖼 dumbbell_hang_clean_and_jerk.webp
+✅  Rotational Push Up  [Chest, Obliques, Waist]  🖼 rotational_push_up.webp
+✅  Butt Ups  [Abs, Waist]  🖼 butt_ups.webp
+✅  Step Up Crossover  [Cardio]  🖼 step_up_crossover.webp
+✅  Trap Bar Bent Over Row  [Back]  🖼 trap_bar_bent_over_row.webp
+✅  Cable Seated Curl  [Upper Arms]  🖼 cable_seated_curl.webp
+✅  Band Good Morning  [Hips]  🖼 band_good_morning.webp
+✅  Band Squat Row  [Back, Glutes, Latissimus Dorsi, Traps]  🖼 band_squat_row.webp
+✅  Intermediate Hip Flexor and Quad Stretch  [Quadriceps, Thighs]  🖼 intermediate_hip_flexor_and_quad_stretch.webp
+✅  Barbell Seated Twist  [Obliques, Waist]  🖼 barbell_seated_twist.webp
+✅  Kneeling Hip Flexor  [Glutes, Quadriceps, Thighs]  🖼 kneeling_hip_flexor.webp
+✅  Quadriceps Stretch  [Quadriceps, Thighs]  🖼 quadriceps_stretch.webp
+✅  Inverted Row With Straps  [Back, Latissimus Dorsi, Traps]  🖼 inverted_row_with_straps.webp
+✅  Lunge Stretch  [Thighs]  🖼 lunge_stretch.webp
+✅  Push With Chair  [Chest]  🖼 push_with_chair.webp
+✅  Strongman Wheelbarrow  [Thighs]  🖼 strongman_wheelbarrow.webp
+✅  Smith Shrug  [Back, Traps]  🖼 smith_shrug.webp
+✅  Side Sit Up  [Obliques, Waist]  🖼 side_sit_up.webp
+✅  Medicine Ball Chest Pass Against Wall  [Chest]  🖼 medicine_ball_chest_pass_against_wall.webp
+✅  Frog Planche  [Abs, Obliques, Waist]  🖼 frog_planche.webp
+✅  Elbow Dips  [Triceps, Upper Arms]  🖼 elbow_dips.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/medicine-ball-supine-chest-throw/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-one-arm-bent-over-row/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-hip-abduction/]
+✅  Barbell One Arm Bent Over Row  [Back, Latissimus Dorsi, Traps]  🖼 barbell_one_arm_bent_over_row.webp
+✅  Band Hip Abduction  [Glutes, Hips]  🖼 band_hip_abduction.webp
+✅  Elevated Side Lunge  [Glutes, Hips, Quadriceps, Thighs]  🖼 elevated_side_lunge.webp
+✅  Medicine Ball Supine Chest Throw  [Upper Arms]  🖼 medicine_ball_supine_chest_throw.webp
+✅  Dumbbell Bent Arm Pullover  [Chest]  🖼 dumbbell_bent_arm_pullover.webp
+✅  Barbell Lying Extension  [Triceps, Upper Arms]  🖼 barbell_lying_extension.webp
+✅  Cable Standing Face Pull  [Rear Deltoid, Shoulders]  🖼 cable_standing_face_pull.webp
+✅  Jack Jump  [Cardio]  🖼 jack_jump.webp
+✅  Trap Bar Split Stance Rdl  [Glutes, Hips, Quadriceps]  🖼 trap_bar_split_stance_rdl.webp
+✅  Alternating Superman  [Glutes, Hips, Spine]  🖼 alternating_superman.webp
+✅  Kettlebell Full Swing  [Front Deltoid, Glutes, Hips, Shoulders]  🖼 kettlebell_full_swing.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-good-morning/]
+✅  Pvc Overhead Squat  [Glutes, Quadriceps, Thighs]  🖼 pvc_overhead_squat.webp
+✅  Barbell Press Sit Up  [Abs, Front Deltoid, Waist]  🖼 barbell_press_sit_up.webp
+  📊 Progress: 1550/1657 done, 1547 saved, 0 skipped
+✅  Shoulder Stand Yoga Pose  [Glutes, Hamstrings, Obliques, Waist]  🖼 shoulder_stand_yoga_pose.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/scapula-elevation-depression/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/reverse-grip-pull-up/]
+✅  Barbell Good Morning  [Hamstrings, Hips]  🖼 barbell_good_morning.webp
+✅  Scapula Elevation Depression  [Back]  🖼 scapula_elevation_depression.webp
+✅  Rotational Jacks  [Cardio]  🖼 rotational_jacks.webp
+✅  Reverse Grip Pull Up  [Back, Latissimus Dorsi]  🖼 reverse_grip_pull_up.webp
+✅  Leverage Incline Chest Press  [Chest]  🖼 leverage_incline_chest_press.webp
+✅  Lever Twist  [Obliques, Waist]  🖼 lever_twist.webp
+✅  Kettlebell Overhead Triceps Extension  [Triceps, Upper Arms]  🖼 kettlebell_overhead_triceps_extension.webp
+✅  Supine Spinal Twist Yoga Pose  [Hips, Obliques, Spine]  🖼 supine_spinal_twist_yoga_pose.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/forward-flexion-neck-stretch/]
+✅  Frog Hip Thrust  [Hips]  🖼 frog_hip_thrust.webp
+✅  Cable Lunge  [Glutes, Quadriceps, Thighs]  🖼 cable_lunge.webp
+✅  Band Bench Press  [Chest]  🖼 band_bench_press.webp
+✅  Kneeling Back Rotation Stretch  [Back, Obliques, Spine]  🖼 kneeling_back_rotation_stretch.webp
+✅  Close Grip Chin Up  [Back, Latissimus Dorsi]  🖼 close_grip_chin_up.webp
+✅  Seated Groin Stretch  [Hips]  🖼 seated_groin_stretch.webp
+✅  Ez-bar Close Grip Bench Press  [Upper Arms]  🖼 ez_bar_close_grip_bench_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-seated-overhead-triceps-extension/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cone-drill/]
+✅  Forward Flexion Neck Stretch  [Neck]  🖼 forward_flexion_neck_stretch.webp
+✅  Barbell Clean and Press  [Front Deltoid, Glutes, Quadriceps, Shoulders]  🖼 barbell_clean_and_press.webp
+✅  Reverse Plank  [Abs, Back, Glutes]  🖼 reverse_plank.webp
+✅  Reverse Chest Stretch  [Chest]  🖼 reverse_chest_stretch.webp
+✅  Cone Drill  [Plyometrics]  🖼 cone_drill.webp
+✅  Barbell Seated Overhead Triceps Extension  [Triceps, Upper Arms]  🖼 barbell_seated_overhead_triceps_extension.webp
+✅  Dumbbell Overhead Carry  [Thighs]  🖼 dumbbell_overhead_carry.webp
+✅  Elbows Back Stretch  [Back]  🖼 elbows_back_stretch.webp
+✅  Dumbbell Full Can Lateral Raise  [Front Deltoid, Shoulders, Side Deltoid]  🖼 dumbbell_full_can_lateral_raise.webp
+✅  Prisoner Get-up  [Thighs]  🖼 prisoner_get_up.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/mountain-climber-jump/]
+✅  Cable Pull Through  [Glutes, Hips]  🖼 cable_pull_through.webp
+✅  Press Under  [Weightlifting]  🖼 press_under.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/forward-hops/]
+✅  Kettlebell Plyo Pushup  [Chest]  🖼 kettlebell_plyo_pushup.webp
+✅  Rear Decline Bridge  [Glutes, Hips]  🖼 rear_decline_bridge.webp
+✅  Dumbbell Decline Bench Press  [Chest]  🖼 dumbbell_decline_bench_press.webp
+✅  Kettlebell Clean and Press  [Weightlifting]  🖼 kettlebell_clean_and_press.webp
+✅  Kettlebell Double Windmill  [Obliques, Waist]  🖼 kettlebell_double_windmill.webp
+✅  Mountain Climber Jump  [Plyometrics]  🖼 mountain_climber_jump.webp
+✅  Bent Arm Shoulder Stretch  [Shoulders]  🖼 bent_arm_shoulder_stretch.webp
+  ⏳ Rate limited (429), waiting 10s... [https://liftmanual.com/forward-hops/]
+✅  Seated Lower Back Stretch  [Back, Latissimus Dorsi]  🖼 seated_lower_back_stretch.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-assisted-dip/]
+✅  Low Jacks  [Cardio]  🖼 low_jacks.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/eagle-pose-garudasana/]
+✅  Band Assisted Dip  [Back, Triceps]  🖼 band_assisted_dip.webp
+✅  Eagle Pose Garudasana  [Stretching]  🖼 eagle_pose_garudasana.webp
+✅  Inverted Shrug  [Back]  🖼 inverted_shrug.webp
+✅  High Knee Against Wall  [Cardio]  🖼 high_knee_against_wall.webp
+✅  Band Close Grip Row  [Back, Latissimus Dorsi, Traps]  🖼 band_close_grip_row.webp
+✅  Cable Reverse Grip Pulldown  [Back]  🖼 cable_reverse_grip_pulldown.webp
+✅  Half Sit-up  [Waist]  🖼 half_sit_up.webp
+✅  Handstand Hold on Wall  [Shoulders]  🖼 handstand_hold_on_wall.webp
+✅  Camel Pose Ustrasana  [Stretching]  🖼 camel_pose_ustrasana.webp
+✅  Dumbbell Bulgarian Split Squat  [Thighs]  🖼 dumbbell_bulgarian_split_squat.webp
+✅  Standing Long Jump  [Plyometrics]  🖼 standing_long_jump.webp
+✅  Full Planche Push-up  [Abs, Chest, Obliques, Triceps, Upper Arms, Waist]  🖼 full_planche_push_up.webp
+✅  L-sit  [Abs, Quadriceps, Triceps, Waist]  🖼 l_sit.webp
+  📊 Progress: 1600/1657 done, 1597 saved, 0 skipped
+✅  Forward Hops  [Calves]  🖼 forward_hops.webp
+✅  Cable Vertical Pallof Press  [Obliques, Waist]  🖼 cable_vertical_pallof_press.webp
+✅  Bodyweight Standing Calf Raise  [Calves]  🖼 bodyweight_standing_calf_raise.webp
+✅  Pike Push Up  [Chest, Front Deltoid]  🖼 pike_push_up.webp
+✅  Cable High Pulley Overhead Tricep Extension  [Triceps, Upper Arms]  🖼 cable_high_pulley_overhead_tricep_extension.webp
+✅  Jump Split  [Cardio]  🖼 jump_split.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/barbell-rollout-from-bench/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/resistance-band-standing-hip-abduction/]
+✅  Revolved Chair  [Stretching]  🖼 revolved_chair.webp
+✅  Tight Rope Walk  [Plyometrics]  🖼 tight_rope_walk.webp
+✅  Dumbbell Bent Over Reverse Row  [Back, Latissimus Dorsi, Traps]  🖼 dumbbell_bent_over_reverse_row.webp
+✅  Medicine Ball Overhead Throw  [Plyometrics]  🖼 medicine_ball_overhead_throw.webp
+✅  Happy Baby Pose  [Hips]  🖼 happy_baby_pose.webp
+✅  Serratus Wall Slide  [Back, Traps]  🖼 serratus_wall_slide.webp
+✅  Barbell Sumo Deadlift  [Glutes, Quadriceps, Thighs]  🖼 barbell_sumo_deadlift.webp
+✅  Resistance Band Standing Hip Abduction  [Hips]  🖼 resistance_band_standing_hip_abduction.webp
+✅  Barbell Rollout From Bench  [Abs, Waist]  🖼 barbell_rollout_from_bench.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/sit-squat/]
+✅  Dumbbell Seated Shoulder Press  [Front Deltoid, Shoulders]  🖼 dumbbell_seated_shoulder_press.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/seated-leg-raise/]
+✅  Power Clean  [Biceps, Calves, Forearms, Front Deltoid, Glutes, Hamstrings, Quadriceps, Side Deltoid, Thighs, Triceps]  🖼 power_clean.webp
+✅  Dumbbell One Arm Shoulder Press  [Front Deltoid, Shoulders]  🖼 dumbbell_one_arm_shoulder_press.webp
+✅  Plantar Flexion Stretch  [Hips]  🖼 plantar_flexion_stretch.webp
+✅  Cable Deadlift  [Glutes, Quadriceps, Thighs]  🖼 cable_deadlift.webp
+✅  Sit Squat  [Thighs]  🖼 sit_squat.webp
+✅  Finger Push-up  [Chest]  🖼 finger_push_up.webp
+✅  Jack Knife Sit-up  [Waist]  🖼 jack_knife_sit_up.webp
+✅  Seated Leg Raise  [Abs, Waist]  🖼 seated_leg_raise.webp
+✅  Dumbbell Front Rack Lunge  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_front_rack_lunge.webp
+✅  Bent Over Twist  [Obliques, Waist]  🖼 bent_over_twist.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/smith-bench-press/]
+✅  Lean Planche  [Waist]  🖼 lean_planche.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/cable-rope-high-pulley-overhead-tricep-extension/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/front-leg-kick/]
+✅  Smith Bench Press  [Chest]  🖼 smith_bench_press.webp
+✅  Cable Rope High Pulley Overhead Tricep Extension  [Triceps, Upper Arms]  🖼 cable_rope_high_pulley_overhead_tricep_extension.webp
+✅  Front Leg Kick  [Plyometrics]  🖼 front_leg_kick.webp
+✅  Lying Knee to Chest Stretch  [Glutes, Hamstrings, Hips]  🖼 lying_knee_to_chest_stretch.webp
+✅  Barbell Single Leg Squat  [Thighs]  🖼 barbell_single_leg_squat.webp
+✅  Kettlebell Single Leg Deadlift  [Hips, Thighs]  🖼 kettlebell_single_leg_deadlift.webp
+✅  Reverse Plank on Elbows  [Waist]  🖼 reverse_plank_on_elbows.webp
+✅  Kipping Handstand Push-up  [Shoulders]  🖼 kipping_handstand_push_up.webp
+✅  Dumbbell Zottman Preacher Curl  [Biceps, Upper Arms]  🖼 dumbbell_zottman_preacher_curl.webp
+✅  Kettlebell Pirate Ships  [Rear Deltoid, Waist]  🖼 kettlebell_pirate_ships.webp
+✅  Band Reverse Wrist Curl  [Forearms, Wrist]  🖼 band_reverse_wrist_curl.webp
+✅  Power Push Aways  [Back, Chest, Latissimus Dorsi]  🖼 power_push_aways.webp
+✅  Lying Lat Pulldown  [Back, Latissimus Dorsi, Spine, Traps]  🖼 lying_lat_pulldown.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/hanging-leg-raise/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/supported-squat/]
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/band-twist/]
+✅  Hanging Leg Raise  [Hips]  🖼 hanging_leg_raise.webp
+✅  Supported Squat  [Thighs]  🖼 supported_squat.webp
+✅  Alternate Lying Floor Leg Raise  [Abs, Waist]  🖼 alternate_lying_floor_leg_raise.webp
+✅  Band Twist  [Obliques, Waist]  🖼 band_twist.webp
+✅  Dumbbell Incline Front Raise  [Front Deltoid, Shoulders]  🖼 dumbbell_incline_front_raise.webp
+✅  Plate Pinch  [Forearms, Wrist]  🖼 plate_pinch.webp
+✅  Barbell Romanian Deadlift From Deficit  [Hips]  🖼 barbell_romanian_deadlift_from_deficit.webp
+✅  Dumbbell Goblet Squat  [Glutes, Quadriceps, Thighs]  🖼 dumbbell_goblet_squat.webp
+✅  Kneeling Hip Thrust  [Hips]  🖼 kneeling_hip_thrust.webp
+✅  Dumbbell Neutral Grip Bench Press  [Triceps, Upper Arms]  🖼 dumbbell_neutral_grip_bench_press.webp
+  📊 Progress: 1650/1657 done, 1647 saved, 0 skipped
+✅  Barbell Skier  [Rear Deltoid, Shoulders]  🖼 barbell_skier.webp
+✅  Jump Box  [Cardio]  🖼 jump_box.webp
+✅  Kettlebell Upright Row  [Shoulders, Side Deltoid]  🖼 kettlebell_upright_row.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/crunch-with-leg-lift/]
+✅  Barbell Walking Lunge  [Thighs]  🖼 barbell_walking_lunge.webp
+✅  Cable Lateral Raise  [Shoulders, Side Deltoid]  🖼 cable_lateral_raise.webp
+  ⏳ Rate limited (429), waiting 5s... [https://liftmanual.com/dumbbell-pullover/]
+✅  Crunch With Leg Lift  [Waist]  🖼 crunch_with_leg_lift.webp
+✅  Dumbbell Pullover  [Back]  🖼 dumbbell_pullover.webp
+  📊 Progress: 1657/1657 done, 1654 saved, 0 skipped
+
+🏁  Done!
+   Exercises  : 1654
+   With image : 1654
+   Missing    : 0
+   DB  → /Users/robert/AndroidStudioProjects/GymDietPlanner/app/src/main/assets/exercises_preseed.db
+   IMG → /Users/robert/AndroidStudioProjects/GymDietPlanner/app/src/main/assets/exercises
