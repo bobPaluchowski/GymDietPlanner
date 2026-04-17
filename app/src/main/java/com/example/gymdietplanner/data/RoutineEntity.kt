@@ -17,9 +17,8 @@ data class WorkoutSet(
 
 data class RoutineExercise(
     val id: String = UUID.randomUUID().toString(),
-    val exerciseId: String,
-    val exerciseName: String,
-    val sets: List<WorkoutSet> = listOf(WorkoutSet())
+    val exercise: Exercise,
+    val sets: List<WorkoutSet> = listOf(WorkoutSet()) // Initialize with 1 empty set
 )
 
 @Entity(tableName = "routines")
@@ -55,7 +54,17 @@ class RoutineTypeConverters {
     fun toRoutineExerciseList(value: String): List<RoutineExercise> {
         return try {
             val listType = object : TypeToken<List<RoutineExercise>>() {}.type
-            gson.fromJson<List<RoutineExercise>>(value, listType) ?: emptyList()
+            val list = gson.fromJson<List<RoutineExercise>>(value, listType) ?: emptyList()
+            
+            // Check if any exercise field is null (sign of legacy Exercise format)
+            if (list.any { it.exercise == null }) {
+                // Try parsing as legacy List<Exercise>
+                val legacyType = object : TypeToken<List<com.example.gymdietplanner.data.Exercise>>() {}.type
+                val legacyList = gson.fromJson<List<com.example.gymdietplanner.data.Exercise>>(value, legacyType) ?: emptyList()
+                legacyList.map { RoutineExercise(exercise = it) }
+            } else {
+                list
+            }
         } catch (e: Exception) {
             emptyList()
         }

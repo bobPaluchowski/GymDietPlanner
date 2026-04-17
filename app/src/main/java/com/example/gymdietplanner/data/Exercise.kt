@@ -7,7 +7,4 @@ data class Exercise(
     val iconName: String? = null
 )
 
-data class MuscleGroup(
-    val name: String,
-    val exercises: List<Exercise>
-)
+data class MuscleGroup(val name: String, val exercises: List<Exercise>)

@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ExerciseDao {
-    @Query("SELECT * FROM exercises ORDER BY name ASC")
+    @Query("SELECT * FROM exercises ORDER BY category ASC, name ASC")
     fun getAllExercises(): Flow<List<ExerciseEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -14,8 +14,8 @@ interface ExerciseDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertExercises(exercises: List<ExerciseEntity>)
 
-    @Query("DELETE FROM exercises WHERE exerciseId = :exerciseId")
-    suspend fun deleteExercise(exerciseId: String)
+    @Query("DELETE FROM exercises WHERE id = :exerciseId")
+    suspend fun deleteExercise(exerciseId: Int)
     
     @Query("SELECT COUNT(*) FROM exercises")
     suspend fun getExerciseCount(): Int
