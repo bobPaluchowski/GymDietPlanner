@@ -1,6 +1,7 @@
 import java.util.Properties
 
 
+plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
@@ -75,15 +76,8 @@ dependencies {
     // Gson
     implementation(libs.gson)
     
-    // Networking
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.gson)
-    implementation(libs.okhttp)
-    implementation(libs.okhttp.logging)
-    
     // Coil (Image Loading)
     implementation(libs.coil.compose)
-    implementation(libs.coil.gif)
 
     // Image loading
     implementation(libs.coil.compose)

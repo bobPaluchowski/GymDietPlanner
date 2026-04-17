@@ -1,5 +1,4 @@
 package com.example.gymdietplanner
-import java.util.UUID
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -8,12 +7,8 @@ import com.example.gymdietplanner.data.AppDatabase
 import com.example.gymdietplanner.data.RoutineEntity
 import com.example.gymdietplanner.data.MealEntity
 import com.example.gymdietplanner.data.WeightEntity
-import android.util.Log
-import com.example.gymdietplanner.data.Exercise
 import com.example.gymdietplanner.data.ExerciseEntity
 import com.example.gymdietplanner.data.PreferencesManager
-import com.example.gymdietplanner.api.RetrofitClient
-import com.example.gymdietplanner.api.ExerciseResponse
 import com.example.gymdietplanner.notifications.NotificationHelper
 import com.example.gymdietplanner.notifications.ReminderManager
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -61,48 +56,22 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             initialValue = emptyList()
         )
 
-    private val _apiLibrary = MutableStateFlow<List<Exercise>>(emptyList())
-    private val _isLoading = MutableStateFlow(false)
-    val isLoading = _isLoading.asStateFlow()
-
-    private val _customExercises = exerciseDao.getAllExercises()
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
-
-    val exercises: StateFlow<List<Exercise>> = MutableStateFlow<List<Exercise>>(emptyList()) // Placeholder, will update in init
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
-
-    // Actual combined StateFlow logic will be handled better or I'll just keep them separate for UI
-    val apiLibrary = _apiLibrary.asStateFlow()
+    val exercises: StateFlow<List<ExerciseEntity>> = exerciseDao.getAllExercises()
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = emptyList()
+        )
 
     init {
+        // Initialize notification channels as soon as the app starts
         NotificationHelper(application)
         reminderManager.scheduleAll()
-        fetchLibrary()
+        prepopulateExercises()
     }
 
-    private fun fetchLibrary() {
+    private fun prepopulateExercises() {
         viewModelScope.launch {
-<<<<<<< HEAD
-            _isLoading.value = true
-            try {
-                Log.d("GymApp", "Fetching exercises from AscendAPI...")
-                val response = RetrofitClient.instance.getExercises()
-                Log.d("GymApp", "Response code: ${response.code()}")
-                if (response.isSuccessful) {
-                    val body = response.body()
-                    Log.d("GymApp", "Response body success=${body?.success}, count=${body?.data?.size}")
-                    val exercises = body?.data?.map { it.toDomain() } ?: emptyList()
-                    Log.d("GymApp", "Parsed ${exercises.size} exercises")
-                    _apiLibrary.value = exercises
-                } else {
-                    val errorBody = response.errorBody()?.string()
-                    Log.e("GymApp", "API error ${response.code()}: $errorBody")
-                }
-            } catch (e: Exception) {
-                Log.e("GymApp", "Exception fetching exercises: ${e.message}", e)
-            } finally {
-                _isLoading.value = false
-=======
             if (exerciseDao.getExerciseCount() == 0) {
                 try {
                     val assetManager = getApplication<Application>().assets
@@ -140,51 +109,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 } catch (e: Exception) {
                     android.util.Log.e("GymApp", "Failed to seed exercises from asset DB", e)
                 }
->>>>>>> feature/locally-stored-exercises
             }
         }
-    }
-
-    fun searchLibrary(query: String) {
-        if (query.isBlank()) {
-            fetchLibrary()
-            return
-        }
-        viewModelScope.launch {
-            _isLoading.value = true
-            try {
-                Log.d("GymApp", "Searching exercises for: '$query'")
-                val response = RetrofitClient.instance.searchExercises(query)
-                Log.d("GymApp", "Search response code: ${response.code()}")
-                if (response.isSuccessful) {
-                    val body = response.body()
-                    val exercises = body?.data?.map { it.toDomain() } ?: emptyList()
-                    Log.d("GymApp", "Search returned ${exercises.size} exercises")
-                    _apiLibrary.value = exercises
-                } else {
-                    val errorBody = response.errorBody()?.string()
-                    Log.e("GymApp", "Search API error ${response.code()}: $errorBody")
-                }
-            } catch (e: Exception) {
-                Log.e("GymApp", "Exception searching exercises: ${e.message}", e)
-            } finally {
-                _isLoading.value = false
-            }
-        }
-    }
-
-    private fun ExerciseResponse.toDomain(): Exercise {
-        return Exercise(
-            exerciseId = this.exerciseId ?: "",
-            name = this.name ?: "Unknown",
-            targetMuscles = this.targetMuscles ?: this.bodyParts ?: emptyList(),
-            secondaryMuscles = this.secondaryMuscles ?: emptyList(),
-            muscles = emptyList(),
-            equipments = this.equipments ?: emptyList(),
-            imageUrls = listOfNotNull(this.imageUrl),  // wrap single URL into list
-            videoUrls = this.videoUrls ?: emptyList(),
-            instructions = this.instructions ?: emptyList()
-        )
     }
 
     fun saveRoutine(routine: RoutineEntity) {
@@ -231,10 +157,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             exerciseDao.insertExercise(
                 ExerciseEntity(
-                    exerciseId = "custom_${UUID.randomUUID()}",
                     name = name,
-                    equipments = listOf(equipment),
-                    targetMuscles = listOf(category),
+                    equipment = equipment,
+                    category = category,
                     isCustom = true
                 )
             )
