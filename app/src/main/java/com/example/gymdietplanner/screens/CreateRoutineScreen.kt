@@ -12,6 +12,8 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.activity.compose.BackHandler
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -37,29 +39,22 @@ fun CreateRoutineScreen(
     exercises: List<ExerciseEntity>
 ) {
     val unitSuffix = if (isMetric) "kg" else "lbs"
-    var routineName by remember { mutableStateOf(routine?.name ?: "") }
-    var repeatWeekly by remember { mutableStateOf(routine?.repeatWeekly ?: false) }
+    var routineName by rememberSaveable { mutableStateOf(routine?.name ?: "") }
+    var repeatWeekly by rememberSaveable { mutableStateOf(routine?.repeatWeekly ?: false) }
     
     val daysOfWeek = listOf("M", "T", "W", "Th", "F", "S", "Su")
     val selectedDays = remember { mutableStateListOf<String>().apply { addAll(routine?.days ?: emptyList()) } }
     val selectedExercises = remember { mutableStateListOf<RoutineExercise>().apply { addAll(routine?.exercises ?: emptyList()) } }
     
     var showSelectionScreen by remember { mutableStateOf(false) }
+    
+    // Proper back handling: If selection screen is open, back button closes it first.
+    BackHandler(enabled = showSelectionScreen) {
+        showSelectionScreen = false
+    }
 
     Box(modifier = Modifier.fillMaxSize()) {
         Scaffold(
-        modifier = Modifier.pointerInput(Unit) {
-            var gestured = false
-            detectHorizontalDragGestures(
-                onDragStart = { gestured = false },
-                onHorizontalDrag = { _, dragAmount ->
-                    if (!gestured && dragAmount > 30) {
-                        gestured = true
-                        onNavigateBack()
-                    }
-                }
-            )
-        },
         topBar = {
             TopAppBar(
                 title = { Text(if (routine == null) "Create Routine" else "Edit Routine") },
